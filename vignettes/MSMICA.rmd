@@ -1,0 +1,54 @@
+---
+output:
+  html_document: default
+  word_document: default
+  pdf_document: default
+---
+## Getting Started
+
+___
+The **MSMICA** package currently contains the following key functions:
+
+- `MSMICA_algorithm()`, the main function to run the MSMICA algorithm with a feature table as the input data
+- `find.Overlapping()`, the function finds overlapping m/z and/or retention time values between two data sets and return all matches. Originally written by Dr. Karan Uppal, Emory University.
+  - This function can be used for in-house reference library matching
+- `QC_filter()`, the function filters out features that appear less than a certain percentage of all samples. Default is 20%.
+
+___
+
+#### Load MSMICA and run the example data for demonstration
+```{r, layout="l-body-outset"}
+
+# Load the necessary dependency packages for MSMICA
+## this is for data processing
+library(dplyr)
+## this is for tibble data structure
+library(readr)
+## this is for data processing
+library(tidyr)
+## this is for progress bar display
+library(progress)
+## this is for calculating theoretical m/z based on the KEGG monoisotopic masses and adduct forms
+library(MetaboCoreUtilsAdduct)
+
+# Load MSMICA
+library(MSMICA)
+
+# The example data includes a feature table from a LC-MS metabolomics study involving 7 paired kidney cancer tissue samples and normal kidney tissue samples taken from the same subjects (7 subjects, 14 actual samples, 42 triplicate samples). These samples were analyzed using HILIC positive. The feature table is a data frame with the first column as m/z (mass-to-charge ratio), the second column as retention time, and the rest of the columns as the intensity values for each sample.
+data(feature_table_exp_hilicpos)
+
+# Set a working directory for the MSMICA output files. This is where the output files will be saved.
+setwd("/Users/james/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Emory University - Ph.D./PhD dissertation/MSMICA/Publication/Abstract/MSMICA algorithm/MSMICA example data")
+
+# Filter out features appear less than 20% of all samples. The intensity column starts from the 3rd column.
+feature_table_exp_hilicpos = QC_filter(x = feature_table_exp_hilicpos, metabolite_start_column = 3, minimum_sample_appear = 0.20)
+
+# Run the MSMICA algorithm with the example data. Remember to select only one ion mode at a time and select the appropriate adduct forms.
+MSMICA_algorithm(met_raw_wide = feature_table_exp_hilicpos, Adduct = c("M+H","M+2Na-H","M+Na","M-H2O+H","M+K","M+2H"), prefix="MSMICA_test_hilicpos", ion_mode="positive")
+
+# Read the output files
+MSMICA_test_hilicpos_MSMICA_identified_metabolites = read_csv("MSMICA_test_hilicpos_MSMICA_identified_metabolites.csv")
+
+# print the data
+print(MSMICA_test_hilicpos_MSMICA_identified_metabolites, width=Inf)
+```

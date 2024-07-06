@@ -1,0 +1,1370 @@
+ion_mode,identification_type,KEGGID,Identified_Name,Exact_mass,isotopic_mass,Adduct,mz,time,correlation,MSMICA_identification,identification_method
+negative,identified,C00009,Orthophosphate,97.9769,99.98114057,M-H,96.9697,133.8,0.462,1,precursor-product correlation
+negative,identified,C00011,CO2,43.9898,44.99318408,M+FA-H,88.988,120.8,0.2636,1,precursor-product correlation
+negative,identified,C00020,AMP,347.0631,348.0664396,M-H,346.0556,19.4,0.2408,1,precursor-product correlation
+negative,identified,C00022,Pyruvate,88.016,89.01939882,M+FA-H,133.0142,20.1,0.5057,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00025,L-Glutamate,147.0532,148.0565126,M-H,146.0459,20.3,0.4111,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00026,2-Oxoglutarate,146.0215,147.0248781,M+FA-H,191.0197,19.9,0.4795,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00031,D-Glucose,180.0634,181.0667429,M+Cl,215.0328,22.1,0.4097,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00033,Acetate,60.0211,61.0244842,M+FA-H,105.0192,44,0.296,1,precursor-product correlation
+negative,identified,C00036,Oxaloacetate,132.0059,133.0092281,M-H,130.9986,287.1,0.2713,1,precursor-product correlation
+negative,identified,C00041,L-Alanine,89.0477,90.05103331,M-H,88.0404,39.9,0.499,1,precursor-product correlation
+negative,identified,C00042,Succinate,118.0266,119.0299635,M-H,117.0193,23.9,0.5012,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00047,L-Lysine,146.1055,147.1088825,M-H,145.0983,45.7,0.437,1,precursor-product correlation
+negative,identified,C00048,Glyoxylate,74.0004,75.00374876,M+Na-2H,94.9754,290.7,0.2832,1,precursor-product correlation
+negative,identified,C00049,L-Aspartate,133.0375,134.0408625,M-H2O-H,114.0196,46.5,0.3388,1,precursor-product correlation
+negative,identified,C00059,Sulfate,97.9674,99.96317558,M-H,96.9601,17,0.5788,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00062,L-Arginine,174.1117,175.1150305,M-H,173.1043,46.4,0.4721,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00064,L-Glutamine,146.0691,147.072497,M-H,145.0618,20.6,0.2975,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00065,L-Serine,105.0426,106.0459479,M-H,104.0349,35.8,0.5421,1,precursor-product correlation
+negative,identified,C00072,Ascorbate,176.0321,177.0354428,M-H,175.0248,17.8,0.3007,1,precursor-product correlation
+negative,identified,C00073,L-Methionine,149.051,150.0544046,M-H,148.0438,31.3,0.3353,1,precursor-product correlation
+negative,identified,C00074,Phosphoenolpyruvate,167.9824,168.9857297,M+Cl,202.9526,100.8,0.2265,1,precursor-product correlation
+negative,identified,C00077,L-Ornithine,132.0899,133.0932325,M-H,131.0826,32.7,0.3744,1,precursor-product correlation
+negative,identified,C00078,L-Tryptophan,204.0899,205.0932325,M-H,203.0826,26,0.3815,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00079,L-Phenylalanine,165.079,166.0823334,M-H,164.0717,28,0.3896,1,precursor-product correlation
+negative,identified,C00082,L-Tyrosine,181.0739,182.0772481,M-H2O-H,162.0561,67.2,0.2705,1,precursor-product correlation
+negative,identified,C00085,D-Fructose 6-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2406,1,precursor-product correlation
+negative,identified,C00090,Catechol,110.0368,111.0401343,M-H,109.0295,34.1,0.42,1,precursor-product correlation
+negative,identified,C00092,D-Glucose 6-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2286,1,precursor-product correlation
+negative,identified,C00093,sn-Glycerol 3-phosphate,172.0137,173.0170298,M-H,171.0064,19.9,0.414,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00095,D-Fructose,180.0634,181.0667429,M+Cl,215.0328,22.1,0.3955,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00097,L-Cysteine,121.0197,123.0155455,M+FA-H,166.0179,18.6,0.2265,1,precursor-product correlation
+negative,identified,C00099,beta-Alanine,89.0477,90.05103331,M-H,88.0404,39.9,0.4813,1,precursor-product correlation
+negative,identified,C00103,D-Glucose 1-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2369,1,precursor-product correlation
+negative,identified,C00105,UMP,324.0359,325.0392218,M-H,323.0296,22.3,0.2216,1,precursor-product correlation
+negative,identified,C00106,Uracil,112.0273,113.0306322,M+FA-H,157.0255,285.1,0.3975,1,precursor-product correlation
+negative,identified,C00108,Anthranilate,137.0477,138.0510333,M+FA-H,182.0452,34.7,0.2211,1,precursor-product correlation
+negative,identified,C00109,2-Oxobutanoate,102.0317,103.0350489,M-H,101.0245,51.6,0.5658,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00111,Glycerone phosphate,169.998,171.0013798,M-H,168.9907,19.5,0.2071,1,precursor-product correlation
+negative,identified,C00117,D-Ribose 5-phosphate,230.0192,231.0225092,M-H,229.0118,21.7,0.372,1,precursor-product correlation
+negative,identified,C00118,D-Glyceraldehyde 3-phosphate,169.998,171.0013798,M-H,168.9907,19.5,0.2079,1,precursor-product correlation
+negative,identified,C00121,D-Ribose,150.0528,151.0561783,M-H,149.0455,42.7,0.4018,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00122,Fumarate,116.011,117.0143134,M-H,115.0037,27.5,0.4307,1,precursor-product correlation
+negative,identified,C00123,L-Leucine,131.0946,132.0979835,M-H,130.0873,35.3,0.4379,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00124,D-Galactose,180.0634,181.0667429,M+Cl,215.0328,22.1,0.4481,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00127,Glutathione disulfide,612.152,613.1553177,M-H,611.1443,19.3,0.3534,1,precursor-product correlation
+negative,identified,C00133,D-Alanine,89.0477,90.05103331,M-H,88.0404,39.9,0.5911,1,precursor-product correlation
+negative,identified,C00135,L-Histidine,155.0695,156.0728314,M-H,154.0623,36.7,0.5394,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00137,myo-Inositol,180.0634,181.0667429,M+Cl,215.0328,22.1,0.5092,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00140,N-Acetyl-D-glucosamine,221.0899,222.093292,M-H2O-H,202.0721,58.8,0.2519,1,precursor-product correlation
+negative,identified,C00141,3-Methyl-2-oxobutanoic acid,116.0473,117.050699,M+FA-H,161.0455,47.3,0.6428,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00144,GMP,363.058,364.0613543,M-H,362.0506,19.8,0.2844,1,precursor-product correlation
+negative,identified,C00146,Phenol,94.0419,95.04521965,M+FA-H,139.0401,293,0.2491,1,precursor-product correlation
+negative,identified,C00147,Adenine,135.0545,136.05785,M-H,134.0471,49.1,0.453,1,precursor-product correlation
+negative,identified,C00148,L-Proline,115.0633,116.0666834,M-H,114.056,41.1,0.5851,1,precursor-product correlation
+negative,identified,C00149,(S)-Malate,134.0215,135.0248781,M-H,133.0142,20.1,0.6129,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00153,Nicotinamide,122.048,123.0513677,M+FA-H,167.0462,53.3,0.2105,1,precursor-product correlation
+negative,identified,C00156,4-Hydroxybenzoate,138.0317,139.0350489,M+FA-H,183.0298,292.8,0.2386,1,precursor-product correlation
+negative,identified,C00158,Citrate,192.027,193.0303574,M-H,191.0197,19.9,0.4154,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00159,D-Mannose,180.0634,181.0667429,M+Cl,215.0328,22.1,0.4478,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00163,Propanoate,74.0368,75.04013427,M+FA-H,119.0349,246.4,0.2057,1,precursor-product correlation
+negative,identified,C00164,Acetoacetate,102.0317,103.0350489,M-H,101.0245,51.6,0.5841,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00166,Phenylpyruvate,164.0473,165.050699,M-H,163.0401,24.6,0.273,1,precursor-product correlation
+negative,identified,C00168,Hydroxypyruvate,104.011,105.0143134,M-H,103.0037,241.4,0.2753,1,precursor-product correlation
+negative,identified,C00169,Carbamoyl phosphate,140.9827,141.9860641,M-H,139.9756,79.3,0.2608,1,precursor-product correlation
+negative,identified,C00178,Thymine,126.0429,127.0462823,M+FA-H,171.0411,276.3,0.3594,1,precursor-product correlation
+negative,identified,C00180,Benzoate,122.0368,123.0401343,M+Cl,157.006,286.9,0.2577,1,precursor-product correlation
+negative,identified,C00181,D-Xylose,150.0528,151.0561783,M-H,149.0455,42.7,0.7477,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00183,L-Valine,117.079,118.0823334,M-H,116.0717,37.1,0.6632,1,precursor-product correlation
+negative,identified,C00184,Glycerone,90.0317,91.03504889,M+Cl,125.0011,21.9,0.4938,1,precursor-product correlation
+negative,identified,C00186,(S)-Lactate,90.0317,91.03504889,M+Cl,125.0011,21.9,0.4675,1,precursor-product correlation
+negative,identified,C00188,L-Threonine,119.0582,120.061598,M-H,118.051,31.4,0.4493,1,precursor-product correlation
+negative,identified,C00191,D-Glucuronate,194.0427,195.0460075,M-H,193.0353,39.3,0.4464,1,precursor-product correlation
+negative,identified,C00196,"2,3-Dihydroxybenzoate",154.0266,155.0299635,M-H,153.0193,290.7,0.3757,1,precursor-product correlation
+negative,identified,C00197,3-Phospho-D-glycerate,185.9929,186.9962944,M-H,184.9856,22.9,0.3215,1,precursor-product correlation
+negative,identified,C00198,"D-Glucono-1,5-lactone",178.0477,179.0510929,M-H,177.0404,44.6,0.5762,1,precursor-product correlation
+negative,identified,C00199,D-Ribulose 5-phosphate,230.0192,231.0225092,M-H,229.0118,21.7,0.4517,1,precursor-product correlation
+negative,identified,C00204,2-Dehydro-3-deoxy-D-gluconate,178.0477,179.0510929,M-H2O-H,159.0299,31.1,0.4163,1,precursor-product correlation
+negative,identified,C00209,Oxalate,89.9953,90.99866338,M-H,88.988,120.8,0.2811,1,precursor-product correlation
+negative,identified,C00213,Sarcosine,89.0477,90.05103331,M-H,88.0404,39.9,0.4439,1,precursor-product correlation
+negative,identified,C00214,Thymidine,242.0903,243.0936264,M+Cl,277.0595,16.6,0.2017,1,precursor-product correlation
+negative,identified,C00216,D-Arabinose,150.0528,151.0561783,M-H,149.0455,42.7,0.5048,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00217,D-Glutamate,147.0532,148.0565126,M-H,146.0459,20.3,0.457,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00219,Arachidonate,304.2402,305.2435851,M-H,303.2328,230.2,0.5532,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00221,beta-D-Glucose,180.0634,181.0667429,M+Cl,215.0328,22.1,0.3244,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00222,3-Oxopropanoate,88.016,89.01939882,M+FA-H,133.0142,20.1,0.5741,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00224,Adenylyl sulfate,427.0199,428.0232547,M+Cl,461.9907,16.9,0.6479,1,precursor-product correlation
+negative,identified,C00227,Acetyl phosphate,139.9875,140.9908151,M+FA-H,184.9856,22.9,0.4236,1,precursor-product correlation
+negative,identified,C00230,"3,4-Dihydroxybenzoate",154.0266,155.0299635,M-H,153.0193,24.2,0.3465,1,precursor-product correlation
+negative,identified,C00231,D-Xylulose 5-phosphate,230.0192,231.0225092,M-H,229.0118,21.7,0.3843,1,precursor-product correlation
+negative,identified,C00232,Succinate semialdehyde,102.0317,103.0350489,M-H,101.0245,51.6,0.5318,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00233,4-Methyl-2-oxopentanoate,130.063,131.066349,M+FA-H,175.0612,125.9,0.207,1,precursor-product correlation
+negative,identified,C00242,Guanine,151.0494,152.0527646,M+Na-2H,172.0242,19.3,0.3278,1,precursor-product correlation
+negative,identified,C00245,Taurine,125.0147,127.0104601,M-H,124.0073,22.3,0.2518,1,precursor-product correlation
+negative,identified,C00247,L-Sorbose,180.0634,181.0667429,M+Cl,215.0328,22.1,0.4865,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00249,Hexadecanoic acid,256.2402,257.2435851,M-H,255.2328,247.9,0.4555,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00250,Pyridoxal,167.0582,168.061598,M-H,166.0509,30.4,0.3781,1,precursor-product correlation
+negative,identified,C00251,Chorismate,226.0477,227.0510929,M-H,225.0413,33.9,0.3119,1,precursor-product correlation
+negative,identified,C00253,Nicotinate,123.032,124.0353832,M+FA-H,168.0301,290,0.221,1,precursor-product correlation
+negative,identified,C00254,Prephenate,226.0477,227.0510929,M-H,225.0413,33.9,0.3204,1,precursor-product correlation
+negative,identified,C00256,(R)-Lactate,90.0317,91.03504889,M+Cl,125.0011,21.9,0.582,1,precursor-product correlation
+negative,identified,C00257,D-Gluconic acid,196.0583,197.0616576,M-H,195.0509,36.5,0.4948,1,precursor-product correlation
+negative,identified,C00258,D-Glycerate,106.0266,107.0299635,M-H,105.0192,44,0.2876,1,precursor-product correlation
+negative,identified,C00259,L-Arabinose,150.0528,151.0561783,M-H,149.0455,42.7,0.5861,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00263,L-Homoserine,119.0582,120.061598,M-H,118.051,31.4,0.4045,1,precursor-product correlation
+negative,identified,C00266,Glycolaldehyde,60.0211,61.0244842,M+FA-H,105.0192,44,0.2506,1,precursor-product correlation
+negative,identified,C00267,alpha-D-Glucose,180.0634,181.0667429,M+Cl,215.0328,22.1,0.3743,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00270,N-Acetylneuraminate,309.106,310.109336,M-H,308.0987,18.7,0.3322,1,precursor-product correlation
+negative,identified,C00273,5-Dehydro-D-fructose,178.0477,179.0510929,M-H,177.0404,44.6,0.6256,1,precursor-product correlation
+negative,identified,C00275,D-Mannose 6-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2292,1,precursor-product correlation
+negative,identified,C00280,Androstenedione,286.1933,287.1966349,M+FA-H,331.1912,48.6,0.2754,1,precursor-product correlation
+negative,identified,C00292,Aniline,93.0578,94.06120407,M-H,92.0508,34.7,0.4611,1,precursor-product correlation
+negative,identified,C00294,Inosine,268.0808,269.0841243,M-H2O-H,249.0615,58.5,0.3393,1,precursor-product correlation
+negative,identified,C00295,Orotate,156.0171,157.0204615,M-H2O-H,136.9992,289.6,0.3868,1,precursor-product correlation
+negative,identified,C00296,Quinate,192.0634,193.0667429,M-H,191.056,46.1,0.3991,1,precursor-product correlation
+negative,identified,C00299,Uridine,244.0695,245.072891,M-H,243.0622,23.6,0.2397,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00300,Creatine,131.0695,132.0728314,M-H2O-H,112.0517,53.7,0.5092,1,precursor-product correlation
+negative,identified,C00301,ADP-ribose,559.0717,560.0750293,M-H,558.0639,18.6,0.3112,1,precursor-product correlation
+negative,identified,C00302,Glutamate,147.0532,148.0565126,M-H,146.0459,20.3,0.436,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00309,D-Ribulose,150.0528,151.0561783,M-H,149.0455,42.7,0.4245,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00310,D-Xylulose,150.0528,151.0561783,M-H,149.0455,42.7,0.4245,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00311,Isocitrate,192.027,193.0303574,M-H,191.0197,19.9,0.322,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00312,L-Xylulose,150.0528,151.0561783,M-H,149.0455,42.7,0.5322,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00314,Pyridoxine,169.0739,170.0772481,M-H2O-H,150.0561,128.9,0.238,1,precursor-product correlation
+negative,identified,C00319,Sphingosine,299.2824,300.2857843,M-H2O-H,280.2643,234.4,0.8548,1,precursor-product correlation
+negative,identified,C00322,2-Oxoadipate,160.0372,161.0405282,M+FA-H,205.0353,58.6,0.441,1,precursor-product correlation
+negative,identified,C00327,L-Citrulline,175.0957,176.0990461,M-H,174.088,19.1,0.443,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00328,L-Kynurenine,208.0848,209.0881471,M+Na-2H,229.0594,45.4,0.5891,1,precursor-product correlation
+negative,identified,C00329,D-Glucosamine,179.0794,180.0827274,M+Cl,214.0488,31.7,0.219,1,precursor-product correlation
+negative,identified,C00333,D-Galacturonate,194.0427,195.0460075,M+Cl,229.0118,21.7,0.5139,1,precursor-product correlation
+negative,identified,C00334,4-Aminobutanoate,103.0633,104.0666834,M-H,102.056,65.4,0.258,1,precursor-product correlation
+negative,identified,C00337,(S)-Dihydroorotate,158.0328,159.0361115,M-H,157.0255,285.1,0.3647,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00346,Ethanolamine phosphate,141.0191,142.0224496,M-H,140.0117,56.6,0.3911,1,precursor-product correlation
+negative,identified,C00349,2-Methyl-3-oxopropanoate,102.0317,103.0350489,M-H,101.0245,51.6,0.5039,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00355,"3,4-Dihydroxy-L-phenylalanine",197.0688,198.0721627,M-H2O-H,178.051,31.3,0.3021,1,precursor-product correlation
+negative,identified,C00357,N-Acetyl-D-glucosamine 6-phosphate,301.0563,302.0596229,M+FA-H,346.0556,19.4,0.1938,1,precursor-product correlation
+negative,identified,C00364,dTMP,322.0566,323.0599573,M+FA-H,367.0564,26.4,0.5786,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00366,Urate,168.0283,169.0316948,M-H,167.0209,25.5,0.4566,1,precursor-product correlation
+negative,identified,C00378,Thiamine,264.105,266.1156622,M-H,263.0972,40.4,0.3763,1,precursor-product correlation
+negative,identified,C00380,Cytosine,111.0433,112.0466166,M+FA-H,156.0414,290.3,0.2996,1,precursor-product correlation
+negative,identified,C00383,Malonate,104.011,105.0143134,M-H,103.0037,241.4,0.2508,1,precursor-product correlation
+negative,identified,C00385,Xanthine,152.0334,153.0367802,M-H,151.0263,22.8,0.2694,1,precursor-product correlation
+negative,identified,C00386,Carnosine,226.1066,227.1099452,M+FA-H,271.1047,290,0.4742,1,precursor-product correlation
+negative,identified,C00388,Histamine,111.0796,112.0830021,M+FA-H,156.0778,46.4,0.3805,1,precursor-product correlation
+negative,identified,C00392,Mannitol,182.079,183.082393,M-H,181.0716,40.3,0.4653,1,precursor-product correlation
+negative,identified,C00400,(-)-Menthol,156.1514,157.1547701,M+FA-H,201.1497,269.3,0.2051,1,precursor-product correlation
+negative,identified,C00402,D-Aspartate,133.0375,134.0408625,M-H2O-H,114.0196,46.5,0.3815,1,precursor-product correlation
+negative,identified,C00407,L-Isoleucine,131.0946,132.0979835,M-H,130.0873,35.3,0.4438,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00408,L-Pipecolate,129.079,130.0823334,M-H,128.0717,148.2,0.2122,1,precursor-product correlation
+negative,identified,C00410,Progesterone,314.2246,315.227935,M-H,313.2171,215.6,0.4741,1,precursor-product correlation
+negative,identified,C00417,cis-Aconitate,174.0164,175.0197928,M+FA-H,219.0147,29.5,0.2708,1,precursor-product correlation
+negative,identified,C00418,(R)-Mevalonate,148.0736,149.0769137,M+FA-H,193.0717,71.1,0.2826,1,precursor-product correlation
+negative,identified,C00423,trans-Cinnamate,148.0524,149.0557843,M-H,147.0453,27.3,0.2572,1,precursor-product correlation
+negative,identified,C00424,(S)-Lactaldehyde,74.0368,75.04013427,M+FA-H,119.0349,246.4,0.2222,1,precursor-product correlation
+negative,identified,C00429,"5,6-Dihydrouracil",114.0429,115.0462823,M+FA-H,159.0411,283.6,0.4687,1,precursor-product correlation
+negative,identified,C00430,5-Aminolevulinate,131.0582,132.061598,M-H,130.0509,27,0.7124,1,precursor-product correlation
+negative,identified,C00431,5-Aminopentanoate,117.079,118.0823334,M-H,116.0717,37.1,0.6077,1,precursor-product correlation
+negative,identified,C00433,"2,5-Dioxopentanoate",130.0266,131.0299635,M-H,129.0193,22.5,0.6719,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00437,N-Acetylornithine,174.1004,175.1037972,M-H2O-H,155.0826,280.7,0.3496,1,precursor-product correlation
+negative,identified,C00438,N-Carbamoyl-L-aspartate,176.0433,177.0466762,M-H2O-H,157.0255,285.1,0.408,1,precursor-product correlation
+negative,identified,C00439,N-Formimino-L-glutamate,174.0641,175.0674116,M-H2O-H,155.0462,290.3,0.2694,1,precursor-product correlation
+negative,identified,C00441,L-Aspartate 4-semialdehyde,117.0426,118.0459479,M-H,116.0353,262.4,0.2165,1,precursor-product correlation
+negative,identified,C00446,alpha-D-Galactose 1-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2369,1,precursor-product correlation
+negative,identified,C00449,"N6-(L-1,3-Dicarboxypropyl)-L-lysine",276.1321,277.1354912,M-H2O-H,257.1143,291.7,0.2446,1,precursor-product correlation
+negative,identified,C00450,"(S)-2,3,4,5-Tetrahydropyridine-2-carboxylate",127.0633,128.0666834,M-H,126.056,109.4,0.2934,1,precursor-product correlation
+negative,identified,C00472,p-Benzoquinone,108.0211,109.0244842,M+FA-H,153.0193,290.7,0.3749,1,precursor-product correlation
+negative,identified,C00473,Retinol,286.2297,287.2330204,M+Na-2H,307.2045,172.4,0.3945,1,precursor-product correlation
+negative,identified,C00475,Cytidine,243.0855,244.0888754,M-H,242.0782,289.9,0.3265,1,precursor-product correlation
+negative,identified,C00477,Ecdysone,464.3138,465.317144,M-H2O-H,445.2957,153.9,0.2296,1,precursor-product correlation
+negative,identified,C00487,Carnitine,162.113,163.1163732,M+Cl,197.0818,290.8,0.3345,1,precursor-product correlation
+negative,identified,C00489,Glutarate,132.0423,133.0456136,M-H2O-H,113.0245,40.8,0.5923,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00490,Itaconate,130.0266,131.0299635,M-H,129.0193,22.5,0.6165,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00492,Raffinose,504.169,505.1723898,M+FA-H,549.1653,18.6,0.2979,1,precursor-product correlation
+negative,identified,C00493,Shikimate,174.0528,175.0561783,M-H,173.0455,288.9,0.3185,1,precursor-product correlation
+negative,identified,C00497,(R)-Malate,134.0215,135.0248781,M-H,133.0142,20.1,0.8141,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00499,Allantoate,176.0546,177.0579096,M-H2O-H,157.0367,24.5,0.3143,1,precursor-product correlation
+negative,identified,C00506,L-Cysteate,169.0045,171.0002894,M-H2O-H,149.9866,292.4,0.235,1,precursor-product correlation
+negative,identified,C00507,L-Rhamnose,164.0685,165.0718283,M+FA-H,209.0666,44.8,0.4357,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00508,L-Ribulose,150.0528,151.0561783,M-H,149.0455,42.7,0.4245,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00509,Naringenin,272.0685,273.0718283,M-H2O-H,253.05,18.8,0.3278,1,precursor-product correlation
+negative,identified,C00511,Acrylic acid,72.0211,73.0244842,M+FA-H,117.0193,23.9,0.2253,1,precursor-product correlation
+negative,identified,C00514,D-Mannonate,196.0583,197.0616576,M-H,195.0509,36.5,0.4988,1,precursor-product correlation
+negative,identified,C00515,D-Ornithine,132.0899,133.0932325,M-H,131.0826,32.7,0.3266,1,precursor-product correlation
+negative,identified,C00517,Hexadecanal,240.2453,241.2486705,M+Cl,275.2136,219.9,0.3576,1,precursor-product correlation
+negative,identified,C00522,(R)-Pantoate,148.0736,149.0769137,M-H,147.0663,36.4,0.2516,1,precursor-product correlation
+negative,identified,C00525,D-Tryptophan,204.0899,205.0932325,M-H,203.0826,26,0.2211,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00526,Deoxyuridine,228.0746,229.0779763,M-H2O-H,209.0553,50.1,0.4218,1,precursor-product correlation
+negative,identified,C00530,Hydroquinone,110.0368,111.0401343,M+FA-H,155.0357,291.4,0.3125,1,precursor-product correlation
+negative,identified,C00534,Pyridoxamine,168.0899,169.0932325,M+FA-H,213.0881,290.5,0.187,1,precursor-product correlation
+negative,identified,C00536,Triphosphate,257.9096,259.9138024,M-H2O-H,238.8913,17.4,0.572,1,precursor-product correlation
+negative,identified,C00544,Homogentisate,168.0423,169.0456136,M-H2O-H,149.0243,286.7,0.2395,1,precursor-product correlation
+negative,identified,C00546,Methylglyoxal,72.0211,73.0244842,M+FA-H,117.0193,23.9,0.43,1,precursor-product correlation
+negative,identified,C00547,L-Noradrenaline,169.0739,170.0772481,M-H2O-H,150.056,36.6,0.2433,1,precursor-product correlation
+negative,identified,C00548,Phenyl acetate,136.0524,137.0557843,M+FA-H,181.0509,290.8,0.2252,1,precursor-product correlation
+negative,identified,C00553,(+)-Neomenthol,156.1514,157.1547701,M+FA-H,201.1497,269.3,0.2051,1,precursor-product correlation
+negative,identified,C00558,D-Tagaturonate,194.0427,195.0460075,M-H,193.0353,39.3,0.4192,1,precursor-product correlation
+negative,identified,C00568,4-Aminobenzoate,137.0477,138.0510333,M+FA-H,182.0452,34.7,0.2435,1,precursor-product correlation
+negative,identified,C00570,CDP-ethanolamine,446.0604,447.0637363,M-H,445.054,40.9,0.3433,1,precursor-product correlation
+negative,identified,C00577,D-Glyceraldehyde,90.0317,91.03504889,M+Cl,125.0011,21.9,0.4083,1,precursor-product correlation
+negative,identified,C00587,3-Hydroxybenzoate,138.0317,139.0350489,M+FA-H,183.0298,292.8,0.2627,1,precursor-product correlation
+negative,identified,C00590,Coniferyl alcohol,180.0786,181.0819991,M-H,179.0708,31.3,0.3714,1,precursor-product correlation
+negative,identified,C00593,Sulfoacetaldehyde,123.983,125.9788256,M+FA-H,168.9812,17.9,0.4766,1,precursor-product correlation
+negative,identified,C00596,"2-Hydroxy-2,4-pentadienoate",114.0317,115.0350489,M-H,113.0245,40.8,0.304,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00601,Phenylacetaldehyde,120.0575,121.0608697,M-H,119.0503,21.6,0.2434,1,precursor-product correlation
+negative,identified,C00603,(S)-Ureidoglycolate,134.0328,135.0361115,M-H2O-H,115.0148,291.5,0.2208,1,precursor-product correlation
+negative,identified,C00606,3-Sulfino-L-alanine,153.0096,155.0053747,M-H,152.0022,289.6,0.2547,1,precursor-product correlation
+negative,identified,C00618,3-Dehydro-L-gulonate,194.0427,195.0460075,M-H,193.0353,39.3,0.6071,1,precursor-product correlation
+negative,identified,C00620,alpha-D-Ribose 1-phosphate,230.0192,231.0225092,M-H,229.0118,21.7,0.2921,1,precursor-product correlation
+negative,identified,C00623,sn-Glycerol 1-phosphate,172.0137,173.0170298,M-H,171.0064,19.9,0.7525,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00624,N-Acetyl-L-glutamate,189.0637,190.0670773,M-H2O-H,170.0458,117.5,0.2688,1,precursor-product correlation
+negative,identified,C00628,"2,5-Dihydroxybenzoate",154.0266,155.0299635,M-H,153.0193,290.7,0.4541,1,precursor-product correlation
+negative,identified,C00631,2-Phospho-D-glycerate,185.9929,186.9962944,M-H,184.9856,22.9,0.3213,1,precursor-product correlation
+negative,identified,C00632,3-Hydroxyanthranilate,153.0426,154.0459479,M+FA-H,198.041,292.8,0.2612,1,precursor-product correlation
+negative,identified,C00633,4-Hydroxybenzaldehyde,122.0368,123.0401343,M+FA-H,167.0351,290.5,0.2648,1,precursor-product correlation
+negative,identified,C00636,D-Mannose 1-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2866,1,precursor-product correlation
+negative,identified,C00642,4-Hydroxyphenylacetate,152.0473,153.050699,M-H,151.0401,34.8,0.2459,1,precursor-product correlation
+negative,identified,C00643,5-Hydroxy-L-tryptophan,220.0848,221.0881471,M-H,219.0778,21.9,0.2185,1,precursor-product correlation
+negative,identified,C00644,D-Mannitol 1-phosphate,262.0454,263.0487239,M+Na-2H,283.0205,24.2,0.2962,1,precursor-product correlation
+negative,identified,C00645,N-Acetyl-D-mannosamine,221.0899,222.093292,M-H2O-H,202.0721,58.8,0.2584,1,precursor-product correlation
+negative,identified,C00651,4-Methylene-L-glutamate,159.0532,160.0565126,M-H,158.0458,286.7,0.3764,1,precursor-product correlation
+negative,identified,C00652,"D-Arabinono-1,4-lactone",148.0372,149.0405282,M+FA-H,193.0353,39.3,0.6409,1,precursor-product correlation
+negative,identified,C00663,beta-D-Glucose 1-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2866,1,precursor-product correlation
+negative,identified,C00666,"LL-2,6-Diaminoheptanedioate",190.0954,191.0987118,M-H2O-H,171.0765,59.9,0.3339,1,precursor-product correlation
+negative,identified,C00668,alpha-D-Glucose 6-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2369,1,precursor-product correlation
+negative,identified,C00671,(S)-3-Methyl-2-oxopentanoic acid,130.063,131.066349,M+FA-H,175.0612,125.9,0.207,1,precursor-product correlation
+negative,identified,C00672,2-Deoxy-D-ribose 1-phosphate,214.0242,215.0275945,M+FA-H,259.0222,20,0.2284,1,precursor-product correlation
+negative,identified,C00673,2-Deoxy-D-ribose 5-phosphate,214.0242,215.0275945,M+FA-H,259.0222,20,0.1846,1,precursor-product correlation
+negative,identified,C00679,5-Dehydro-4-deoxy-D-glucarate,192.027,193.0303574,M-H,191.0197,19.9,0.5575,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00680,"meso-2,6-Diaminoheptanedioate",190.0954,191.0987118,M-H2O-H,171.0765,59.9,0.4202,1,precursor-product correlation
+negative,identified,C00682,2-Hydroxymuconate semialdehyde,142.0266,143.0299635,M-H2O-H,123.0088,117,0.216,1,precursor-product correlation
+negative,identified,C00684,2-Dehydro-3-deoxy-L-arabinonate,148.0372,149.0405282,M+FA-H,193.0353,39.3,0.4636,1,precursor-product correlation
+negative,identified,C00691,"2,4,6/3,5-Pentahydroxycyclohexanone",178.0477,179.0510929,M-H,177.0404,44.6,0.4587,1,precursor-product correlation
+negative,identified,C00695,Cholic acid,408.2876,409.2909292,M+FA-H,453.286,26.7,0.4759,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00712,(9Z)-Octadecenoic acid,282.2559,283.2592352,M-H,281.2484,251,0.9248,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00716,Serine,105.0426,106.0459479,M-H,104.0349,35.8,0.4918,1,precursor-product correlation
+negative,identified,C00719,Betaine,117.079,118.0823334,M-H,116.0717,37.1,0.6023,1,precursor-product correlation
+negative,identified,C00735,Cortisol,362.2093,363.2126789,M-H2O-H,343.1906,167.4,0.4855,1,precursor-product correlation
+negative,identified,C00736,Cysteine,121.0197,123.0155455,M+FA-H,166.0179,18.6,0.1935,1,precursor-product correlation
+negative,identified,C00738,D-Hexose,180.0634,181.0667429,M+Cl,215.0328,22.1,0.2121,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00739,D-Lysine,146.1055,147.1088825,M-H,145.0983,45.7,0.5232,1,precursor-product correlation
+negative,identified,C00740,D-Serine,105.0426,106.0459479,M-H,104.0349,35.8,0.5855,1,precursor-product correlation
+negative,identified,C00741,Diacetyl,86.0368,87.04013427,M+FA-H,131.035,45.2,0.9368,1,precursor-product correlation
+negative,identified,C00755,4-Hydroxy-3-methoxy-benzaldehyde,152.0473,153.050699,M-H,151.0401,34.8,0.2678,1,precursor-product correlation
+negative,identified,C00763,D-Proline,115.0633,116.0666834,M-H,114.056,41.1,0.4416,1,precursor-product correlation
+negative,identified,C00764,D-Sorbose,180.0634,181.0667429,M+Cl,215.0328,22.1,0.4846,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00770,L-Idonate,196.0583,197.0616576,M-H,195.0509,36.5,0.47,1,precursor-product correlation
+negative,identified,C00772,Mevaldate,146.0579,147.0612636,M+FA-H,191.056,46.1,0.2431,1,precursor-product correlation
+negative,identified,C00780,Serotonin,176.095,177.0983179,M+Cl,211.0642,61.9,0.2384,1,precursor-product correlation
+negative,identified,C00785,Urocanate,138.0429,139.0462823,M-H,137.0354,29.4,0.2864,1,precursor-product correlation
+negative,identified,C00791,Creatinine,113.0589,114.0622667,M-H,112.0517,53.7,0.3192,1,precursor-product correlation
+negative,identified,C00792,D-Arginine,174.1117,175.1150305,M-H,173.1043,46.4,0.4885,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00793,D-Cysteine,121.0197,123.0155455,M+FA-H,166.0179,18.6,0.2736,1,precursor-product correlation
+negative,identified,C00794,D-Sorbitol,182.079,183.082393,M-H,181.0716,40.3,0.473,1,precursor-product correlation
+negative,identified,C00795,D-Tagatose,180.0634,181.0667429,M+Cl,215.0328,22.1,0.3938,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00800,L-Gulonate,196.0583,197.0616576,M-H,195.0509,36.5,0.4942,1,precursor-product correlation
+negative,identified,C00802,Oxalureate,132.0171,133.0204615,M-H,131.0098,286,0.2776,1,precursor-product correlation
+negative,identified,C00804,Propynoate,70.0055,71.00883414,M+FA-H,115.0037,27.5,0.5717,1,precursor-product correlation
+negative,identified,C00805,Salicylate,138.0317,139.0350489,M+FA-H,183.0298,292.8,0.2627,1,precursor-product correlation
+negative,identified,C00811,4-Coumarate,164.0473,165.050699,M+Na-2H,185.0221,14,0.2639,1,precursor-product correlation
+negative,identified,C00815,Citramalate,148.0372,149.0405282,M-H2O-H,129.0193,22.5,0.3569,1,precursor-product correlation
+negative,identified,C00817,D-Altronate,196.0583,197.0616576,M-H,195.0509,36.5,0.5132,1,precursor-product correlation
+negative,identified,C00818,D-Glucarate,210.0376,211.0409221,M-H2O-H,191.0197,19.9,0.4776,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00819,D-Glutamine,146.0691,147.072497,M-H,145.0618,20.6,0.2483,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00822,Dopaquinone,195.0532,196.0565126,M-H,194.0458,23,0.2225,1,precursor-product correlation
+negative,identified,C00823,1-Hexadecanol,242.261,243.2643206,M+Cl,277.2296,219.9,0.4223,1,precursor-product correlation
+negative,identified,C00830,Oxomalonate,117.9902,118.993578,M-H,116.9829,15.8,0.2374,1,precursor-product correlation
+negative,identified,C00836,Sphinganine,301.2981,302.3014343,M-H2O-H,282.2803,251.8,0.8635,1,precursor-product correlation
+negative,identified,C00846,3-Oxoadipate,160.0372,161.0405282,M-H,159.0299,31.1,0.4896,1,precursor-product correlation
+negative,identified,C00847,4-Pyridoxate,183.0532,184.0565126,M-H,182.0452,34.7,0.2258,1,precursor-product correlation
+negative,identified,C00855,D-Methionine,149.051,150.0544046,M-H,148.0438,31.3,0.7163,1,precursor-product correlation
+negative,identified,C00859,Gibberellin A1,348.1573,349.1606433,M-H2O-H,329.1393,239.6,0.3288,1,precursor-product correlation
+negative,identified,C00864,Pantothenate,219.1107,220.1140275,M-H,218.1033,20.2,0.2879,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00869,2-Oxooctadecanoic acid,298.2508,299.2541498,M-H2O-H,279.2327,234,0.9332,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00872,Aminomalonate,119.0219,120.0252125,M-H2O-H,100.004,278,0.2812,1,precursor-product correlation
+negative,identified,C00879,D-Galactarate,210.0376,211.0409221,M-H2O-H,191.0197,19.9,0.6476,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00880,D-Galactonate,196.0583,197.0616576,M-H,195.0509,36.5,0.5034,1,precursor-product correlation
+negative,identified,C00881,Deoxycytidine,227.0906,228.0939607,M+FA-H,272.0887,282.6,0.4539,1,precursor-product correlation
+negative,identified,C00885,Isochorismate,226.0477,227.0510929,M-H,225.0413,33.9,0.3074,1,precursor-product correlation
+negative,identified,C00898,"(R,R)-Tartaric acid",150.0164,151.0197928,M-H2O-H,130.9986,287.1,0.3885,1,precursor-product correlation
+negative,identified,C00899,11-cis-Retinol,286.2297,287.2330204,M+Na-2H,307.2045,172.4,0.3945,1,precursor-product correlation
+negative,identified,C00900,2-Acetolactate,132.0423,133.0456136,M-H2O-H,113.0245,40.8,0.7984,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00905,D-Fructuronate,194.0427,195.0460075,M+Cl,229.0118,21.7,0.4045,1,precursor-product correlation
+negative,identified,C00906,"5,6-Dihydrothymine",128.0586,129.0619323,M-H,127.0513,289,0.3977,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00909,Leukotriene A4,318.2195,319.2228497,M-H2O-H,299.2014,201.5,0.6497,1,precursor-product correlation
+negative,identified,C00922,"2,3-Dimethylmaleate",144.0423,145.0456136,M-H,143.0348,40.9,0.7933,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00936,alpha-D-Mannose,180.0634,181.0667429,M+Cl,215.0328,22.1,0.2979,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00937,(R)-Lactaldehyde,74.0368,75.04013427,M+FA-H,119.0349,246.4,0.2222,1,precursor-product correlation
+negative,identified,C00940,2-Oxoglutaramate,145.0375,146.0408625,M-H,144.0302,286.8,0.3998,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00944,3-Dehydroquinate,190.0477,191.0510929,M-H,189.0404,38.1,0.2503,1,precursor-product correlation
+negative,identified,C00956,L-2-Aminoadipate,161.0688,162.0721627,M-H2O-H,142.0509,54.5,0.3481,1,precursor-product correlation
+negative,identified,C00966,2-Dehydropantoate,146.0579,147.0612636,M+FA-H,191.056,46.1,0.5083,1,precursor-product correlation
+negative,identified,C00979,O-Acetyl-L-serine,147.0532,148.0565126,M-H,146.0459,20.3,0.4706,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00984,alpha-D-Galactose,180.0634,181.0667429,M+Cl,215.0328,22.1,0.2121,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C00989,4-Hydroxybutanoic acid,104.0473,105.050699,M+FA-H,149.0455,42.7,0.6462,1,precursor-product correlation
+negative,identified,C01013,3-Hydroxypropanoate,90.0317,91.03504889,M+Cl,125.0011,21.9,0.7614,1,precursor-product correlation
+negative,identified,C01015,cis-4-Hydroxy-L-proline,131.0582,132.061598,M-H,130.0509,27,0.7142,1,precursor-product correlation
+negative,identified,C01019,L-Fucose,164.0685,165.0718283,M+FA-H,209.0666,44.8,0.4996,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01026,"N,N-Dimethylglycine",103.0633,104.0666834,M-H,102.056,65.4,0.2287,1,precursor-product correlation
+negative,identified,C01036,4-Maleylacetoacetate,200.0321,201.0354428,M-H2O-H,181.0144,138.4,0.2128,1,precursor-product correlation
+negative,identified,C01040,"L-Gulono-1,4-lactone",178.0477,179.0510929,M-H,177.0404,44.6,0.4248,1,precursor-product correlation
+negative,identified,C01042,N-Acetyl-L-aspartate,175.0481,176.0514272,M-H,174.0407,22.5,0.4004,1,precursor-product correlation
+negative,identified,C01043,N-Carbamoylsarcosine,132.0535,133.056847,M-H2O-H,113.0357,236.7,0.2535,1,precursor-product correlation
+negative,identified,C01044,N-Formyl-L-aspartate,161.0324,162.0357772,M-H2O-H,142.0145,287.1,0.3443,1,precursor-product correlation
+negative,identified,C01045,N-Formyl-L-glutamate,175.0481,176.0514272,M-H,174.0407,22.5,0.471,1,precursor-product correlation
+negative,identified,C01046,N-Methyl-L-glutamate,161.0688,162.0721627,M-H2O-H,142.0509,54.5,0.2689,1,precursor-product correlation
+negative,identified,C01047,N5-Ethyl-L-glutamine,174.1004,175.1037972,M-H2O-H,155.0826,280.7,0.3165,1,precursor-product correlation
+negative,identified,C01053,(R)-4-Dehydropantoate,146.0579,147.0612636,M+FA-H,191.056,46.1,0.5083,1,precursor-product correlation
+negative,identified,C01059,"2,5-Dihydroxypyridine",111.032,112.0353832,M+FA-H,156.0302,288,0.3479,1,precursor-product correlation
+negative,identified,C01061,4-Fumarylacetoacetate,200.0321,201.0354428,M-H2O-H,181.0144,138.4,0.3917,1,precursor-product correlation
+negative,identified,C01062,5-Dehydro-D-gluconate,194.0427,195.0460075,M+Cl,229.0118,21.7,0.5292,1,precursor-product correlation
+negative,identified,C01068,D-Ribitol 5-phosphate,232.0348,233.0381592,M+FA-H,277.0329,24.7,0.5402,1,precursor-product correlation
+negative,identified,C01073,N-Acetyl-beta-alanine,131.0582,132.061598,M-H,130.0509,27,0.5469,1,precursor-product correlation
+negative,identified,C01077,O-Acetyl-L-homoserine,161.0688,162.0721627,M-H2O-H,142.0509,54.5,0.3693,1,precursor-product correlation
+negative,identified,C01081,Thiamin monophosphate,345.0786,346.0819931,M+FA-H,390.0758,191.6,0.187,1,precursor-product correlation
+negative,identified,C01087,(R)-2-Hydroxyglutarate,148.0372,149.0405282,M-H2O-H,129.0193,22.5,0.6683,1,precursor-product correlation
+negative,identified,C01088,"(R)-3,3-Dimethylmalate",162.0528,163.0561783,M-H,161.0455,47.3,0.4154,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01089,(R)-3-Hydroxybutanoate,104.0473,105.050699,M+FA-H,149.0455,42.7,0.8403,1,precursor-product correlation
+negative,identified,C01094,D-Fructose 1-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2594,1,precursor-product correlation
+negative,identified,C01096,Sorbitol 6-phosphate,262.0454,263.0487239,M+Na-2H,283.0205,24.2,0.2784,1,precursor-product correlation
+negative,identified,C01097,D-Tagatose 6-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2005,1,precursor-product correlation
+negative,identified,C01100,L-Histidinol phosphate,221.0565,222.0598977,M-H,220.0495,21.3,0.572,1,precursor-product correlation
+negative,identified,C01101,L-Ribulose 5-phosphate,230.0192,231.0225092,M-H,229.0118,21.7,0.4245,1,precursor-product correlation
+negative,identified,C01107,(R)-5-Phosphomevalonate,228.0399,229.0432446,M-H2O-H,209.0212,20.3,0.4881,1,precursor-product correlation
+negative,identified,C01108,"1,2,3-Trihydroxybenzene",126.0317,127.0350489,M-H,125.0241,40.9,0.2142,1,precursor-product correlation
+negative,identified,C01109,4-Methylene-L-glutamine,158.0691,159.072497,M-H,157.0618,291,0.3446,1,precursor-product correlation
+negative,identified,C01110,5-Amino-2-oxopentanoic acid,131.0582,132.061598,M-H,130.0509,27,0.5646,1,precursor-product correlation
+negative,identified,C01112,D-Arabinose 5-phosphate,230.0192,231.0225092,M-H,229.0118,21.7,0.5246,1,precursor-product correlation
+negative,identified,C01113,D-Galactose 6-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2121,1,precursor-product correlation
+negative,identified,C01114,"L-Arabinono-1,4-lactone",148.0372,149.0405282,M+FA-H,193.0353,39.3,0.7477,1,precursor-product correlation
+negative,identified,C01115,"L-Galactono-1,4-lactone",178.0477,179.0510929,M-H,177.0404,44.6,0.475,1,precursor-product correlation
+negative,identified,C01118,O-Succinyl-L-homoserine,219.0743,220.077642,M-H,218.0669,18.7,0.4528,1,precursor-product correlation
+negative,identified,C01120,Sphinganine 1-phosphate,381.2644,382.2677652,M-H,380.2559,272.2,0.5794,1,precursor-product correlation
+negative,identified,C01124,18-Hydroxycorticosterone,362.2093,363.2126789,M-H2O-H,343.1906,167.4,0.4855,1,precursor-product correlation
+negative,identified,C01127,4-Hydroxy-2-oxoglutarate,162.0164,163.0197928,M-H,161.0084,46.8,0.5616,1,precursor-product correlation
+negative,identified,C01133,N-Acetyl-D-glucosaminate,237.0849,238.0882067,M-H2O-H,218.0669,18.7,0.2358,1,precursor-product correlation
+negative,identified,C01143,(R)-5-Diphosphomevalonate,308.0062,309.0095755,M-H2O-H,288.9869,19,0.6296,1,precursor-product correlation
+negative,identified,C01146,2-Hydroxy-3-oxopropanoate,104.011,105.0143134,M-H,103.0037,241.4,0.3692,1,precursor-product correlation
+negative,identified,C01147,2-Hydroxycyclohexan-1-one,114.0681,115.0714344,M-H,113.0608,289,0.5195,1,precursor-product correlation
+negative,identified,C01152,N(pi)-Methyl-L-histidine,169.0851,170.0884814,M+FA-H,214.0833,289.6,0.3905,1,precursor-product correlation
+negative,identified,C01157,Hydroxyproline,131.0582,132.061598,M-H,130.0509,27,0.6622,1,precursor-product correlation
+negative,identified,C01162,3-(Pyrazol-1-yl)-L-alanine,155.0695,156.0728314,M-H,154.0623,36.7,0.7738,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01165,L-Glutamate 5-semialdehyde,131.0582,132.061598,M-H,130.0509,27,0.5642,1,precursor-product correlation
+negative,identified,C01168,Pseudouridine 5'-phosphate,324.0359,325.0392218,M-H,323.0296,22.3,0.2288,1,precursor-product correlation
+negative,identified,C01171,alpha-D-Hexose 1-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2121,1,precursor-product correlation
+negative,identified,C01172,beta-D-Glucose 6-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2121,1,precursor-product correlation
+negative,identified,C01176,17alpha-Hydroxyprogesterone,330.2195,331.2228497,M-H,329.2127,233.7,0.2704,1,precursor-product correlation
+negative,identified,C01177,Inositol 1-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2494,1,precursor-product correlation
+negative,identified,C01179,3-(4-Hydroxyphenyl)pyruvate,180.0423,181.0456136,M+FA-H,225.0413,33.9,0.2712,1,precursor-product correlation
+negative,identified,C01180,4-Methylthio-2-oxobutanoic acid,148.0194,149.0227701,M+Cl,182.9886,40.8,0.2686,1,precursor-product correlation
+negative,identified,C01181,4-Trimethylammoniobutanoate,146.1181,147.1214586,M+Na-2H,167.0924,64.9,0.2148,1,precursor-product correlation
+negative,identified,C01186,"(3S,5S)-3,5-Diaminohexanoate",146.1055,147.1088825,M-H,145.0983,45.7,0.2899,1,precursor-product correlation
+negative,identified,C01187,3-Deoxy-D-manno-octulosonate,238.0689,239.0722222,M-H2O-H,219.0507,290.2,0.4228,1,precursor-product correlation
+negative,identified,C01188,3-Hydroxy-2-methylpropanoate,104.0473,105.050699,M+FA-H,149.0455,42.7,0.8781,1,precursor-product correlation
+negative,identified,C01197,Caffeate,180.0423,181.0456136,M+FA-H,225.0413,33.9,0.4366,1,precursor-product correlation
+negative,identified,C01198,3-(2-Hydroxyphenyl)propanoate,166.063,167.066349,M-H,165.0556,115.3,0.1962,1,precursor-product correlation
+negative,identified,C01205,(R)-3-Amino-2-methylpropanoate,103.0633,104.0666834,M-H,102.056,65.4,0.2093,1,precursor-product correlation
+negative,identified,C01210,N-Methylethanolamine phosphate,155.0347,156.0380996,M+Na-2H,176.0095,24.4,0.2629,1,precursor-product correlation
+negative,identified,C01214,1-Amino-1-deoxy-scyllo-inositol,179.0794,180.0827274,M+FA-H,224.0775,72.5,0.3096,1,precursor-product correlation
+negative,identified,C01215,2-(Acetamidomethylene)succinate,187.0481,188.0514272,M-H2O-H,168.0301,290,0.2021,1,precursor-product correlation
+negative,identified,C01216,2-Dehydro-3-deoxy-D-galactonate,178.0477,179.0510929,M-H2O-H,159.0299,31.1,0.4962,1,precursor-product correlation
+negative,identified,C01225,sn-Glycero-3-phospho-1-inositol,334.0665,335.0698533,M+FA-H,379.0655,174.5,0.295,1,precursor-product correlation
+negative,identified,C01233,sn-Glycero-3-phosphoethanolamine,215.0559,216.059229,M-H,214.0488,31.7,0.2078,1,precursor-product correlation
+negative,identified,C01234,1-Aminocyclopropane-1-carboxylate,101.0477,102.0510333,M+FA-H,146.0459,20.3,0.4854,1,precursor-product correlation
+negative,identified,C01243,"1D-myo-Inositol 1,3,4-trisphosphate",419.9624,420.9657356,M+FA-H,464.9588,34.3,0.2493,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01245,"D-myo-Inositol 1,4,5-trisphosphate",419.9624,420.9657356,M+FA-H,464.9588,34.3,0.2386,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01250,N-Acetyl-L-glutamate 5-semialdehyde,173.0688,174.0721627,M+FA-H,218.0669,18.7,0.4696,1,precursor-product correlation
+negative,identified,C01251,"(R)-2-Hydroxybutane-1,2,4-tricarboxylate",206.0427,207.0460075,M-H,205.0353,58.6,0.5596,1,precursor-product correlation
+negative,identified,C01255,N-(6-Aminohexanoyl)-6-aminohexanoate,244.1787,245.1820475,M+Cl,279.1469,234.2,0.3181,1,precursor-product correlation
+negative,identified,C01269,5-O-(1-Carboxyvinyl)-3-phosphoshikimate,324.0246,325.0279885,M+Cl,358.9947,35.2,0.3133,1,precursor-product correlation
+negative,identified,C01278,"2-Carboxy-2,5-dihydro-5-oxofuran-2-acetate",186.0164,187.0197928,M-H2O-H,166.9985,289.5,0.3549,1,precursor-product correlation
+negative,identified,C01279,4-Amino-5-hydroxymethyl-2-methylpyrimidine,139.0746,140.0779168,M+FA-H,184.0728,37.3,0.6272,1,precursor-product correlation
+negative,identified,C01284,"1D-myo-Inositol 1,3,4,5,6-pentakisphosphate",579.895,580.8983974,M+Na-2H,600.8669,37.4,0.2279,1,precursor-product correlation
+negative,identified,C01292,"3alpha,7alpha-Dihydroxy-12-oxo-5beta-cholanate",406.2719,407.2752792,M+FA-H,451.2716,26.1,0.8308,1,precursor-product correlation
+negative,identified,C01298,"1D-1-Guanidino-3-amino-1,3-dideoxy-scyllo-inositol",220.1172,221.1205098,M+Na-2H,241.0918,44.7,0.6824,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01368,3'-UMP,324.0359,325.0392218,M-H,323.0296,22.3,0.2046,1,precursor-product correlation
+negative,identified,C01384,Maleic acid,116.011,117.0143134,M-H,115.0037,27.5,0.493,1,precursor-product correlation
+negative,identified,C01401,Alanine,89.0477,90.05103331,M-H,88.0404,39.9,0.2894,1,precursor-product correlation
+negative,identified,C01403,Anisole,108.0575,109.0608697,M+FA-H,153.0557,291.3,0.3194,1,precursor-product correlation
+negative,identified,C01424,Gallate,170.0215,171.0248781,M-H,169.0138,61.4,0.1998,1,precursor-product correlation
+negative,identified,C01432,Lactate,90.0317,91.03504889,M+Cl,125.0011,21.9,0.7659,1,precursor-product correlation
+negative,identified,C01441,Neamine,322.1852,323.1885894,M-H2O-H,303.1673,230.6,0.3354,1,precursor-product correlation
+negative,identified,C01444,Oxamate,89.0113,90.0146478,M+Cl,123.9806,136,0.4794,1,precursor-product correlation
+negative,identified,C01454,Toluate,136.0524,137.0557843,M-H,135.0452,43.5,0.2992,1,precursor-product correlation
+negative,identified,C01467,3-Cresol,108.0575,109.0608697,M+FA-H,153.0557,291.3,0.2076,1,precursor-product correlation
+negative,identified,C01468,4-Cresol,108.0575,109.0608697,M-H,107.0503,29.7,0.2447,1,precursor-product correlation
+negative,identified,C01487,D-Allose,180.0634,181.0667429,M+Cl,215.0328,22.1,0.2121,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01489,D-Iditol,182.079,183.082393,M-H,181.0716,40.3,0.4846,1,precursor-product correlation
+negative,identified,C01494,Ferulate,194.0579,195.0612636,M+Na-2H,215.0328,22.1,0.3738,1,precursor-product correlation
+negative,identified,C01507,L-Iditol,182.079,183.082393,M-H,181.0716,40.3,0.4846,1,precursor-product correlation
+negative,identified,C01510,L-Xylose,150.0528,151.0561783,M-H,149.0455,42.7,0.7477,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01513,Lupinate,306.144,307.1473933,M-H2O-H,287.1249,18.7,0.3372,1,precursor-product correlation
+negative,identified,C01514,Luteolin,286.0477,287.0510929,M+Cl,321.0178,31,0.5028,1,precursor-product correlation
+negative,identified,C01530,Octadecanoic acid,284.2715,285.2748852,M-H,283.2642,272.3,0.2364,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01546,2-Furoate,112.016,113.0193988,M+FA-H,157.0141,292.3,0.2149,1,precursor-product correlation
+negative,identified,C01563,Carbamate,61.0164,62.01973318,M+Cl,95.9854,85.9,0.2248,1,precursor-product correlation
+negative,identified,C01582,Galactose,180.0634,181.0667429,M+Cl,215.0328,22.1,0.2884,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01586,Hippurate,179.0582,180.061598,M+Cl,214.0271,238.6,0.2153,1,precursor-product correlation
+negative,identified,C01595,Linoleate,280.2402,281.2435851,M-H,279.2327,234,0.958,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01596,Maleamate,115.0269,116.0302979,M+Cl,149.9961,287.6,0.394,1,precursor-product correlation
+negative,identified,C01602,Ornithine,132.0899,133.0932325,M-H,131.0826,32.7,0.298,1,precursor-product correlation
+negative,identified,C01617,Taxifolin,304.0583,305.0616576,M-H2O-H,285.0402,19.6,0.2617,1,precursor-product correlation
+negative,identified,C01620,Threonate,136.0372,137.0405282,M-H2O-H,117.0193,23.9,0.6987,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01680,D-Fuconate,180.0634,181.0667429,M+Cl,215.0328,22.1,0.8015,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01685,D-Ribonate,166.0477,167.0510929,M-H,165.0407,226.8,0.2107,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01693,L-Dopachrome,193.0375,194.0408625,M-H,192.0303,16.4,0.2105,1,precursor-product correlation
+negative,identified,C01697,Galactitol,182.079,183.082393,M-H,181.0716,40.3,0.4701,1,precursor-product correlation
+negative,identified,C01719,L-Fructose,180.0634,181.0667429,M+Cl,215.0328,22.1,0.4846,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01720,L-Fuconate,180.0634,181.0667429,M+Cl,215.0328,22.1,0.8015,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01722,L-Glucitol,182.079,183.082393,M-H,181.0716,40.3,0.4846,1,precursor-product correlation
+negative,identified,C01732,Mesaconate,130.0266,131.0299635,M-H,129.0193,22.5,0.6828,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01744,Phloretate,166.063,167.066349,M-H2O-H,147.0453,27.3,0.2853,1,precursor-product correlation
+negative,identified,C01746,Piperidine,85.0891,86.09250419,M+FA-H,130.0873,35.3,0.2403,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01751,Resorcinol,110.0368,111.0401343,M-H,109.0295,34.1,0.3604,1,precursor-product correlation
+negative,identified,C01752,Scopoletin,192.0423,193.0456136,M-H,191.0355,20.5,0.2342,1,precursor-product correlation
+negative,identified,C01757,Triacetate,144.0423,145.0456136,M-H,143.0348,40.9,0.2937,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01772,trans-2-Hydroxycinnamate,164.0473,165.050699,M+Na-2H,185.0221,14,0.2853,1,precursor-product correlation
+negative,identified,C01801,Deoxyribose,134.0579,135.0612636,M+FA-H,179.0561,37.8,0.1846,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01825,L-Galactose,180.0634,181.0667429,M+Cl,215.0328,22.1,0.4878,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01839,Orsellinate,168.0423,169.0456136,M-H2O-H,149.0243,286.7,0.2766,1,precursor-product correlation
+negative,identified,C01841,Pentalenene,204.1878,205.1911556,M+FA-H,249.1859,183.4,0.2312,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01869,(-)-Sympatol,167.0946,168.0979835,M+FA-H,212.0928,292.8,0.2023,1,precursor-product correlation
+negative,identified,C01877,4-Oxoproline,129.0426,130.0459479,M-H,128.0353,21.8,0.7082,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01879,5-Oxoproline,129.0426,130.0459479,M-H,128.0353,21.8,0.7096,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01888,Aminoacetone,73.0528,74.05611869,M+FA-H,118.051,31.4,0.4554,1,precursor-product correlation
+negative,identified,C01906,D-Hamamelose,180.0634,181.0667429,M+Cl,215.0328,22.1,0.2121,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01909,Dethiobiotin,214.1317,215.1350973,M+FA-H,259.1297,18.8,0.213,1,precursor-product correlation
+negative,identified,C01921,Glycocholate,465.309,466.3123929,M+Cl,500.276,191.5,0.3137,1,precursor-product correlation
+negative,identified,C01924,Homoarginine,188.1273,189.1306806,M+Cl,223.0976,291.5,0.2888,1,precursor-product correlation
+negative,identified,C01929,L-Histidinal,139.0746,140.0779168,M+FA-H,184.0728,37.3,0.8787,1,precursor-product correlation
+negative,identified,C01933,L-Norleucine,131.0946,132.0979835,M-H,130.0873,35.3,0.5817,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01934,L-Rhamnonate,180.0634,181.0667429,M+Cl,215.0328,22.1,0.8015,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01948,Pentadecanal,226.2297,227.2330204,M+FA-H,271.2277,185.8,0.2386,1,precursor-product correlation
+negative,identified,C01953,Pregnenolone,316.2402,317.2435851,M-H,315.2334,221.3,0.7503,1,precursor-product correlation
+negative,identified,C01987,2-Aminophenol,109.0528,110.0561187,M+FA-H,154.0509,291.6,0.2785,1,precursor-product correlation
+negative,identified,C01989,3-Ethylmalate,162.0528,163.0561783,M-H,161.0455,47.3,0.2873,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C01995,Acetone oxime,73.0528,74.05611869,M+Cl,108.0218,52.9,0.2756,1,precursor-product correlation
+negative,identified,C01998,Acrylonitrile,53.0265,54.02990394,M+FA-H,98.0247,154.1,0.1809,1,precursor-product correlation
+negative,identified,C02024,D-Mannuronate,194.0427,195.0460075,M-H,193.0353,39.3,0.5395,1,precursor-product correlation
+negative,identified,C02034,Gibberellin A19,362.1729,363.1762934,M+Na-2H,383.1478,25.2,0.4665,1,precursor-product correlation
+negative,identified,C02045,L-Erythrulose,120.0423,121.0456136,M+FA-H,165.0407,226.8,0.2888,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02067,Pseudouridine,244.0695,245.072891,M-H,243.0622,23.6,0.2046,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02115,2-Methylserine,119.0582,120.061598,M-H,118.051,31.4,0.848,1,precursor-product correlation
+negative,identified,C02117,2-Oxophytanate,326.2821,327.2854499,M-H2O-H,307.2641,256.8,0.8288,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02132,Acetylpyruvate,130.0266,131.0299635,M-H,129.0193,22.5,0.5536,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02137,alpha-Oxo-benzeneacetic acid,150.0317,151.0350489,M-H,149.0243,286.7,0.2766,1,precursor-product correlation
+negative,identified,C02140,Corticosterone,346.2144,347.2177643,M-H,345.2054,217.1,0.4968,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02167,Maleylpyruvate,186.0164,187.0197928,M-H2O-H,166.9978,14.7,0.2429,1,precursor-product correlation
+negative,identified,C02170,Methylmalonate,118.0266,119.0299635,M-H,117.0193,23.9,0.3379,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02183,Phloroglucinol,126.0317,127.0350489,M-H,125.0241,40.9,0.2444,1,precursor-product correlation
+negative,identified,C02193,Pyruvate oxime,103.0269,104.0302979,M+Cl,137.9962,66.9,0.2766,1,precursor-product correlation
+negative,identified,C02207,beta-Alanopine,161.0688,162.0721627,M-H2O-H,142.0509,54.5,0.3812,1,precursor-product correlation
+negative,identified,C02214,(E)-Glutaconate,130.0266,131.0299635,M-H,129.0193,22.5,0.3569,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02218,Dehydroalanine,87.032,88.03538324,M-H,86.0247,287.7,0.2514,1,precursor-product correlation
+negative,identified,C02222,2-Maleylacetate,158.0215,159.0248781,M+FA-H,203.0205,22.9,0.361,1,precursor-product correlation
+negative,identified,C02224,2-Methylcholine,118.1232,119.126544,M+Cl,153.0921,293.3,0.5112,1,precursor-product correlation
+negative,identified,C02225,2-Methylcitrate,206.0427,207.0460075,M-H,205.0353,58.6,0.469,1,precursor-product correlation
+negative,identified,C02226,2-Methylmaleate,130.0266,131.0299635,M-H,129.0193,22.5,0.7553,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02231,3-Nitroacrylate,117.0062,118.0095624,M-H,115.999,287.7,0.4251,1,precursor-product correlation
+negative,identified,C02237,5-Oxo-D-proline,129.0426,130.0459479,M-H,128.0353,21.8,0.6843,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02253,Benzoylagmatine,234.1481,235.1514161,M+FA-H,279.1469,234.2,0.3701,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02265,D-Phenylalanine,165.079,166.0823334,M-H,164.0717,28,0.2289,1,precursor-product correlation
+negative,identified,C02266,D-Xylonolactone,148.0372,149.0405282,M+FA-H,193.0353,39.3,0.7477,1,precursor-product correlation
+negative,identified,C02273,Digalacturonate,370.0747,371.0780955,M-H2O-H,351.0569,19.1,0.4652,1,precursor-product correlation
+negative,identified,C02305,Phosphocreatine,211.0358,212.0391623,M-H,210.0284,19.6,0.3023,1,precursor-product correlation
+negative,identified,C02336,beta-D-Fructose,180.0634,181.0667429,M+Cl,215.0328,22.1,0.2041,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02348,(R)(-)-Allantoin,158.044,159.0473449,M-H,157.0367,24.5,0.3747,1,precursor-product correlation
+negative,identified,C02350,(S)-Allantoin,158.044,159.0473449,M-H,157.0367,24.5,0.3747,1,precursor-product correlation
+negative,identified,C02351,o-Benzoquinone,108.0211,109.0244842,M+FA-H,153.0193,24.2,0.5348,1,precursor-product correlation
+negative,identified,C02356,(S)-2-Aminobutanoate,103.0633,104.0666834,M-H,102.056,65.4,0.2624,1,precursor-product correlation
+negative,identified,C02360,2-Hydroxyadipate,162.0528,163.0561783,M-H,161.0455,47.3,0.6323,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02367,3-Oxododecanoic acid,214.1569,215.1602494,M-H2O-H,195.1391,152.8,0.2235,1,precursor-product correlation
+negative,identified,C02372,4-Hydroxyaniline,109.0528,110.0561187,M+FA-H,154.0509,52.2,0.3131,1,precursor-product correlation
+negative,identified,C02376,5-Methylcytosine,125.0589,126.0622667,M+FA-H,170.0571,269.4,0.4781,1,precursor-product correlation
+negative,identified,C02378,6-Aminohexanoate,131.0946,132.0979835,M-H,130.0873,35.3,0.4834,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02385,Amino acid(Arg-),174.1117,175.1150305,M-H,173.1043,46.4,0.2232,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02426,L-Glyceraldehyde,90.0317,91.03504889,M+Cl,125.0011,21.9,0.4587,1,precursor-product correlation
+negative,identified,C02431,L-Rhamnofuranose,164.0685,165.0718283,M+FA-H,209.0666,44.8,0.4996,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02488,(R)-2-Ethylmalate,162.0528,163.0561783,M-H,161.0455,47.3,0.8439,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02501,2-Hydroxymuconate,158.0215,159.0248781,M-H,157.0141,292.3,0.2361,1,precursor-product correlation
+negative,identified,C02505,2-Phenylacetamide,135.0684,136.0717688,M+FA-H,180.0666,26.1,0.393,1,precursor-product correlation
+negative,identified,C02512,3-Cyano-L-alanine,114.0429,115.0462823,M+FA-H,159.0411,283.6,0.2509,1,precursor-product correlation
+negative,identified,C02513,3-Dehydroecdysone,462.2981,463.3014939,M-H2O-H,443.2801,144,0.2433,1,precursor-product correlation
+negative,identified,C02514,3-Fumarylpyruvate,186.0164,187.0197928,M-H2O-H,166.9978,14.7,0.2429,1,precursor-product correlation
+negative,identified,C02528,Chenodeoxycholate,392.2927,393.2960146,M+FA-H,437.2928,223.1,0.2234,1,precursor-product correlation
+negative,identified,C02565,N-Methylhydantoin,114.0429,115.0462823,M+FA-H,159.0411,283.6,0.2323,1,precursor-product correlation
+negative,identified,C02571,O-Acetylcarnitine,203.1158,205.1269379,M-H2O-H,184.0979,293.2,0.3802,1,precursor-product correlation
+negative,identified,C02587,Pyrimidodiazepine,221.0913,222.0946295,M-H2O-H,202.0721,58.8,0.2423,1,precursor-product correlation
+negative,identified,C02588,Retinyl palmitate,524.4593,525.462686,M+FA-H,569.4552,218.7,0.4761,1,precursor-product correlation
+negative,identified,C02604,alpha-L-Arabinopyranose,150.0528,151.0561783,M-H,149.0455,42.7,0.7477,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02612,(R)-2-Methylmalate,148.0372,149.0405282,M-H,147.0302,27.9,0.6265,1,precursor-product correlation
+negative,identified,C02614,(S)-2-Methylmalate,148.0372,149.0405282,M-H,147.0302,27.9,0.6188,1,precursor-product correlation
+negative,identified,C02630,2-Hydroxyglutarate,148.0372,149.0405282,M-H2O-H,129.0193,22.5,0.4852,1,precursor-product correlation
+negative,identified,C02632,2-Methylpropanoate,88.0524,89.05578433,M-H,87.0451,251.8,0.2543,1,precursor-product correlation
+negative,identified,C02636,3-Dehydrocarnitine,160.0974,161.1007232,M+Na-2H,181.0716,40.3,0.1926,1,precursor-product correlation
+negative,identified,C02637,3-Dehydroshikimate,172.0372,173.0405282,M-H2O-H,153.0193,290.7,0.295,1,precursor-product correlation
+negative,identified,C02642,3-Ureidopropionate,132.0535,133.056847,M-H2O-H,113.0357,236.7,0.2535,1,precursor-product correlation
+negative,identified,C02647,4-Guanidinobutanal,129.0902,130.0935668,M+FA-H,174.088,19.1,0.3751,1,precursor-product correlation
+negative,identified,C02655,6-Acetyl-D-glucose,222.074,223.0773076,M-H2O-H,203.0562,166.4,0.1799,1,precursor-product correlation
+negative,identified,C02656,Pimelate,160.0736,161.0769137,M+FA-H,205.0715,127.9,0.1862,1,precursor-product correlation
+negative,identified,C02657,6-Methylsalicylate,152.0473,153.050699,M-H,151.0401,34.8,0.2026,1,precursor-product correlation
+negative,identified,C02666,Coniferyl aldehyde,178.063,179.066349,M+Na-2H,199.0378,25.8,0.3848,1,precursor-product correlation
+negative,identified,C02669,"D-Galactono-1,5-lactone",178.0477,179.0510929,M-H,177.0404,44.6,0.5267,1,precursor-product correlation
+negative,identified,C02670,D-Glucuronolactone,176.0321,177.0354428,M-H,175.0248,17.8,0.335,1,precursor-product correlation
+negative,identified,C02674,Deoxyribonolactone,132.0423,133.0456136,M-H2O-H,113.0245,40.8,0.6532,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02679,Dodecanoic acid,200.1776,201.1809849,M-H,199.1703,182.7,0.5708,1,precursor-product correlation
+negative,identified,C02700,L-Formylkynurenine,236.0797,237.0830617,M-H,235.0724,151.7,0.2211,1,precursor-product correlation
+negative,identified,C02710,N-Acetyl-L-leucine,173.1052,174.1085482,M-H,172.0979,30.4,0.4916,1,precursor-product correlation
+negative,identified,C02714,N-Acetylputrescine,130.1106,131.1139679,M+Cl,165.0798,212.2,0.2343,1,precursor-product correlation
+negative,identified,C02721,N-Methyl-L-alanine,103.0633,104.0666834,M-H,102.056,65.4,0.3763,1,precursor-product correlation
+negative,identified,C02728,N6-Methyl-L-lysine,160.1212,161.1245326,M-H,159.1139,42.9,0.5355,1,precursor-product correlation
+negative,identified,C02740,Photinus luciferin,279.9976,281.0009893,M-H2O-H,260.9792,21.6,0.3314,1,precursor-product correlation
+negative,identified,C02752,Triacetate lactone,126.0317,127.0350489,M-H,125.0241,40.9,0.2937,1,precursor-product correlation
+negative,identified,C02753,"D-Xylono-1,4-lactone",148.0372,149.0405282,M+FA-H,193.0353,39.3,0.7477,1,precursor-product correlation
+negative,identified,C02763,2-Hydroxy-3-phenylpropenoate,164.0473,165.050699,M+Na-2H,185.0221,14,0.2003,1,precursor-product correlation
+negative,identified,C02779,2-Dehydro-D-glucose,178.0477,179.0510929,M-H,177.0404,44.6,0.5245,1,precursor-product correlation
+negative,identified,C02780,"2,5-Didehydro-D-gluconate",192.027,193.0303574,M-H,191.0197,19.9,0.6476,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02782,2-Deoxy-D-gluconate,180.0634,181.0667429,M+Cl,215.0328,22.1,0.6256,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02798,3-Phosphonopyruvate,167.9824,168.9857297,M+Cl,202.9526,100.8,0.2518,1,precursor-product correlation
+negative,identified,C02800,"4,5-Dioxopentanoate",130.0266,131.0299635,M-H,129.0193,22.5,0.7138,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02804,5-Hydroxypentanoate,118.063,119.066349,M-H,117.0557,26.3,0.2889,1,precursor-product correlation
+negative,identified,C02814,"Benzene-1,2,4-triol",126.0317,127.0350489,M+FA-H,171.0298,291,0.2028,1,precursor-product correlation
+negative,identified,C02827,D-Glucose 6-sulfate,260.0202,261.023558,M+FA-H,305.0186,169.7,0.2239,1,precursor-product correlation
+negative,identified,C02835,Imidazole-4-acetate,126.0429,127.0462823,M+FA-H,171.0411,276.3,0.3867,1,precursor-product correlation
+negative,identified,C02845,Methyl ethyl ketone,72.0575,73.06086971,M+FA-H,117.0557,26.3,0.3215,1,precursor-product correlation
+negative,identified,C02876,Propanoyl phosphate,154.0031,155.0064652,M-H,152.9958,19.5,0.306,1,precursor-product correlation
+negative,identified,C02888,Sorbose 1-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2005,1,precursor-product correlation
+negative,identified,C02923,"2,3-Dihydroxytoluene",124.0524,125.0557843,M+FA-H,169.0505,291.9,0.1936,1,precursor-product correlation
+negative,identified,C02930,2-Methyleneglutarate,144.0423,145.0456136,M-H,143.0348,40.9,0.7933,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02932,"3,4-Dihydroxypyridine",111.032,112.0353832,M+FA-H,156.0302,288,0.2074,1,precursor-product correlation
+negative,identified,C02934,3-Dehydrosphinganine,299.2824,300.2857843,M+FA-H,344.2804,230.7,0.4016,1,precursor-product correlation
+negative,identified,C02946,4-Acetamidobutanoate,145.0739,146.0772481,M-H,144.0666,49.3,0.1915,1,precursor-product correlation
+negative,identified,C02962,D-Allose 6-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2121,1,precursor-product correlation
+negative,identified,C02965,D-Hexose 6-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2121,1,precursor-product correlation
+negative,identified,C02979,Glycerol 2-phosphate,172.0137,173.0170298,M-H,171.0064,19.9,0.7525,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02982,L-2-Hydroxyphytanate,328.2977,329.3011,M-H2O-H,309.2798,275.2,0.8288,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02991,"L-Rhamnono-1,4-lactone",162.0528,163.0561783,M-H,161.0455,47.3,0.6002,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C02994,"L-Xylono-1,4-lactone",148.0372,149.0405282,M+FA-H,193.0353,39.3,0.7477,1,precursor-product correlation
+negative,identified,C02997,N-Acetyl-L-histidine,197.08,198.0833961,M+FA-H,242.0782,289.9,0.5498,1,precursor-product correlation
+negative,identified,C03015,O-Carbamoyl-L-serine,148.0484,149.0517616,M-H2O-H,129.0305,291.2,0.2602,1,precursor-product correlation
+negative,identified,C03027,Testosterone acetate,330.2195,331.2228497,M-H,329.2127,233.7,0.29,1,precursor-product correlation
+negative,identified,C03030,Uracil 5-carboxylate,156.0171,157.0204615,M-H2O-H,136.9992,289.6,0.5017,1,precursor-product correlation
+negative,identified,C03042,(R)-2-Hydroxystearate,300.2664,301.2697999,M-H2O-H,281.2484,251,0.9332,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C03045,(S)-2-Hydroxystearate,300.2664,301.2697999,M-H2O-H,281.2484,251,0.9332,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C03056,"2,6-Dihydroxypyridine",111.032,112.0353832,M+FA-H,156.0302,288,0.2373,1,precursor-product correlation
+negative,identified,C03063,2-Oxohept-3-enedioate,172.0372,173.0405282,M-H2O-H,153.0193,290.7,0.2046,1,precursor-product correlation
+negative,identified,C03064,3-Dehydro-L-threonate,134.0215,135.0248781,M-H,133.0142,20.1,0.8795,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C03065,3-Guanidinopropanoate,131.0695,132.0728314,M-H2O-H,112.0517,53.7,0.6991,1,precursor-product correlation
+negative,identified,C03066,3-Hydroxy-L-glutamate,163.0481,164.0514272,M-H2O-H,144.0302,286.8,0.3055,1,precursor-product correlation
+negative,identified,C03067,3-Hydroxybenzaldehyde,122.0368,123.0401343,M+Cl,157.006,286.9,0.2627,1,precursor-product correlation
+negative,identified,C03071,3-aci-Nitropropanoate,119.0219,120.0252125,M-H2O-H,100.004,278,0.342,1,precursor-product correlation
+negative,identified,C03078,4-Guanidinobutanamide,144.1011,145.1044659,M+Cl,179.0708,31.3,0.4655,1,precursor-product correlation
+negative,identified,C03079,4-Hydroxy-L-glutamate,163.0481,164.0514272,M-H2O-H,144.0302,286.8,0.4584,1,precursor-product correlation
+negative,identified,C03087,5-Acetamidopentanoate,159.0895,160.0928981,M-H,158.0823,32,0.5728,1,precursor-product correlation
+negative,identified,C03088,5-Hydroxymethyluracil,142.0378,143.0411969,M+FA-H,187.0362,286.6,0.3508,1,precursor-product correlation
+negative,identified,C03107,"D-Glucono-1,4-lactone",178.0477,179.0510929,M-H,177.0404,44.6,0.6256,1,precursor-product correlation
+negative,identified,C03167,Phosphonoacetaldehyde,123.9925,124.9959005,M+Na-2H,144.9674,23.8,0.431,1,precursor-product correlation
+negative,identified,C03189,DL-Glycerol 1-phosphate,172.0137,173.0170298,M-H,171.0064,19.9,0.674,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C03196,(S)-2-Hydroxyglutarate,148.0372,149.0405282,M-H2O-H,129.0193,22.5,0.737,1,precursor-product correlation
+negative,identified,C03197,(S)-3-Hydroxybutanoate,104.0473,105.050699,M+FA-H,149.0455,42.7,0.8033,1,precursor-product correlation
+negative,identified,C03198,(S)-4-Hydroxymandelate,168.0423,169.0456136,M-H2O-H,149.0243,286.7,0.2659,1,precursor-product correlation
+negative,identified,C03205,11-Deoxycorticosterone,330.2195,331.2228497,M-H,329.2127,233.7,0.29,1,precursor-product correlation
+negative,identified,C03210,Alanopine,161.0688,162.0721627,M-H2O-H,142.0509,54.5,0.3812,1,precursor-product correlation
+negative,identified,C03217,2-Hydroxy-3-oxoadipate,176.0321,177.0354428,M-H,175.0248,17.8,0.3965,1,precursor-product correlation
+negative,identified,C03227,3-Hydroxy-L-kynurenine,224.0797,225.0830617,M-H2O-H,205.0605,134.2,0.295,1,precursor-product correlation
+negative,identified,C03230,(Indol-3-yl)glycolaldehyde,175.0633,176.0666834,M-H,174.056,52.4,0.6355,1,precursor-product correlation
+negative,identified,C03239,6-Amino-2-oxohexanoate,145.0739,146.0772481,M-H2O-H,126.056,109.4,0.2899,1,precursor-product correlation
+negative,identified,C03267,beta-D-Fructose 2-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2494,1,precursor-product correlation
+negative,identified,C03269,D-galacto-Hexodialdose,178.0477,179.0510929,M-H,177.0404,44.6,0.6256,1,precursor-product correlation
+negative,identified,C03273,5-Oxopentanoate,116.0473,117.050699,M+FA-H,161.0455,47.3,0.6229,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C03277,Imidazol-5-yl-pyruvate,154.0378,155.0411969,M-H,153.0305,287.7,0.2644,1,precursor-product correlation
+negative,identified,C03284,L-3-Aminoisobutanoate,103.0633,104.0666834,M-H,102.056,65.4,0.2451,1,precursor-product correlation
+negative,identified,C03289,L-xylo-Hexulonolactone,176.0321,177.0354428,M-H,175.0248,128.1,0.2485,1,precursor-product correlation
+negative,identified,C03291,L-Xylulose 5-phosphate,230.0192,231.0225092,M-H,229.0118,21.7,0.4245,1,precursor-product correlation
+negative,identified,C03298,Nalpha-Methylhistidine,169.0851,170.0884814,M+FA-H,214.0833,289.6,0.3426,1,precursor-product correlation
+negative,identified,C03341,2-Amino-4-oxopentanoic acid,131.0582,132.061598,M-H,130.0509,27,0.5889,1,precursor-product correlation
+negative,identified,C03354,3-Methylthiopropanamine,105.0612,107.0570164,M+FA-H,150.0593,19.3,0.2174,1,precursor-product correlation
+negative,identified,C03366,5-Phosphooxy-L-lysine,242.0668,243.070128,M-H2O-H,223.0481,28.1,0.707,1,precursor-product correlation
+negative,identified,C03383,"D-Galactono-1,4-lactone",178.0477,179.0510929,M-H,177.0404,44.6,0.5267,1,precursor-product correlation
+negative,identified,C03387,"D-Glucurono-6,2-lactone",176.0321,177.0354428,M-H2O-H,157.014,152.7,0.2545,1,precursor-product correlation
+negative,identified,C03406,N-(L-Arginino)succinate,290.1226,291.1259892,M-H2O-H,271.1047,290,0.3548,1,precursor-product correlation
+negative,identified,C03409,N-Formimino-L-aspartate,160.0484,161.0517616,M-H,159.0411,283.6,0.2205,1,precursor-product correlation
+negative,identified,C03410,N-Glycoloyl-neuraminate,325.1009,326.1042507,M-H,324.0936,18,0.2898,1,precursor-product correlation
+negative,identified,C03415,N2-Succinyl-L-ornithine,232.1059,233.1092765,M-H2O-H,213.0881,290.5,0.2286,1,precursor-product correlation
+negative,identified,C03440,cis-4-Hydroxy-D-proline,131.0582,132.061598,M-H,130.0509,27,0.7082,1,precursor-product correlation
+negative,identified,C03453,gamma-Oxalocrotonate,158.0215,159.0248781,M+FA-H,203.0205,22.9,0.3734,1,precursor-product correlation
+negative,identified,C03455,11-cis-Retinyl palmitate,524.4593,525.462686,M+FA-H,569.4552,218.7,0.4761,1,precursor-product correlation
+negative,identified,C03458,"2,3,6-Trihydroxypyridine",127.0269,128.0302979,M+FA-H,172.0251,288.7,0.2855,1,precursor-product correlation
+negative,identified,C03461,"2-trans,6-trans-Farnesal",220.1827,221.1860702,M+FA-H,265.1808,188.7,0.1992,1,precursor-product correlation
+negative,identified,C03493,D-4-Hydroxyphenylglycine,167.0582,168.061598,M-H,166.0509,30.4,0.2406,1,precursor-product correlation
+negative,identified,C03508,L-2-Amino-3-oxobutanoic acid,117.0426,118.0459479,M-H2O-H,98.0247,154.1,0.1939,1,precursor-product correlation
+negative,identified,C03519,N-Acetyl-L-phenylalanine,207.0895,208.0928981,M-H2O-H,188.0716,28.1,0.1868,1,precursor-product correlation
+negative,identified,C03546,myo-Inositol 4-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2494,1,precursor-product correlation
+negative,identified,C03557,2-Aminoethylphosphonate,125.0242,126.027535,M-H2O-H,106.0059,18.4,0.4861,1,precursor-product correlation
+negative,identified,C03564,1-Pyrroline-2-carboxylate,113.0477,114.0510333,M+FA-H,158.0458,286.7,0.4275,1,precursor-product correlation
+negative,identified,C03584,3-(Uracil-1-yl)-L-alanine,199.0593,200.0626606,M-H,198.052,45.7,0.4041,1,precursor-product correlation
+negative,identified,C03586,"2-Oxo-2,3-dihydrofuran-5-acetate",142.0266,143.0299635,M-H2O-H,123.0088,290.3,0.306,1,precursor-product correlation
+negative,identified,C03589,4-Hydroxy-2-oxopentanoate,132.0423,133.0456136,M-H2O-H,113.0245,40.8,0.5252,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C03590,4-Hydroxyphenylglyoxylate,166.0266,167.0299635,M+Na-2H,187.0015,44.7,0.2549,1,precursor-product correlation
+negative,identified,C03600,Carboxymethyloxysuccinate,192.027,193.0303574,M-H,191.0197,19.9,0.8045,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C03606,D-Hamamelose 2(1)-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2121,1,precursor-product correlation
+negative,identified,C03614,Inosine 5'-tetraphosphate,587.9461,588.9494479,M+Na-2H,608.9224,40.2,0.2134,1,precursor-product correlation
+negative,identified,C03618,L-threo-3-Methylaspartate,147.0532,148.0565126,M-H,146.0459,20.3,0.605,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C03623,N-Methyl-2-oxoglutaramate,159.0532,160.0565126,M-H,158.0458,286.7,0.6188,1,precursor-product correlation
+negative,identified,C03626,"NG,NG-Dimethyl-L-arginine",202.143,203.1463307,M-H,201.1358,51.4,0.5922,1,precursor-product correlation
+negative,identified,C03652,"(2R,3S)-2,3-Dimethylmalate",162.0528,163.0561783,M-H,161.0455,47.3,0.7177,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C03656,(S)-5-Amino-3-oxohexanoic acid,145.0739,146.0772481,M-H2O-H,126.056,109.4,0.2721,1,precursor-product correlation
+negative,identified,C03659,D-Bornesitol,194.079,195.082393,M+Na-2H,215.0533,18,0.8715,1,precursor-product correlation
+negative,identified,C03660,L-Bornesitol,194.079,195.082393,M+Na-2H,215.0533,18,0.8715,1,precursor-product correlation
+negative,identified,C03664,"2,4-Dichlorophenoxyacetate",219.9694,221.9664494,M+FA-H,264.9681,291.9,0.1923,1,precursor-product correlation
+negative,identified,C03666,"2-Carboxy-cis,cis-muconate",186.0164,187.0197928,M-H2O-H,166.9985,289.5,0.3365,1,precursor-product correlation
+negative,identified,C03676,"3-Hydroxy-cis,cis-muconate",158.0215,159.0248781,M-H,157.0141,292.3,0.2194,1,precursor-product correlation
+negative,identified,C03678,4-Amino-3-hydroxybutanoate,119.0582,120.061598,M-H,118.051,31.4,0.3543,1,precursor-product correlation
+negative,identified,C03680,4-Imidazolone-5-propanoate,156.0535,157.056847,M+FA-H,201.0517,282.9,0.346,1,precursor-product correlation
+negative,identified,C03681,"5alpha-Pregnane-3,20-dione",316.2402,317.2435851,M-H,315.2334,221.3,0.7828,1,precursor-product correlation
+negative,identified,C03682,6-Acetamido-3-oxohexanoate,187.0845,188.0878127,M-H,186.0771,292.3,0.2623,1,precursor-product correlation
+negative,identified,C03684,6-Pyruvoyltetrahydropterin,237.0862,238.0895441,M-H2O-H,218.0669,18.7,0.4157,1,precursor-product correlation
+negative,identified,C03716,Oxaloacetate 4-methyl ester,146.0215,147.0248781,M+FA-H,191.0197,19.9,0.2878,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C03722,Quinolinate,167.0219,168.0252125,M-H,166.0145,279.9,0.2589,1,precursor-product correlation
+negative,identified,C03738,gamma-L-Glutamyl-D-alanine,218.0903,219.0936264,M-H,217.0829,18,0.4685,1,precursor-product correlation
+negative,identified,C03739,"trans-1,2-Cyclohexanediol",116.0837,117.0870845,M-H,115.0765,289.4,0.6274,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C03743,"1,2,3,5-Tetrahydroxybenzene",142.0266,143.0299635,M-H2O-H,123.0088,117,0.2509,1,precursor-product correlation
+negative,identified,C03747,11alpha-Hydroxyprogesterone,330.2195,331.2228497,M-H,329.2127,233.7,0.29,1,precursor-product correlation
+negative,identified,C03761,3-Hydroxy-3-methylglutarate,162.0528,163.0561783,M-H,161.0455,47.3,0.6091,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C03765,4-Hydroxyphenylacetaldehyde,136.0524,137.0557843,M-H,135.0452,43.5,0.2508,1,precursor-product correlation
+negative,identified,C03771,5-Guanidino-2-oxopentanoate,173.08,174.0833961,M-H2O-H,154.0623,36.7,0.5791,1,precursor-product correlation
+negative,identified,C03790,N-(Carboxymethyl)-D-alanine,147.0532,148.0565126,M-H,146.0459,20.3,0.8158,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C03797,Oxidized Photinus luciferin,249.9871,250.9904246,M-H,248.9811,26.8,0.438,1,precursor-product correlation
+negative,identified,C03817,(S)-3-(Imidazol-5-yl)lactate,156.0535,157.056847,M-H2O-H,137.0357,291.1,0.2326,1,precursor-product correlation
+negative,identified,C03826,2-Dehydro-3-deoxy-D-xylonate,148.0372,149.0405282,M+FA-H,193.0353,39.3,0.4812,1,precursor-product correlation
+negative,identified,C03827,2-Dehydro-3-deoxy-L-fuconate,162.0528,163.0561783,M-H,161.0455,47.3,0.7169,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C03851,Adenosine 5'-phosphoramidate,346.0791,347.0824241,M-H2O-H,327.0596,17.7,0.4966,1,precursor-product correlation
+negative,identified,C03871,L-2-Amino-6-oxoheptanedioate,189.0637,190.0670773,M-H2O-H,170.0458,117.5,0.27,1,precursor-product correlation
+negative,identified,C03884,N(omega)-Methyl-L-arginine,188.1273,189.1306806,M+Cl,223.0976,291.5,0.2938,1,precursor-product correlation
+negative,identified,C03906,beta-L-Arabinose 1-phosphate,230.0192,231.0225092,M-H,229.0118,21.7,0.4245,1,precursor-product correlation
+negative,identified,C03912,(S)-1-Pyrroline-5-carboxylate,113.0477,114.0510333,M+FA-H,158.0458,286.7,0.4849,1,precursor-product correlation
+negative,identified,C03921,2-Dehydro-3-deoxy-D-glucarate,192.027,193.0303574,M-H,191.0197,19.9,0.609,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C03926,3-Dehydro-2-deoxy-D-gluconate,178.0477,179.0510929,M-H,177.0404,44.6,0.6256,1,precursor-product correlation
+negative,identified,C03943,"(2R,4S)-2,4-Diaminopentanoate",132.0899,133.0932325,M-H,131.0826,32.7,0.4301,1,precursor-product correlation
+negative,identified,C03947,"Glycerol 1,2-cyclic phosphate",154.0031,155.0064652,M-H,152.9958,19.5,0.5955,1,precursor-product correlation
+negative,identified,C03961,erythro-3-Hydroxy-Ls-aspartate,149.0324,150.0357772,M-H2O-H,130.0146,286.1,0.229,1,precursor-product correlation
+negative,identified,C03964,(R)-3-(4-Hydroxyphenyl)lactate,182.0579,183.0612636,M-H2O-H,163.0401,24.6,0.2003,1,precursor-product correlation
+negative,identified,C03972,"2,3,4,5-Tetrahydrodipicolinate",171.0532,172.0565126,M-H,170.0458,117.5,0.3344,1,precursor-product correlation
+negative,identified,C03979,2-Dehydro-3-deoxy-L-rhamnonate,162.0528,163.0561783,M-H,161.0455,47.3,0.692,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C03981,2-Hydroxyethylenedicarboxylate,132.0059,133.0092281,M-H,130.9986,287.1,0.2872,1,precursor-product correlation
+negative,identified,C03990,Lithocholic acid,376.2977,377.3011,M-H2O-H,357.281,245.2,0.2064,1,precursor-product correlation
+negative,identified,C04002,"(Z)-But-1-ene-1,2,4-tricarboxylate",188.0321,189.0354428,M-H2O-H,169.0138,61.4,0.5765,1,precursor-product correlation
+negative,identified,C04006,1D-myo-Inositol 3-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2494,1,precursor-product correlation
+negative,identified,C04039,"2,3-Dihydroxy-3-methylbutanoate",134.0579,135.0612636,M+FA-H,179.0561,37.8,0.9248,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C04042,20alpha-Hydroxy-4-pregnen-3-one,316.2402,317.2435851,M-H,315.2334,221.3,0.7503,1,precursor-product correlation
+negative,identified,C04043,"3,4-Dihydroxyphenylacetaldehyde",152.0473,153.050699,M-H,151.0401,34.8,0.2159,1,precursor-product correlation
+negative,identified,C04053,5-Dehydro-4-deoxy-D-glucuronate,176.0321,177.0354428,M-H,175.0248,128.1,0.2485,1,precursor-product correlation
+negative,identified,C04076,L-2-Aminoadipate 6-semialdehyde,145.0739,146.0772481,M-H,144.0666,49.3,0.2502,1,precursor-product correlation
+negative,identified,C04092,Delta1-Piperideine-2-carboxylate,127.0633,128.0666834,M-H,126.056,109.4,0.2899,1,precursor-product correlation
+negative,identified,C04115,4-Carboxy-4-hydroxy-2-oxoadipate,220.0219,221.0252721,M-H,219.0147,29.5,0.3773,1,precursor-product correlation
+negative,identified,C04122,D-1-Aminopropan-2-ol O-phosphate,155.0347,156.0380996,M+Na-2H,176.0095,24.4,0.3988,1,precursor-product correlation
+negative,identified,C04164,trans-Cinnamoyl beta-D-glucoside,310.1053,311.1086078,M+Na-2H,331.0809,152,0.2422,1,precursor-product correlation
+negative,identified,C04171,"(2S,3S)-2,3-Dihydro-2,3-dihydroxybenzoate",156.0423,157.0456136,M-H,155.0357,291.4,0.4541,1,precursor-product correlation
+negative,identified,C04181,3-Hydroxy-3-methyl-2-oxobutanoic acid,132.0423,133.0456136,M-H2O-H,113.0245,40.8,0.9883,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C04210,N5-(L-1-Carboxyethyl)-L-ornithine,204.111,205.1143618,M-H,203.1037,19.8,0.1952,1,precursor-product correlation
+negative,identified,C04211,N(6)-[(Indol-3-yl)acetyl]-L-lysine,303.1583,304.1616464,M-H,302.1508,288,0.4682,1,precursor-product correlation
+negative,identified,C04225,"(Z)-But-2-ene-1,2,3-tricarboxylate",188.0321,189.0354428,M-H2O-H,169.0138,61.4,0.5765,1,precursor-product correlation
+negative,identified,C04226,"6-Oxo-1,4,5,6-tetrahydronicotinate",141.0426,142.0459479,M-H,140.0354,286.5,0.1917,1,precursor-product correlation
+negative,identified,C04236,(2S)-2-Isopropyl-3-oxosuccinate,174.0528,175.0561783,M+FA-H,219.0507,290.2,0.3313,1,precursor-product correlation
+negative,identified,C04259,"N,N-Dimethylhistidine",183.1008,184.1041315,M+FA-H,228.099,292.6,0.2137,1,precursor-product correlation
+negative,identified,C04264,3-[(4-Bromophenyl)sulfanyl]-2-oxopropanoate,273.9299,275.9278804,M-H2O-H,254.9116,48.6,0.2521,1,precursor-product correlation
+negative,identified,C04272,"(R)-2,3-Dihydroxy-3-methylbutanoate",134.0579,135.0612636,M+FA-H,179.0561,37.8,0.946,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C04281,L-1-Pyrroline-3-hydroxy-5-carboxylate,129.0426,130.0459479,M-H,128.0353,21.8,0.5997,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C04282,1-Pyrroline-4-hydroxy-2-carboxylate,129.0426,130.0459479,M-H,128.0353,21.8,0.6866,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C04287,"3D-3,5/4-Trihydroxycyclohexane-1,2-dione",160.0372,161.0405282,M+FA-H,205.0353,58.6,0.493,1,precursor-product correlation
+negative,identified,C04322,Delta1-Pyrroline-5-carboxylate,113.0477,114.0510333,M+FA-H,158.0458,286.7,0.6188,1,precursor-product correlation
+negative,identified,C04349,"(4S)-4,6-Dihydroxy-2,5-dioxohexanoate",176.0321,177.0354428,M-H,175.0248,17.8,0.2641,1,precursor-product correlation
+negative,identified,C04350,(E)-4-Hydroxyphenylacetaldehyde oxime,151.0633,152.0666834,M-H,150.056,36.6,0.1925,1,precursor-product correlation
+negative,identified,C04390,"N6-Acetyl-LL-2,6-diaminoheptanedioate",232.1059,233.1092765,M-H2O-H,213.0881,290.5,0.1845,1,precursor-product correlation
+negative,identified,C04399,S-Methyl-3-phospho-1-thio-D-glycerate,215.9857,217.981542,M+Cl,250.955,42.5,0.2612,1,precursor-product correlation
+negative,identified,C04409,2-Amino-3-carboxymuconate semialdehyde,185.0324,186.0357772,M-H2O-H,166.0145,279.9,0.1898,1,precursor-product correlation
+negative,identified,C04411,"(2R,3S)-3-Isopropylmalate",176.0685,177.0718283,M-H,175.0612,125.9,0.207,1,precursor-product correlation
+negative,identified,C04421,"N-Succinyl-LL-2,6-diaminoheptanedioate",290.1114,291.1147558,M-H2O-H,271.0919,26.4,0.2813,1,precursor-product correlation
+negative,identified,C04471,"(4S,5S)-4,5-Dihydroxy-2,6-dioxohexanoate",176.0321,177.0354428,M-H,175.0248,17.8,0.2719,1,precursor-product correlation
+negative,identified,C04480,3-Carboxy-2-hydroxymuconate semialdehyde,186.0164,187.0197928,M-H2O-H,166.9985,289.5,0.3702,1,precursor-product correlation
+negative,identified,C04483,Deoxycholic acid,392.2927,393.2960146,M+FA-H,437.2928,223.1,0.2456,1,precursor-product correlation
+negative,identified,C04518,"17alpha,20alpha-Dihydroxypregn-4-en-3-one",332.2351,333.2384997,M-H2O-H,313.2171,215.6,0.29,1,precursor-product correlation
+negative,identified,C04546,(R)-3-((R)-3-Hydroxybutanoyloxy)butanoate,190.0841,191.0874784,M+Cl,225.0542,22.9,0.8025,1,precursor-product correlation
+negative,identified,C04554,"3alpha,7alpha-Dihydroxy-5beta-cholestanate",434.3396,435.3429648,M+FA-H,479.3374,185.1,0.2227,1,precursor-product correlation
+negative,identified,C04556,4-Amino-2-methyl-5-(phosphooxymethyl)pyrimidine,219.0409,220.0442476,M-H,218.0331,21.7,0.5851,1,precursor-product correlation
+negative,identified,C04575,"(4R,5S)-4,5,6-Trihydroxy-2,3-dioxohexanoate",192.027,193.0303574,M-H,191.0197,19.9,0.3309,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C04577,15-OxoETE,318.2195,319.2228497,M-H2O-H,299.2014,201.5,0.7815,1,precursor-product correlation
+negative,identified,C04593,"(2S,3R)-3-Hydroxybutane-1,2,3-tricarboxylate",206.0427,207.0460075,M-H,205.0353,58.6,0.5221,1,precursor-product correlation
+negative,identified,C04631,UDP-N-acetyl-3-(1-carboxyvinyl)-D-glucosamine,677.087,678.0904046,M-H2O-H,658.0704,21.1,0.1883,1,precursor-product correlation
+negative,identified,C04634,"1,6-Dihydroxycyclohexa-2,4-diene-1-carboxylate",156.0423,157.0456136,M-H,155.0357,291.4,0.2246,1,precursor-product correlation
+negative,identified,C04641,2-(alpha-D-Galactosyl)-sn-glycerol 3-phosphate,334.0665,335.0698533,M+FA-H,379.0655,174.5,0.4105,1,precursor-product correlation
+negative,identified,C04643,7-Oxodeoxycholate,406.2719,407.2752792,M+FA-H,451.2716,26.1,0.8308,1,precursor-product correlation
+negative,identified,C04661,"3alpha,7alpha,12beta-Trihydroxy-5beta-cholanate",408.2876,409.2909292,M+FA-H,453.286,26.7,0.8308,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C04673,1D-1-Guanidino-1-deoxy-3-dehydro-scyllo-inositol,219.0855,220.0888754,M-H2O-H,200.0677,48.6,0.6642,1,precursor-product correlation
+negative,identified,C04690,2-(Hydroxymethyl)-3-(acetamidomethylene)succinate,217.0586,218.0619919,M-H2O-H,198.041,292.8,0.2813,1,precursor-product correlation
+negative,identified,C04703,"alpha-D-Galactosyl-(1,1')-sn-glycerol 3-phosphate",334.0665,335.0698533,M+FA-H,379.0655,174.5,0.4105,1,precursor-product correlation
+negative,identified,C04713,N6-(delta2-Isopentenyl)-adenosine 5'-monophosphate,415.1257,416.1290399,M+Na-2H,436.0992,211.7,0.3161,1,precursor-product correlation
+negative,identified,C04715,Nuatigenin,430.3083,431.3116647,M-H,429.3009,171.2,0.4223,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C04732,5-Amino-6-(1-D-ribitylamino)uracil,276.107,277.1103391,M-H,275.0988,45.8,0.2287,1,precursor-product correlation
+negative,identified,C04742,"(15S)-15-Hydroxy-5,8,11-cis-13-trans-eicosatetraenoate",320.2351,321.2384997,M-H2O-H,301.2172,215.4,0.7815,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C04752,4-Amino-5-hydroxymethyl-2-methylpyrimidine diphosphate,299.0072,300.0105785,M-H2O-H,279.9887,251.8,0.2454,1,precursor-product correlation
+negative,identified,C04771,L-Mimosine,198.0641,199.0674116,M+FA-H,243.0622,291.5,0.305,1,precursor-product correlation
+negative,identified,C04778,"N1-(5-Phospho-alpha-D-ribosyl)-5,6-dimethylbenzimidazole",358.093,359.0963428,M-H,357.0866,225.4,0.3884,1,precursor-product correlation
+negative,identified,C04805,5(S)-HETE,320.2351,321.2384997,M-H2O-H,301.2172,215.4,0.7815,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C04859,Nuatigenin 3beta-D-glucopyranoside,592.3611,593.3644881,M+Na-2H,613.3342,199.8,0.4223,1,precursor-product correlation
+negative,identified,C04916,N-(5'-Phospho-D-1'-ribulosylformimino)-5-amino-1-(5''-phospho-D-ribosyl)-4-imidazolecarboxamide,577.0822,578.085594,M-H2O-H,558.0639,18.6,0.3573,1,precursor-product correlation
+negative,identified,C05122,Taurocholate,515.2917,516.2950288,M-H,514.2842,24.7,0.4652,1,precursor-product correlation
+negative,identified,C05130,Imidazole-4-acetaldehyde,110.048,111.0513677,M+FA-H,155.0462,140.8,0.3051,1,precursor-product correlation
+negative,identified,C05133,4-Imidazolone-5-acetate,142.0378,143.0411969,M+FA-H,187.0362,286.6,0.2808,1,precursor-product correlation
+negative,identified,C05135,4-(beta-Acetylaminoethyl)imidazole,153.0902,154.0935668,M+FA-H,198.0884,286.9,0.3136,1,precursor-product correlation
+negative,identified,C05138,17alpha-Hydroxypregnenolone,332.2351,333.2384997,M-H2O-H,313.2171,215.6,0.5773,1,precursor-product correlation
+negative,identified,C05147,trans-3-Hydroxy-L-proline,131.0582,132.061598,M-H,130.0509,27,0.5061,1,precursor-product correlation
+negative,identified,C05235,Hydroxyacetone,74.0368,75.04013427,M+FA-H,119.0349,246.4,0.2994,1,precursor-product correlation
+negative,identified,C05281,5-Methylbarbiturate,142.0378,143.0411969,M+FA-H,187.0362,286.6,0.2968,1,precursor-product correlation
+negative,identified,C05324,Nicotianamine,303.143,304.1463902,M-H2O-H,284.1251,284.5,0.2153,1,precursor-product correlation
+negative,identified,C05345,beta-D-Fructose 6-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2163,1,precursor-product correlation
+negative,identified,C05356,5(S)-HPETE,336.2301,337.2334143,M+Na-2H,357.2045,167.9,0.2045,1,precursor-product correlation
+negative,identified,C05379,Oxalosuccinate,190.0114,191.0147074,M-H,189.0037,19.9,0.2261,1,precursor-product correlation
+negative,identified,C05394,3-Keto-beta-D-galactose,178.0477,179.0510929,M-H,177.0404,44.6,0.1811,1,precursor-product correlation
+negative,identified,C05401,3-beta-D-Galactosyl-sn-glycerol,254.1002,255.1035224,M-H,253.0928,46.2,0.2884,1,precursor-product correlation
+negative,identified,C05403,3-Ketolactose,340.1006,341.1039163,M+FA-H,385.0994,229.5,0.1886,1,precursor-product correlation
+negative,identified,C05404,D-Gal alpha 1->6D-Gal alpha 1->6D-Glucose,504.169,505.1723898,M+FA-H,549.1653,18.6,0.2979,1,precursor-product correlation
+negative,identified,C05406,"5-Hydroxy-2,4-dioxopentanoate",146.0215,147.0248781,M+FA-H,191.0197,19.9,0.6915,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C05411,L-Xylonate,166.0477,167.0510929,M-H,165.0407,226.8,0.3267,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C05412,L-Lyxonate,166.0477,167.0510929,M-H,165.0407,226.8,0.3267,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C05422,Dehydroascorbate,174.0164,175.0197928,M+FA-H,219.0147,29.5,0.2844,1,precursor-product correlation
+negative,identified,C05463,Taurodeoxycholate,499.2968,500.3001142,M-H,498.2894,26.2,0.1811,1,precursor-product correlation
+negative,identified,C05464,Glycodeoxycholate,449.3141,450.3174783,M-H,448.3081,27,0.1832,1,precursor-product correlation
+negative,identified,C05465,Taurochenodeoxycholate,499.2968,500.3001142,M-H,498.2894,26.2,0.4322,1,precursor-product correlation
+negative,identified,C05466,Glycochenodeoxycholate,449.3141,450.3174783,M-H,448.3081,27,0.1832,1,precursor-product correlation
+negative,identified,C05469,"17alpha,21-Dihydroxy-5beta-pregnane-3,11,20-trione",362.2093,363.2126789,M-H2O-H,343.1906,167.4,0.4855,1,precursor-product correlation
+negative,identified,C05470,Tetrahydrocortisone,364.225,365.228329,M-H2O-H,345.2054,217.1,0.5024,1,precursor-product correlation
+negative,identified,C05471,Dihydrocortisol,364.225,365.228329,M-H2O-H,345.2054,217.1,0.5024,1,precursor-product correlation
+negative,identified,C05472,Urocortisol,366.2406,367.243979,M-H2O-H,347.2215,223,0.4991,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C05475,"11beta,21-Dihydroxy-5beta-pregnane-3,20-dione",348.2301,349.2334143,M-H,347.2215,223,0.4991,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C05476,Tetrahydrocorticosterone,350.2457,351.2490644,M-H,349.2374,235.5,0.4789,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C05477,"21-Hydroxy-5beta-pregnane-3,11,20-trione",346.2144,347.2177643,M-H,345.2054,217.1,0.5024,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C05478,"3alpha,21-Dihydroxy-5beta-pregnane-11,20-dione",348.2301,349.2334143,M-H,347.2215,223,0.4924,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C05479,"5beta-Pregnane-3,20-dione",316.2402,317.2435851,M-H,315.2334,221.3,0.7792,1,precursor-product correlation
+negative,identified,C05480,Pregnanolone,318.2559,319.2592352,M-H,317.2479,240.4,0.7936,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C05481,Cortolone,366.2406,367.243979,M-H2O-H,347.2215,223,0.5193,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C05482,Cortol,368.2563,369.2596291,M-H2O-H,349.2374,235.5,0.4789,1,precursor-product correlation
+negative,identified,C05483,"3alpha,20alpha,21-Trihydroxy-5beta-pregnan-11-one",350.2457,351.2490644,M-H,349.2374,235.5,0.4789,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C05485,21-Hydroxypregnenolone,332.2351,333.2384997,M-H2O-H,313.2171,215.6,0.5202,1,precursor-product correlation
+negative,identified,C05487,"17alpha,21-Dihydroxypregnenolone",348.2301,349.2334143,M-H,347.2215,223,0.5767,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C05488,11-Deoxycortisol,346.2144,347.2177643,M-H,345.2054,217.1,0.5024,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C05489,"11beta,17alpha,21-Trihydroxypregnenolone",364.225,365.228329,M-H2O-H,345.2054,217.1,0.5024,1,precursor-product correlation
+negative,identified,C05490,11-Dehydrocorticosterone,344.1988,345.2021142,M-H,343.1906,167.4,0.4855,1,precursor-product correlation
+negative,identified,C05497,21-Deoxycortisol,346.2144,347.2177643,M-H,345.2054,217.1,0.4855,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C05498,11beta-Hydroxyprogesterone,330.2195,331.2228497,M-H,329.2127,233.7,0.29,1,precursor-product correlation
+negative,identified,C05513,Urate-3-ribonucleoside,300.0706,301.0739536,M-H2O-H,281.0526,23.9,0.187,1,precursor-product correlation
+negative,identified,C05519,L-Allothreonine,119.0582,120.061598,M-H,118.051,31.4,0.1939,1,precursor-product correlation
+negative,identified,C05526,S-Glutathionyl-L-cysteine,426.0879,427.0912609,M-H,425.0805,20.9,0.2227,1,precursor-product correlation
+negative,identified,C05527,3-Sulfinylpyruvate,151.9779,153.9737403,M+FA-H,196.9759,17.5,0.505,1,precursor-product correlation
+negative,identified,C05533,Oxaloglutarate,204.027,205.0303574,M-H,203.0205,22.9,0.4242,1,precursor-product correlation
+negative,identified,C05548,6-Acetamido-2-oxohexanoate,187.0845,188.0878127,M-H,186.0771,292.3,0.2342,1,precursor-product correlation
+negative,identified,C05565,Hydantoin-5-propionate,172.0484,173.0517616,M-H,171.0411,276.3,0.3417,1,precursor-product correlation
+negative,identified,C05568,Imidazole lactate,156.0535,157.056847,M-H2O-H,137.0357,291.1,0.2326,1,precursor-product correlation
+negative,identified,C05572,4-Oxoglutaramate,145.0375,146.0408625,M-H,144.0302,286.8,0.5032,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C05578,"5,6-Dihydroxyindole",149.0477,150.0510333,M+FA-H,194.0458,23,0.2105,1,precursor-product correlation
+negative,identified,C05579,"Indole-5,6-quinone",147.032,148.0353832,M+FA-H,192.0303,16.4,0.2105,1,precursor-product correlation
+negative,identified,C05585,Gentisate aldehyde,138.0317,139.0350489,M-H,137.0244,170.8,0.2134,1,precursor-product correlation
+negative,identified,C05593,3-Hydroxyphenylacetate,152.0473,153.050699,M-H,151.0401,34.8,0.2992,1,precursor-product correlation
+negative,identified,C05600,"2-Hydroxyhepta-2,4-dienedioate",172.0372,173.0405282,M-H2O-H,153.0193,290.7,0.2046,1,precursor-product correlation
+negative,identified,C05601,4-Hydroxy-2-oxo-heptanedioate,190.0477,191.0510929,M-H,189.0404,38.1,0.3481,1,precursor-product correlation
+negative,identified,C05604,"2-Carboxy-2,3-dihydro-5,6-dihydroxyindole",195.0532,196.0565126,M-H,194.0458,23,0.2225,1,precursor-product correlation
+negative,identified,C05608,4-Hydroxycinnamyl aldehyde,148.0524,149.0557843,M-H,147.0453,27.3,0.2853,1,precursor-product correlation
+negative,identified,C05610,Sinapoyl aldehyde,208.0736,209.0769137,M+Na-2H,229.0484,24,0.4814,1,precursor-product correlation
+negative,identified,C05620,N-Acetyl-D-phenylalanine,207.0895,208.0928981,M-H2O-H,188.0716,28.1,0.1868,1,precursor-product correlation
+negative,identified,C05627,4-Hydroxystyrene,120.0575,121.0608697,M-H,119.0503,21.6,0.2846,1,precursor-product correlation
+negative,identified,C05647,Formyl-5-hydroxykynurenamine,208.0848,209.0881471,M+Na-2H,229.0594,45.4,0.2636,1,precursor-product correlation
+negative,identified,C05662,Homoisocitrate,206.0427,207.0460075,M-H,205.0353,58.6,0.4137,1,precursor-product correlation
+negative,identified,C05665,3-Aminopropanal,73.0528,74.05611869,M+FA-H,118.051,31.4,0.848,1,precursor-product correlation
+negative,identified,C05669,beta-Nitropropanoate,119.0219,120.0252125,M-H2O-H,100.004,278,0.3531,1,precursor-product correlation
+negative,identified,C05670,3-Aminopropiononitrile,70.0531,71.05645304,M+FA-H,115.0512,283.4,0.2345,1,precursor-product correlation
+negative,identified,C05672,2-Amino-3-phosphonopropanoate,169.014,170.0173642,M-H2O-H,149.9961,287.6,0.2326,1,precursor-product correlation
+negative,identified,C05678,(2-Amino-1-hydroxyethyl)phosphonate,141.0191,142.0224496,M-H,140.0117,56.6,0.4082,1,precursor-product correlation
+negative,identified,C05682,Phosphonoacetate,139.9875,140.9908151,M+FA-H,184.9856,22.9,0.377,1,precursor-product correlation
+negative,identified,C05699,L-Selenocystathionine,270.0119,268.0126661,M+Cl,304.9816,17.9,0.5699,1,precursor-product correlation
+negative,identified,C05711,gamma-Glutamyl-beta-cyanoalanine,243.0855,244.0888754,M-H,242.0782,289.9,0.306,1,precursor-product correlation
+negative,identified,C05714,alpha-Aminopropiononitrile,70.0531,71.05645304,M+FA-H,115.0512,283.4,0.261,1,precursor-product correlation
+negative,identified,C05715,gamma-Amino-gamma-cyanobutanoate,128.0586,129.0619323,M-H,127.0513,289,0.3336,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C05730,Glutathionylspermidine,434.2311,435.2344942,M-H2O-H,415.2139,184,0.1957,1,precursor-product correlation
+negative,identified,C05731,3-Ketosucrose,340.1006,341.1039163,M+FA-H,385.0994,229.5,0.1886,1,precursor-product correlation
+negative,identified,C05824,S-Sulfo-L-cysteine,200.9766,202.9723605,M-H,199.9694,19.1,0.2452,1,precursor-product correlation
+negative,identified,C05829,N-Carbamyl-L-glutamate,190.059,191.0623263,M-H2O-H,171.0411,276.3,0.3193,1,precursor-product correlation
+negative,identified,C05840,Iminoaspartate,131.0219,132.0252125,M-H,130.0146,286.1,0.235,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C05844,5-L-Glutamyl-taurine,254.0573,255.0606122,M-H,253.05,18.8,0.1872,1,precursor-product correlation
+negative,identified,C05852,2-Hydroxyphenylacetate,152.0473,153.050699,M-H,151.0401,34.8,0.2992,1,precursor-product correlation
+negative,identified,C05903,Kaempferol,286.0477,287.0510929,M+Cl,321.0178,31,0.5028,1,precursor-product correlation
+negative,identified,C05904,Pelargonidin,271.0606,272.0640033,M+Cl,306.0303,21.9,0.2185,1,precursor-product correlation
+negative,identified,C05911,Pentahydroxyflavanone,304.0583,305.0616576,M-H2O-H,285.0402,19.6,0.2369,1,precursor-product correlation
+negative,identified,C05928,(6R)-10-Formyltetrahydropteroyldiglutamate,602.2085,603.211844,M-H,601.2006,19.5,0.2584,1,precursor-product correlation
+negative,identified,C05936,N4-Acetylaminobutanal,129.079,130.0823334,M-H,128.0717,148.2,0.2071,1,precursor-product correlation
+negative,identified,C05938,L-4-Hydroxyglutamate semialdehyde,147.0532,148.0565126,M-H,146.0459,20.3,0.5348,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C05939,Linatine,259.1168,260.1201755,M-H2O-H,240.0989,289.7,0.2192,1,precursor-product correlation
+negative,identified,C05941,2-Oxo-4-hydroxy-5-aminovalerate,147.0532,148.0565126,M-H,146.0459,20.3,0.6386,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C05946,(4R)-4-Hydroxy-2-oxoglutarate,162.0164,163.0197928,M-H,161.0084,46.8,0.4969,1,precursor-product correlation
+negative,identified,C05947,L-erythro-4-Hydroxyglutamate,163.0481,164.0514272,M-H2O-H,144.0302,286.8,0.4272,1,precursor-product correlation
+negative,identified,C05965,12(S)-HPETE,336.2301,337.2334143,M+Na-2H,357.2045,167.9,0.2045,1,precursor-product correlation
+negative,identified,C05966,15(S)-HPETE,336.2301,337.2334143,M+Na-2H,357.2045,167.9,0.2045,1,precursor-product correlation
+negative,identified,C05984,2-Hydroxybutanoic acid,104.0473,105.050699,M+FA-H,149.0455,42.7,0.8781,1,precursor-product correlation
+negative,identified,C05985,2-Propynal,54.0106,55.01391952,M+FA-H,99.0089,286.7,0.3066,1,precursor-product correlation
+negative,identified,C05986,2-Propyn-1-ol,56.0262,57.02956958,M+FA-H,101.0245,51.6,0.2185,1,precursor-product correlation
+negative,identified,C05999,Lactaldehyde,74.0368,75.04013427,M+FA-H,119.0349,246.4,0.1847,1,precursor-product correlation
+negative,identified,C06001,(S)-3-Hydroxyisobutyrate,104.0473,105.050699,M+FA-H,149.0455,42.7,0.8781,1,precursor-product correlation
+negative,identified,C06002,(S)-Methylmalonate semialdehyde,102.0317,103.0350489,M-H,101.0245,51.6,0.5776,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C06006,(S)-2-Aceto-2-hydroxybutanoate,146.0579,147.0612636,M+FA-H,191.056,46.1,0.4181,1,precursor-product correlation
+negative,identified,C06007,"(R)-2,3-Dihydroxy-3-methylpentanoate",148.0736,149.0769137,M-H,147.0663,36.4,0.2064,1,precursor-product correlation
+negative,identified,C06010,(S)-2-Acetolactate,132.0423,133.0456136,M-H2O-H,113.0245,40.8,0.7071,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C06019,D-arabino-Hex-3-ulose 6-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2447,1,precursor-product correlation
+negative,identified,C06029,L-threo-3-Methylmalate,148.0372,149.0405282,M-H,147.0302,27.9,0.7553,1,precursor-product correlation
+negative,identified,C06030,Methyloxaloacetate,146.0215,147.0248781,M+FA-H,191.0197,19.9,0.525,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C06031,D-threo-3-Methylmalate,148.0372,149.0405282,M-H,147.0302,27.9,0.7553,1,precursor-product correlation
+negative,identified,C06032,D-erythro-3-Methylmalate,148.0372,149.0405282,M-H2O-H,129.0193,22.5,0.7524,1,precursor-product correlation
+negative,identified,C06033,Parapyruvate,176.0321,177.0354428,M-H,175.0248,17.8,0.3207,1,precursor-product correlation
+negative,identified,C06034,4-Hydroxy-4-methylglutamate,177.0637,178.0670773,M-H2O-H,158.0458,286.7,0.3555,1,precursor-product correlation
+negative,identified,C06035,4-Methylene-2-oxoglutarate,158.0215,159.0248781,M+FA-H,203.0205,22.9,0.3218,1,precursor-product correlation
+negative,identified,C06056,4-Hydroxy-L-threonine,135.0532,136.0565126,M-H2O-H,116.0353,262.4,0.1819,1,precursor-product correlation
+negative,identified,C06087,Abietate,302.2246,303.227935,M-H,301.2172,215.4,0.2621,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C06090,ent-Kaurene,272.2504,273.2537559,M+FA-H,317.2479,240.4,0.7108,1,precursor-product correlation
+negative,identified,C06093,Gibberellin A12 aldehyde,316.2038,317.2071996,M+FA-H,361.2018,53,0.2582,1,precursor-product correlation
+negative,identified,C06096,Gibberellin A29,348.1573,349.1606433,M-H2O-H,329.1393,239.6,0.5706,1,precursor-product correlation
+negative,identified,C06104,Adipate,146.0579,147.0612636,M-H2O-H,127.04,28.7,0.2081,1,precursor-product correlation
+negative,identified,C06105,"Cyclohexane-1,2-dione",112.0524,113.0557843,M-H,111.0452,291.1,0.3036,1,precursor-product correlation
+negative,identified,C06114,gamma-Glutamyl-beta-aminopropiononitrile,199.0957,200.0990461,M-H2O-H,180.0779,293.4,0.3117,1,precursor-product correlation
+negative,identified,C06124,Sphingosine 1-phosphate,379.2488,380.2521152,M-H,378.2406,252.5,0.553,1,precursor-product correlation
+negative,identified,C06144,3-Butynoate,84.0211,85.0244842,M+FA-H,129.0193,22.5,0.7053,1,precursor-product correlation
+negative,identified,C06145,3-Butyn-1-al,68.0262,69.02956958,M+FA-H,113.0245,40.8,0.4625,1,precursor-product correlation
+negative,identified,C06146,3-Butyn-1-ol,70.0419,71.04521965,M+FA-H,115.0401,39.4,0.2667,1,precursor-product correlation
+negative,identified,C06153,scyllo-Inositol,180.0634,181.0667429,M+Cl,215.0328,22.1,0.6256,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C06159,2-Dehydro-3-deoxy-D-fuconate,162.0528,163.0561783,M-H,161.0455,47.3,0.7218,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C06181,Piperideine,83.0735,84.07685413,M+FA-H,128.0717,148.2,0.2627,1,precursor-product correlation
+negative,identified,C06193,Guanosine 3'-phosphate,363.058,364.0613543,M-H,362.0506,19.8,0.3115,1,precursor-product correlation
+negative,identified,C06201,"2,4-Dihydroxyhept-2-enedioate",190.0477,191.0510929,M-H,189.0404,38.1,0.3481,1,precursor-product correlation
+negative,identified,C06202,Salicylaldehyde,122.0368,123.0401343,M+Cl,157.006,286.9,0.2627,1,precursor-product correlation
+negative,identified,C06203,trans-o-Hydroxybenzylidenepyruvate,192.0423,193.0456136,M-H,191.0355,20.5,0.3899,1,precursor-product correlation
+negative,identified,C06210,"2-Hydroxy-6-keto-2,4-heptadienoate",156.0423,157.0456136,M-H,155.0357,291.4,0.2111,1,precursor-product correlation
+negative,identified,C06218,Cellopentaose,828.2747,829.2780366,M-H2O-H,809.2553,18.7,0.2665,1,precursor-product correlation
+negative,identified,C06219,Cellotriose,504.169,505.1723898,M+FA-H,549.1653,18.6,0.2979,1,precursor-product correlation
+negative,identified,C06231,Ectoine,142.0742,143.0775824,M+FA-H,187.0724,19.2,0.3204,1,precursor-product correlation
+negative,identified,C06234,4-Methyl-L-glutamate,161.0688,162.0721627,M-H2O-H,142.0509,54.5,0.3444,1,precursor-product correlation
+negative,identified,C06244,Acetamide,59.0371,60.04046862,M+FA-H,104.0349,35.8,0.3985,1,precursor-product correlation
+negative,identified,C06257,1-Deoxy-D-xylulose,134.0579,135.0612636,M+FA-H,179.0561,37.8,0.199,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C06311,Galactitol 1-phosphate,262.0454,263.0487239,M+Na-2H,283.0205,24.2,0.3078,1,precursor-product correlation
+negative,identified,C06316,"Dehydro-D-arabinono-1,4-lactone",146.0215,147.0248781,M+FA-H,191.0197,19.9,0.5341,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C06317,Vanillyl alcohol,154.063,155.066349,M-H2O-H,135.0452,43.5,0.2992,1,precursor-product correlation
+negative,identified,C06318,"(3S,4R)-3,4-Dihydroxycyclohexa-1,5-diene-1,4-dicarboxylate",200.0321,201.0354428,M-H2O-H,181.0144,138.4,0.3251,1,precursor-product correlation
+negative,identified,C06321,"(1R,6S)-1,6-Dihydroxycyclohexa-2,4-diene-1-carboxylate",156.0423,157.0456136,M-H,155.0357,147.5,0.262,1,precursor-product correlation
+negative,identified,C06352,4-O-Methyl-myo-inositol,194.079,195.082393,M+Na-2H,215.0533,18,0.8715,1,precursor-product correlation
+negative,identified,C06359,Ethyl cinnamate,176.0837,177.0870845,M+FA-H,221.0819,280.5,0.1997,1,precursor-product correlation
+negative,identified,C06367,1-Carboxyvinyl carboxyphosphonate,195.9773,196.9806443,M+Cl,230.9473,50.3,0.184,1,precursor-product correlation
+negative,identified,C06376,N-Acetyl-D-galactosamine 6-phosphate,301.0563,302.0596229,M+FA-H,346.0556,19.4,0.1938,1,precursor-product correlation
+negative,identified,C06394,delta-Cadinene,204.1878,205.1911556,M+FA-H,249.1859,183.4,0.1868,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C06426,"(6Z,9Z,12Z)-Octadecatrienoic acid",278.2246,279.227935,M-H,277.217,219.6,0.958,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C06427,"(9Z,12Z,15Z)-Octadecatrienoic acid",278.2246,279.227935,M-H,277.217,219.6,0.8491,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C06429,"(4Z,7Z,10Z,13Z,16Z,19Z)-Docosahexaenoic acid",328.2402,329.2435851,M-H,327.2327,224.4,0.4897,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C06430,D-Galacturonolactone,176.0321,177.0354428,M-H,175.0248,17.8,0.4233,1,precursor-product correlation
+negative,identified,C06440,"2-Dehydro-D-glucono-1,5-lactone",176.0321,177.0354428,M-H,175.0248,17.8,0.4233,1,precursor-product correlation
+negative,identified,C06441,L-Xylulose 1-phosphate,230.0192,231.0225092,M-H,229.0118,21.7,0.2869,1,precursor-product correlation
+negative,identified,C06451,2-Hydroxyethylphosphonate,126.0082,127.0115505,M-H,125.0011,21.9,0.4161,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C06452,(S)-2-Hydroxypropylphosphonate,140.0238,141.0272006,M+Na-2H,160.9987,23.7,0.3224,1,precursor-product correlation
+negative,identified,C06473,2-Keto-D-gluconic acid,194.0427,195.0460075,M+Cl,229.0118,21.7,0.5588,1,precursor-product correlation
+negative,identified,C06485,"1,5-Anhydro-D-fructose",162.0528,163.0561783,M-H,161.0455,47.3,0.6464,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C06582,"2-Hydroxy-6-oxo-7-methylocta-2,4-dienoate",184.0736,185.0769137,M-H,183.066,291.7,0.2607,1,precursor-product correlation
+negative,identified,C06593,epsilon-Caprolactam,113.0841,114.0874188,M+FA-H,158.0823,32,0.5504,1,precursor-product correlation
+negative,identified,C06601,Chlorohydroquinone,143.9978,145.994857,M+Na-2H,164.9726,63.1,0.2472,1,precursor-product correlation
+negative,identified,C06603,"cis,cis-4-Hydroxymuconic semialdehyde",142.0266,143.0299635,M-H2O-H,123.0088,290.3,0.2436,1,precursor-product correlation
+negative,identified,C06658,Proclavaminic acid,202.0954,203.0987118,M+Na-2H,223.0703,23.1,0.4308,1,precursor-product correlation
+negative,identified,C06659,Dihydroclavaminic acid,200.0797,201.0830617,M-H,199.0723,288.2,0.2851,1,precursor-product correlation
+negative,identified,C06660,Clavaminic acid,198.0641,199.0674116,M+FA-H,243.0622,291.5,0.3716,1,precursor-product correlation
+negative,identified,C06664,Thienamycin,272.0831,273.086433,M-H2O-H,253.0636,37.9,0.3531,1,precursor-product correlation
+negative,identified,C06669,(5R)-Carbapen-2-em-3-carboxylate,153.0426,154.0459479,M+FA-H,198.041,292.8,0.3044,1,precursor-product correlation
+negative,identified,C06672,Vanillate,168.0423,169.0456136,M-H,167.0351,290.5,0.1838,1,precursor-product correlation
+negative,identified,C06680,4-Hydroxyphthalate,182.0215,183.0248781,M-H,181.0144,138.4,0.3251,1,precursor-product correlation
+negative,identified,C06701,Phosphonic acid,81.982,83.98622595,M+Na-2H,102.9568,26.9,0.5214,1,precursor-product correlation
+negative,identified,C06719,Dihydrophloroglucinol,128.0473,129.050699,M+FA-H,173.0455,288.9,0.2925,1,precursor-product correlation
+negative,identified,C06720,"1,6-Dihydroxy-5-methylcyclohexa-2,4-dienecarboxylate",170.0579,171.0612636,M-H2O-H,151.0401,34.8,0.2484,1,precursor-product correlation
+negative,identified,C06729,"cis-1,2-Dihydroxy-4-methylcyclohexa-3,5-diene-1-carboxylate",170.0579,171.0612636,M-H2O-H,151.0401,34.8,0.2484,1,precursor-product correlation
+negative,identified,C06730,4-Methylcatechol,124.0524,125.0557843,M-H,123.0451,131.6,0.2011,1,precursor-product correlation
+negative,identified,C06731,"1,2-Dihydroxy-6-methylcyclohexa-3,5-dienecarboxylate",170.0579,171.0612636,M-H2O-H,151.0401,34.8,0.2484,1,precursor-product correlation
+negative,identified,C06735,Aminoacetaldehyde,59.0371,60.04046862,M+FA-H,104.0349,35.8,0.4555,1,precursor-product correlation
+negative,identified,C06761,(4E)-2-Oxohexenoic acid,128.0473,129.050699,M-H,127.04,28.7,0.3223,1,precursor-product correlation
+negative,identified,C06762,4-Hydroxy-2-oxohexanoic acid,146.0579,147.0612636,M+FA-H,191.056,46.1,0.3486,1,precursor-product correlation
+negative,identified,C06891,"D-2,3-Diketo 4-deoxy-epi-inositol",160.0372,161.0405282,M+FA-H,205.0353,58.6,0.493,1,precursor-product correlation
+negative,identified,C06892,2-Deoxy-5-keto-D-gluconic acid,178.0477,179.0510929,M-H2O-H,159.0299,31.1,0.3074,1,precursor-product correlation
+negative,identified,C07054,Isoniazid,137.0589,138.0622667,M-H,136.0517,47.8,0.3221,1,precursor-product correlation
+negative,identified,C07086,Phenylacetic acid,136.0524,137.0557843,M-H,135.0452,43.5,0.2902,1,precursor-product correlation
+negative,identified,C07087,"2-Hydroxy-6-oxoocta-2,4,7-trienoate",168.0423,169.0456136,M-H2O-H,149.0243,286.7,0.2925,1,precursor-product correlation
+negative,identified,C07090,Protoanemonin,96.0211,97.0244842,M-H,95.0138,37.5,0.8439,1,precursor-product correlation
+negative,identified,C07091,cis-Acetylacrylate,114.0317,115.0350489,M-H,113.0245,40.8,0.8439,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C07099,"2,3,6-Trichlorohydroquinone",211.9199,213.9169124,M-H,210.9136,93.3,0.369,1,precursor-product correlation
+negative,identified,C07103,"2-Hydroxy-1,4-benzoquinone",124.016,125.0193988,M+FA-H,169.0142,291.5,0.3376,1,precursor-product correlation
+negative,identified,C07113,Acetophenone,120.0575,121.0608697,M-H,119.0503,21.6,0.2781,1,precursor-product correlation
+negative,identified,C07114,3-Oxo-3-phenylpropanoate,164.0473,165.050699,M+Na-2H,185.0221,14,0.2846,1,precursor-product correlation
+negative,identified,C07130,Theophylline,180.0647,181.0680804,M-H2O-H,161.0455,47.3,0.6711,1,precursor-product correlation
+negative,identified,C07211,m-Methylbenzoate,136.0524,137.0557843,M-H,135.0452,43.5,0.2992,1,precursor-product correlation
+negative,identified,C07215,o-Toluate,136.0524,137.0557843,M-H,135.0452,43.5,0.2992,1,precursor-product correlation
+negative,identified,C07272,Maleimide,97.0164,98.01973318,M+FA-H,142.0145,287.1,0.4634,1,precursor-product correlation
+negative,identified,C07289,Crepenynate,278.2246,279.227935,M-H,277.217,219.6,0.958,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C07326,"1,5-Anhydro-D-glucitol",164.0685,165.0718283,M+FA-H,209.0666,44.8,0.4996,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C07446,Isonicotinic acid,123.032,124.0353832,M+FA-H,168.0301,290,0.1821,1,precursor-product correlation
+negative,identified,C07479,2-Oxo-5-methyl-cis-muconate,172.0372,173.0405282,M-H,171.0298,291,0.2514,1,precursor-product correlation
+negative,identified,C07480,Theobromine,180.0647,181.0680804,M-H2O-H,161.0455,47.3,0.6313,1,precursor-product correlation
+negative,identified,C07501,Felbamate,238.0954,239.0987118,M-H2O-H,219.0778,21.9,0.2239,1,precursor-product correlation
+negative,identified,C07585,N-Acetylisoniazid,179.0695,180.0728314,M+FA-H,224.0676,291.6,0.3252,1,precursor-product correlation
+negative,identified,C07667,Gossypol,518.1941,519.1974228,M+Na-2H,539.1677,18.7,0.1868,1,precursor-product correlation
+negative,identified,C07727,2-Indanone,132.0575,133.0608697,M+FA-H,177.0558,15.3,0.2499,1,precursor-product correlation
+negative,identified,C07728,3-Isochromanone,148.0524,149.0557843,M-H,147.0453,27.3,0.2245,1,precursor-product correlation
+negative,identified,C08281,Docosanoic acid,340.3341,341.3374855,M-H,339.3266,290.8,0.4544,1,precursor-product correlation
+negative,identified,C08285,"10,16-Dihydroxyhexadecanoic acid",288.2301,289.2334143,M-H,287.2226,224.8,0.9253,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C08579,Antheraxanthin,584.4229,585.4263005,M-H,583.4157,225.9,0.218,1,precursor-product correlation
+negative,identified,C08639,"Cyanidin 3,5-O-diglucoside",611.1612,612.1645648,M+FA-H,656.1598,265.5,0.7088,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C09092,Ferruginol,286.2297,287.2330204,M+Na-2H,307.2045,172.4,0.2219,1,precursor-product correlation
+negative,identified,C09094,Geranylgeraniol,290.261,291.2643206,M+Cl,325.2288,223.1,0.4237,1,precursor-product correlation
+negative,identified,C09118,Isopimaric acid,302.2246,303.227935,M-H,301.2172,215.4,0.2621,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C09163,Pisiferic acid,316.2038,317.2071996,M-H2O-H,297.1855,285.5,0.1821,1,precursor-product correlation
+negative,identified,C09265,Fraxetin,208.0372,209.0405282,M+Na-2H,229.0118,21.7,0.6476,1,precursor-product correlation
+negative,identified,C09614,Butin,272.0685,273.0718283,M-H2O-H,253.05,18.8,0.4188,1,precursor-product correlation
+negative,identified,C09627,Capsidiol,236.1776,237.1809849,M+Cl,271.1458,157.6,0.2152,1,precursor-product correlation
+negative,identified,C09684,Humulene,204.1878,205.1911556,M+FA-H,249.1859,183.4,0.236,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C09694,Juvenile hormone III,266.1882,267.1915495,M-H2O-H,247.1702,162.9,0.5257,1,precursor-product correlation
+negative,identified,C09737,Solavetivone,218.1671,219.1704202,M+FA-H,263.1652,175.4,0.2264,1,precursor-product correlation
+negative,identified,C09751,Garbanzol,272.0685,273.0718283,M-H2O-H,253.05,18.8,0.2071,1,precursor-product correlation
+negative,identified,C09815,Benzamide,121.0528,122.0561187,M-H,120.0456,20.9,0.2055,1,precursor-product correlation
+negative,identified,C09816,Benzylsuccinate,208.0736,209.0769137,M+Na-2H,229.0484,24,0.5111,1,precursor-product correlation
+negative,identified,C09826,Pinobanksin,272.0685,273.0718283,M-H2O-H,253.05,18.8,0.313,1,precursor-product correlation
+negative,identified,C09870,(-)-Menthyl acetate,198.162,199.1653348,M-H,197.1547,150.2,0.2051,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C10028,Chrysin,254.0579,255.0612636,M-H,253.05,18.8,0.2071,1,precursor-product correlation
+negative,identified,C10157,Lobelanine,335.1885,336.1918839,M-H2O-H,316.1706,26.4,0.2581,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C10216,Daidzin,416.1107,417.1140871,M-H2O-H,397.0931,20.8,0.2639,1,precursor-product correlation
+negative,identified,C10447,"3,4-Dihydroxyphenylpropanoate",182.0579,183.0612636,M-H2O-H,163.0401,24.6,0.3338,1,precursor-product correlation
+negative,identified,C10517,2-(alpha-D-Glucosyl)-sn-glycerol 3-phosphate,334.0665,335.0698533,M+FA-H,379.0655,174.5,0.4198,1,precursor-product correlation
+negative,identified,C10700,4'-Hydroxyacetophenone,136.0524,137.0557843,M-H,135.0452,43.5,0.2992,1,precursor-product correlation
+negative,identified,C10906,D-Fructose,180.0634,181.0667429,M+Cl,215.0328,22.1,0.6256,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C10945,Caffeic aldehyde,164.0473,165.050699,M+Na-2H,185.0221,14,0.2642,1,precursor-product correlation
+negative,identified,C11354,"2-Hydroxy-cis-hex-2,4-dienoate",128.0473,129.050699,M-H,127.04,28.7,0.3223,1,precursor-product correlation
+negative,identified,C11434,2-C-Methyl-D-erythritol 4-phosphate,216.0399,217.0432446,M-H,215.0328,22.1,0.2121,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C11437,1-Deoxy-D-xylulose 5-phosphate,214.0242,215.0275945,M+FA-H,259.0222,20,0.2579,1,precursor-product correlation
+negative,identified,C11499,(S)-3-Sulfolactate,169.9885,171.9843049,M-H,168.9812,17.9,0.2072,1,precursor-product correlation
+negative,identified,C11527,4-Hydroxymandelate,168.0423,169.0456136,M-H2O-H,149.0243,286.7,0.2551,1,precursor-product correlation
+negative,identified,C11537,(2R)-3-Sulfolactate,169.9885,171.9843049,M-H,168.9812,17.9,0.5296,1,precursor-product correlation
+negative,identified,C11544,2-O-(alpha-D-Mannosyl)-D-glycerate,268.0794,269.0827869,M-H2O-H,249.0615,58.5,0.5064,1,precursor-product correlation
+negative,identified,C11631,9-Riburonosylhypoxanthine,282.06,283.0633889,M+FA-H,327.0596,17.7,0.3145,1,precursor-product correlation
+negative,identified,C11637,"3alpha,12alpha-Dihydroxy-5beta-chol-6-enoate",390.277,391.2803645,M+Na-2H,411.2515,241.8,0.3098,1,precursor-product correlation
+negative,identified,C11638,3-Amino-2-oxopropyl phosphate,169.014,170.0173642,M-H2O-H,149.9961,287.6,0.4075,1,precursor-product correlation
+negative,identified,C11695,Anandamide,347.2824,348.2857843,M+Cl,382.2522,272.3,0.4297,1,precursor-product correlation
+negative,identified,C11821,5-Hydroxyisourate,184.0233,185.0266095,M-H,183.0159,19,0.388,1,precursor-product correlation
+negative,identified,C11822,2-Aminomalonate semialdehyde,103.0269,104.0302979,M+Cl,137.9962,66.9,0.4415,1,precursor-product correlation
+negative,identified,C11825,3beta-Hydroxy-5beta-pregnane-20-one,318.2559,319.2592352,M-H,317.2479,240.4,0.7936,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C11853,Gibberellin A14 aldehyde,332.1988,333.2021142,M-H,331.1912,48.6,0.2582,1,precursor-product correlation
+negative,identified,C11855,Gibberellin A29-catabolite,346.1416,347.1449933,M-H2O-H,327.1243,224.6,0.8588,1,precursor-product correlation
+negative,identified,C11857,Gibberellin A12,332.1988,333.2021142,M-H,331.1912,48.6,0.2198,1,precursor-product correlation
+negative,identified,C11861,Gibberellin A24,346.178,347.1813788,M-H2O-H,327.1598,225,0.4116,1,precursor-product correlation
+negative,identified,C11862,Gibberellin A36,362.1729,363.1762934,M+Na-2H,383.1478,25.2,0.4665,1,precursor-product correlation
+negative,identified,C11868,Gibberellin A34,348.1573,349.1606433,M-H2O-H,329.1393,239.6,0.5706,1,precursor-product correlation
+negative,identified,C11869,Gibberellin A34-catabolite,346.1416,347.1449933,M-H2O-H,327.1243,224.6,0.8588,1,precursor-product correlation
+negative,identified,C11873,Kaur-16-en-18-al,286.2297,287.2330204,M+Na-2H,307.2045,172.4,0.2621,1,precursor-product correlation
+negative,identified,C11874,Kaur-16-en-18-oic acid,302.2246,303.227935,M-H,301.2172,215.4,0.4839,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C11875,ent-7alpha-Hydroxykaur-16-en-19-oic acid,318.2195,319.2228497,M-H2O-H,299.2014,201.5,0.7815,1,precursor-product correlation
+negative,identified,C11885,Neoabietal,286.2297,287.2330204,M+Na-2H,307.2045,172.4,0.2621,1,precursor-product correlation
+negative,identified,C11886,Levopimarinal,286.2297,287.2330204,M+Na-2H,307.2045,172.4,0.2621,1,precursor-product correlation
+negative,identified,C11887,Abietal,286.2297,287.2330204,M+Na-2H,307.2045,172.4,0.2621,1,precursor-product correlation
+negative,identified,C11888,Levopimaric acid,302.2246,303.227935,M-H,301.2172,215.4,0.2621,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C11889,Neoabietic acid,302.2246,303.227935,M-H,301.2172,215.4,0.2621,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C11896,"Taxa-4(20),11(12)-dien-5alpha-yl acetate",330.2559,331.2592352,M-H,329.2485,235.7,0.9196,1,precursor-product correlation
+negative,identified,C11898,"Taxa-4(20),11(12)-dien-5alpha-acetoxy-10beta-ol",346.2508,347.2541498,M-H2O-H,327.2327,224.4,0.7046,1,precursor-product correlation
+negative,identified,C11905,Gibberellin A53 aldehyde,332.1988,333.2021142,M-H,331.1912,48.6,0.2582,1,precursor-product correlation
+negative,identified,C11907,dTDP-4-oxo-6-deoxy-D-glucose,546.0652,547.0685469,M+Na-2H,567.0383,41.5,0.6188,1,precursor-product correlation
+negative,identified,C11908,"3,6-Dideoxy-3-oxo-dTDP-D-glucose",546.0652,547.0685469,M+Na-2H,567.0383,41.5,0.6188,1,precursor-product correlation
+negative,identified,C12026,"3,5-Dihydroxy-phenylglycine",183.0532,184.0565126,M-H,182.0452,34.7,0.2535,1,precursor-product correlation
+negative,identified,C12077,Palustric acid,302.2246,303.227935,M-H,301.2172,215.4,0.2621,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C12115,3-Amino-4-hydroxybenzoate,153.0426,154.0459479,M+FA-H,198.041,292.8,0.2813,1,precursor-product correlation
+negative,identified,C12123,"7,4'-Dihydroxyflavone",254.0579,255.0612636,M-H,253.05,18.8,0.2071,1,precursor-product correlation
+negative,identified,C12138,Delphinidin 3-O-glucoside,465.1033,466.106656,M+Cl,500.0723,193.1,0.2654,1,precursor-product correlation
+negative,identified,C12142,Vetispiradiene,204.1878,205.1911556,M+FA-H,249.1859,183.4,0.2312,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C12204,5-Hydroxyconiferaldehyde,194.0579,195.0612636,M+Na-2H,215.0328,22.1,0.3796,1,precursor-product correlation
+negative,identified,C12205,5-Hydroxyconiferyl alcohol,196.0736,197.0769137,M-H,195.0662,292.9,0.1844,1,precursor-product correlation
+negative,identified,C12206,Caffeyl alcohol,166.063,167.066349,M-H2O-H,147.0453,27.3,0.2853,1,precursor-product correlation
+negative,identified,C12248,"5-Hydroxy-2-oxo-4-ureido-2,5-dihydro-1H-imidazole-5-carboxylate",202.0338,203.0371741,M-H2O-H,183.0159,19,0.3617,1,precursor-product correlation
+negative,identified,C12270,N-Acetylaspartylglutamate,304.0907,305.0940203,M-H,303.0832,19.1,0.2058,1,precursor-product correlation
+negative,identified,C12308,Gibberellin A44,346.178,347.1813788,M-H2O-H,327.1598,225,0.4278,1,precursor-product correlation
+negative,identified,C12313,"cis-1,2-Cyclohexanediol",116.0837,117.0870845,M-H,115.0765,289.4,0.6274,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C12316,cis-Dihydroquercetin,304.0583,305.0616576,M-H2O-H,285.0402,19.6,0.2617,1,precursor-product correlation
+negative,identified,C12323,L-4-Hydroxyphenylglycine,167.0582,168.061598,M-H,166.0509,30.4,0.2253,1,precursor-product correlation
+negative,identified,C12325,"3,5-Dihydroxyphenylglyoxylate",182.0215,183.0248781,M-H,181.0144,138.4,0.5173,1,precursor-product correlation
+negative,identified,C12455,5-Aminopentanal,101.0841,102.0874188,M-H,100.0768,291.2,0.3637,1,precursor-product correlation
+negative,identified,C12491,Pyrrolnitrin,255.9806,257.9776828,M+Cl,290.9488,37.1,0.5013,1,precursor-product correlation
+negative,identified,C12621,trans-3-Hydroxycinnamate,164.0473,165.050699,M+Na-2H,185.0221,14,0.2853,1,precursor-product correlation
+negative,identified,C12836,2-Chloro-3-oxoadipate,193.9982,195.995251,M+Na-2H,214.9735,22.6,0.6039,1,precursor-product correlation
+negative,identified,C13273,Plaunotol,306.2559,307.2592352,M-H,305.2485,241.7,0.4237,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C13482,Phosphodimethylethanolamine,169.0504,170.0537497,M+FA-H,214.0488,31.7,0.1822,1,precursor-product correlation
+negative,identified,C13636,4-Hydroxyphenyl acetate,152.0473,153.050699,M-H,151.0401,34.8,0.2358,1,precursor-product correlation
+negative,identified,C13712,Allopregnanolone,318.2559,319.2592352,M-H,317.2479,240.4,0.7936,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C13713,Allotetrahydrodeoxycorticosterone,334.2508,335.2541498,M-H2O-H,315.2334,221.3,0.7503,1,precursor-product correlation
+negative,identified,C13747,"1,7-Dimethylxanthine",180.0647,181.0680804,M-H2O-H,161.0455,47.3,0.6446,1,precursor-product correlation
+negative,identified,C14086,2-Hydroxy-3-methylbenzalpyruvate,206.0579,207.0612636,M-H2O-H,187.0401,23.6,0.219,1,precursor-product correlation
+negative,identified,C14087,3-Methylsalicylaldehyde,136.0524,137.0557843,M-H,135.0452,43.5,0.2992,1,precursor-product correlation
+negative,identified,C14088,3-Methylsalicylate,152.0473,153.050699,M-H,151.0401,34.8,0.2484,1,precursor-product correlation
+negative,identified,C14097,2-Hydroxyisophthalic acid,182.0215,183.0248781,M-H,181.0144,138.4,0.3251,1,precursor-product correlation
+negative,identified,C14103,4-Methylsalicylate,152.0473,153.050699,M-H,151.0401,34.8,0.1976,1,precursor-product correlation
+negative,identified,C14109,4-Hydroxymethylsalicylate,168.0423,169.0456136,M-H2O-H,149.0243,286.7,0.2643,1,precursor-product correlation
+negative,identified,C14110,4-Hydroxymethylcatechol,140.0473,141.050699,M+Na-2H,161.0221,26.1,0.252,1,precursor-product correlation
+negative,identified,C14179,Sulfoacetate,139.9779,141.9737403,M-H,138.9706,18.2,0.4962,1,precursor-product correlation
+negative,identified,C14463,(R)-3-Hydroxy-3-methyl-2-oxopentanoate,146.0579,147.0612636,M-H2O-H,127.04,28.7,0.2643,1,precursor-product correlation
+negative,identified,C14732,5-OxoETE,318.2195,319.2228497,M-H2O-H,299.2014,201.5,0.7815,1,precursor-product correlation
+negative,identified,C14748,20-HETE,320.2351,321.2384997,M-H2O-H,301.2172,215.4,0.6034,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C14749,19(S)-HETE,320.2351,321.2384997,M-H2O-H,301.2172,215.4,0.6034,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C14762,13(S)-HODE,296.2351,297.2384997,M-H2O-H,277.217,219.6,0.8491,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C14765,13-OxoODE,294.2195,295.2228497,M-H2O-H,275.2014,202.6,0.8491,1,precursor-product correlation
+negative,identified,C14768,"5,6-EET",320.2351,321.2384997,M-H2O-H,301.2172,215.4,0.5727,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C14769,"8,9-EET",320.2351,321.2384997,M-H2O-H,301.2172,215.4,0.5727,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C14770,"11,12-EET",320.2351,321.2384997,M-H2O-H,301.2172,215.4,0.5727,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C14771,"14,15-EET",320.2351,321.2384997,M-H2O-H,301.2172,215.4,0.5727,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C14772,"5,6-DHET",338.2457,339.2490644,M-H,337.2376,227.1,0.5419,1,precursor-product correlation
+negative,identified,C14773,"8,9-DHET",338.2457,339.2490644,M-H,337.2376,227.1,0.5419,1,precursor-product correlation
+negative,identified,C14774,"11,12-DHET",338.2457,339.2490644,M-H,337.2376,227.1,0.5419,1,precursor-product correlation
+negative,identified,C14775,"14,15-DHET",338.2457,339.2490644,M-H,337.2376,227.1,0.5419,1,precursor-product correlation
+negative,identified,C14778,16(R)-HETE,320.2351,321.2384997,M-H2O-H,301.2172,215.4,0.6034,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C14825,9(10)-EpOME,296.2351,297.2384997,M-H2O-H,277.217,219.6,0.9302,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C14826,12(13)-EpOME,296.2351,297.2384997,M-H2O-H,277.217,219.6,0.9302,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C14828,"9,10-DHOME",314.2457,315.2490644,M-H,313.2384,226.3,0.9023,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C14829,"12,13-DHOME",314.2457,315.2490644,M-H,313.2384,226.3,0.9023,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C15484,Isopregnanolone,318.2559,319.2592352,M-H,317.2479,240.4,0.7936,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C15494,Decylubiquinone,322.2144,323.2177643,M+Na-2H,343.1906,167.4,0.4033,1,precursor-product correlation
+negative,identified,C15495,Decylubiquinol,324.2301,325.2334143,M-H,323.2218,226.9,0.4033,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C15516,Taurohyocholate,515.2917,516.2950288,M-H,514.2842,24.7,0.6832,1,precursor-product correlation
+negative,identified,C15522,4a-Hydroxytetrahydrobiopterin,257.1124,258.1157588,M+Cl,292.0809,19.3,0.1851,1,precursor-product correlation
+negative,identified,C15523,"2,6-Dihydroxynicotinate",155.0219,156.0252125,M-H,154.0146,286.2,0.2105,1,precursor-product correlation
+negative,identified,C15532,N-Acetyl-L-citrulline,217.1063,218.1096108,M-H2O-H,198.0884,286.9,0.471,1,precursor-product correlation
+negative,identified,C15556,"L-3,4-Dihydroxybutan-2-one 4-phosphate",184.0137,185.0170298,M+FA-H,229.0118,21.7,0.6246,1,precursor-product correlation
+negative,identified,C15566,D-Dopachrome,193.0375,194.0408625,M-H,192.0303,16.4,0.2105,1,precursor-product correlation
+negative,identified,C15605,N-Formyl-D-kynurenine,236.0797,237.0830617,M-H,235.0724,151.7,0.2211,1,precursor-product correlation
+negative,identified,C15650,"2,3-Diketo-5-methylthiopentyl-1-phosphate",242.0014,243.0047511,M+Na-2H,262.9759,36.8,0.3199,1,precursor-product correlation
+negative,identified,C15651,2-Hydroxy-3-keto-5-methylthiopentenyl-1-phosphate,242.0014,243.0047511,M+Na-2H,262.9759,36.8,0.3199,1,precursor-product correlation
+negative,identified,C15673,2-Dehydro-L-idonate,194.0427,195.0460075,M+Cl,229.0118,21.7,0.5588,1,precursor-product correlation
+negative,identified,C15767,4-(L-gamma-Glutamylamino)butanoate,232.1059,233.1092765,M-H2O-H,213.0881,290.5,0.2126,1,precursor-product correlation
+negative,identified,C15926,beta-L-Galactose 1-phosphate,260.0297,261.0330738,M-H,259.0222,20,0.2494,1,precursor-product correlation
+negative,identified,C15930,L-Galactonate,196.0583,197.0616576,M-H,195.0509,36.5,0.4704,1,precursor-product correlation
+negative,identified,C15987,4-Methylaminobutyrate,117.079,118.0823334,M-H,116.0717,37.1,0.6525,1,precursor-product correlation
+negative,identified,C15988,"(9S,10S)-9,10-Dihydroxyoctadecanoate",316.2614,317.2647145,M-H2O-H,297.2433,192.5,0.4263,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C15989,"(9S,10S)-10-Hydroxy-9-(phosphonooxy)octadecanoate",396.2277,397.2310454,M-H,395.2214,224,0.4263,1,precursor-product correlation
+negative,identified,C16028,"Amorpha-4,11-diene",204.1878,205.1911556,M+FA-H,249.1859,183.4,0.236,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C16075,(Z)-Phenylacetaldehyde oxime,135.0684,136.0717688,M+FA-H,180.0666,26.1,0.5225,1,precursor-product correlation
+negative,identified,C16141,(+)-Germacrene A,204.1878,205.1911556,M+FA-H,249.1859,183.4,0.236,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C16155,UDP-L-Ara4O,534.0288,535.0321614,M+Cl,568.9966,35.8,0.4504,1,precursor-product correlation
+negative,identified,C16159,2-Formylglutarate,160.0372,161.0405282,M+FA-H,205.0353,58.6,0.412,1,precursor-product correlation
+negative,identified,C16183,alpha-D-Arabinopyranose 1-phosphate,230.0192,231.0225092,M-H,229.0118,21.7,0.4245,1,precursor-product correlation
+negative,identified,C16199,5-Sulfosalicylate,217.9885,218.9918639,M-H,216.9811,290.2,0.5048,1,precursor-product correlation
+negative,identified,C16235,o-Hydroxylaminobenzoate,153.0426,154.0459479,M-H,152.0354,293,0.2232,1,precursor-product correlation
+negative,identified,C16264,"2-Hydroxy-6-oxo-6-(2-carboxyphenyl)-hexa-2,4-dienoate",262.0477,263.0510929,M-H,261.0412,24.6,0.2055,1,precursor-product correlation
+negative,identified,C16267,Cyclopropanecarboxylate,86.0368,87.04013427,M-H,85.0295,31.6,0.6883,1,precursor-product correlation
+negative,identified,C16269,(+)-epi-Isozizaene,204.1878,205.1911556,M+FA-H,249.1859,183.4,0.2328,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C16272,3-Hydroxy-5-oxohexanoate,146.0579,147.0612636,M-H2O-H,127.04,28.7,0.2344,1,precursor-product correlation
+negative,identified,C16300,Stearidonic acid,276.2089,277.212285,M-H,275.2014,202.6,0.8491,1,precursor-product correlation
+negative,identified,C16307,Delphinidin 3-O-sophoroside,627.1561,628.1594794,M+FA-H,672.1521,265.7,0.3018,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C16312,"Delphinidin 3,5-diglucoside",627.1561,628.1594794,M+FA-H,672.1521,265.7,0.6156,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C16313,Delphinidin 3-glucoside 5-caffoyl-glucoside,789.1878,790.1911734,M-H,788.1789,293.8,0.6605,1,precursor-product correlation
+negative,identified,C16314,"Delphinidin 3,5,3'-triglucoside",789.2089,790.2123028,M-H2O-H,770.1872,284.3,0.8125,1,precursor-product correlation
+negative,identified,C16315,Delphinidin 3-O-rutinoside,611.1612,612.1645648,M+FA-H,656.1598,265.5,0.2376,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C16351,Delphinidin 3-O-beta-D-glucoside 5-O-(6-coumaroyl-beta-D-glucoside),773.1929,774.1962588,M-H,772.1874,289,0.6875,1,precursor-product correlation
+negative,identified,C16353,7-Methylxanthine,166.0491,167.0524303,M-H2O-H,147.0302,27.9,0.5358,1,precursor-product correlation
+negative,identified,C16355,7-Methyluric acid,182.044,183.0473449,M-H2O-H,163.0249,47.3,0.5299,1,precursor-product correlation
+negative,identified,C16356,"1,7-Dimethyluric acid",196.0596,197.062995,M-H2O-H,177.0404,44.6,0.5516,1,precursor-product correlation
+negative,identified,C16357,3-Methylxanthine,166.0491,167.0524303,M-H2O-H,147.0302,27.9,0.5378,1,precursor-product correlation
+negative,identified,C16358,1-Methylxanthine,166.0491,167.0524303,M-H2O-H,147.0302,27.9,0.5358,1,precursor-product correlation
+negative,identified,C16359,1-Methyluric acid,182.044,183.0473449,M-H2O-H,163.0249,47.3,0.5299,1,precursor-product correlation
+negative,identified,C16360,"3,7-Dimethyluric acid",196.0596,197.062995,M-H2O-H,177.0404,44.6,0.5516,1,precursor-product correlation
+negative,identified,C16361,"1,3,7-Trimethyluric acid",210.0753,211.078645,M-H2O-H,191.056,46.1,0.2945,1,precursor-product correlation
+negative,identified,C16365,5-Acetylamino-6-formylamino-3-methyluracil,226.0702,227.0735597,M-H2O-H,207.0509,52.5,0.6778,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C16366,5-Acetylamino-6-amino-3-methyluracil,198.0753,199.078645,M-H2O-H,179.0561,37.8,0.6712,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C16372,Cyanidin 3-glucoside 5-caffeoylglucoside,773.1929,774.1962588,M-H,772.1874,289,0.7088,1,precursor-product correlation
+negative,identified,C16390,(S)-2-(Hydroxymethyl)glutarate,162.0528,163.0561783,M-H,161.0455,47.3,0.7128,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C16401,"2,4,6-Trihydroxytoluene",140.0473,141.050699,M+FA-H,185.0447,23,0.2543,1,precursor-product correlation
+negative,identified,C16432,5-Hydroxyectoine,158.0691,159.072497,M+FA-H,203.0673,17.9,0.321,1,precursor-product correlation
+negative,identified,C16493,"2,22,25-Trideoxyecdysone",416.329,417.3324001,M+FA-H,461.3277,232.2,0.2763,1,precursor-product correlation
+negative,identified,C16494,"2,22-Dideoxyecdysone",432.324,433.3273147,M-H2O-H,413.3062,232.4,0.4384,1,precursor-product correlation
+negative,identified,C16495,2-Deoxyecdysone,448.3189,449.3222294,M-H2O-H,429.3009,171.2,0.4083,1,precursor-product correlation
+negative,identified,C16496,3-Epiecdysone,464.3138,465.317144,M-H2O-H,445.2957,153.9,0.2433,1,precursor-product correlation
+negative,identified,C16497,3-Dehydro-2-deoxyecdysone,446.3032,447.3065793,M-H,445.2957,153.9,0.2296,1,precursor-product correlation
+negative,identified,C16498,"2,22-Dideoxy-3-dehydroecdysone",430.3083,431.3116647,M-H,429.3009,171.2,0.4083,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C16502,Farnesoic acid,236.1776,237.1809849,M+Cl,271.1458,157.6,0.2072,1,precursor-product correlation
+negative,identified,C16503,Methyl farnesoate,250.1933,251.1966349,M-H,249.1859,183.4,0.5395,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C16505,(10S)-Juvenile hormone III diol,284.1988,285.2021142,M-H,283.1914,178.9,0.1877,1,precursor-product correlation
+negative,identified,C16509,"14alpha-Hydroxy-5beta-cholest-7-ene-3,6-dione",414.3134,415.3167501,M-H,413.3062,232.4,0.4384,1,precursor-product correlation
+negative,identified,C16519,2-Succinyl-5-enolpyruvyl-6-hydroxy-3-cyclohexene-1-carboxylate,328.0794,329.0827869,M+Na-2H,349.0547,189.5,0.3042,1,precursor-product correlation
+negative,identified,C16538,"1,5-Anhydro-D-mannitol",164.0685,165.0718283,M+FA-H,209.0666,44.8,0.4996,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C16562,Glutathionylspermine,491.289,492.2923435,M-H,490.2817,179.8,0.5841,1,precursor-product correlation
+negative,identified,C16579,trans-Homoaconitate,188.0321,189.0354428,M-H2O-H,169.0138,61.4,0.7312,1,precursor-product correlation
+negative,identified,C16583,(R)-(Homo)2-citrate,220.0583,221.0616576,M-H,219.0507,290.2,0.2556,1,precursor-product correlation
+negative,identified,C16587,3-Carbamoyl-2-phenylpropionaldehyde,193.0739,194.0772481,M-H,192.0666,21.4,0.2391,1,precursor-product correlation
+negative,identified,C16588,2-Oxopimelate,174.0528,175.0561783,M+Cl,209.0212,20.3,0.4452,1,precursor-product correlation
+negative,identified,C16593,7-Mercaptoheptanoic acid,162.0715,163.0748057,M+FA-H,207.069,69.6,0.2616,1,precursor-product correlation
+negative,identified,C16595,"4-Hydroxy-5-phenyltetrahydro-1,3-oxazin-2-one",193.0739,194.0772481,M-H2O-H,174.056,52.4,0.3546,1,precursor-product correlation
+negative,identified,C16596,"5-Phenyl-1,3-oxazinane-2,4-dione",191.0582,192.061598,M-H2O-H,172.0405,48.2,0.4156,1,precursor-product correlation
+negative,identified,C16597,(-)-threo-Iso(homo)2-citrate,220.0583,221.0616576,M-H,219.0507,290.2,0.3223,1,precursor-product correlation
+negative,identified,C16624,Isoniazid pyruvate,207.0644,208.067746,M-H2O-H,188.0459,24.6,0.4818,1,precursor-product correlation
+negative,identified,C16637,5-Deoxyribose-1-phosphate,214.0242,215.0275945,M+FA-H,259.0222,20,0.2866,1,precursor-product correlation
+negative,identified,C16673,Isoglutamine,146.0691,147.072497,M-H,145.0618,20.6,0.2295,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C16674,Formylisoglutamine,174.0641,175.0674116,M-H2O-H,155.0462,140.8,0.2295,1,precursor-product correlation
+negative,identified,C16698,N-Acetylmuramic acid 6-phosphate,373.0774,374.0807523,M-H,372.0716,19.2,0.659,1,precursor-product correlation
+negative,identified,C16737,5-Deoxy-D-glucuronate,178.0477,179.0510929,M-H,177.0404,44.6,0.4002,1,precursor-product correlation
+negative,identified,C16825,Neomenthyl acetate,198.162,199.1653348,M-H,197.1547,150.2,0.2051,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C17205,(R)-2-O-Sulfolactate,169.9885,171.9843049,M-H,168.9812,17.9,0.5286,1,precursor-product correlation
+negative,identified,C17206,Uracil 5-carbaldehyde,140.0222,141.0255468,M-H,139.0149,287.3,0.43,1,precursor-product correlation
+negative,identified,C17209,2-Deoxy-scyllo-inosose,162.0528,163.0561783,M-H,161.0455,47.3,0.4375,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C17212,3-(2'-Methylthio)ethylmalic acid,208.0405,209.0438995,M-H,207.033,70.6,0.3108,1,precursor-product correlation
+negative,identified,C17234,2-Aminobut-2-enoate,101.0477,102.0510333,M+FA-H,146.0459,20.3,0.4788,1,precursor-product correlation
+negative,identified,C17235,L-Homophenylalanine,179.0946,180.0979835,M-H,178.0874,90,0.2547,1,precursor-product correlation
+negative,identified,C17255,3-Methylbutyraldehyde oxime,101.0841,102.0874188,M+FA-H,146.0823,24.1,0.2755,1,precursor-product correlation
+negative,identified,C17268,Pyruvophenone,148.0524,149.0557843,M-H,147.0453,27.3,0.2555,1,precursor-product correlation
+negative,identified,C17333,3beta-Hydroxy-5-cholestenoate,416.329,417.3324001,M+FA-H,461.3277,232.2,0.2763,1,precursor-product correlation
+negative,identified,C17335,"3beta,7alpha-Dihydroxy-5-cholestenoate",432.324,433.3273147,M-H2O-H,413.3062,232.4,0.4384,1,precursor-product correlation
+negative,identified,C17336,"7alpha,26-Dihydroxy-4-cholesten-3-one",416.329,417.3324001,M+FA-H,461.3277,232.2,0.2871,1,precursor-product correlation
+negative,identified,C17337,7alpha-Hydroxy-3-oxo-4-cholestenoate,430.3083,431.3116647,M-H,429.3009,171.2,0.4439,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C17366,"(2S,5S)-trans-Carboxymethylproline",173.0688,174.0721627,M+FA-H,218.0669,18.7,0.3266,1,precursor-product correlation
+negative,identified,C17367,"(3S,5S)-Carbapenam-3-carboxylic acid",155.0582,156.061598,M+FA-H,200.0565,286.7,0.2826,1,precursor-product correlation
+negative,identified,C17467,p-Hydroxybenzyl alcohol,124.0524,125.0557843,M+FA-H,169.0505,291.9,0.2481,1,precursor-product correlation
+negative,identified,C17580,2-Deoxy-scyllo-inosamine,163.0845,164.0878127,M+FA-H,208.0826,30.4,0.4207,1,precursor-product correlation
+negative,identified,C17581,"3-Amino-2,3-dideoxy-scyllo-inosose",161.0688,162.0721627,M-H2O-H,142.0509,54.5,0.3198,1,precursor-product correlation
+negative,identified,C17704,Antibiotic JI-20A,481.2748,482.2781327,M-H2O-H,462.2564,181.2,0.2506,1,precursor-product correlation
+negative,identified,C17883,4-Vinylguaiacol,150.0681,151.0714344,M+FA-H,195.0662,292.9,0.1844,1,precursor-product correlation
+negative,identified,C17945,Phosphonoformyl-CMP,431.0131,432.0164518,M+Cl,465.9848,16.4,0.7144,1,precursor-product correlation
+negative,identified,C17953,(5S)-Albaflavenol,220.1827,221.1860702,M+FA-H,265.1808,188.7,0.236,1,precursor-product correlation
+negative,identified,C17954,Albaflavenone,218.1671,219.1704202,M+FA-H,263.1652,175.4,0.2264,1,precursor-product correlation
+negative,identified,C17955,(5R)-Albaflavenol,220.1827,221.1860702,M+FA-H,265.1808,188.7,0.236,1,precursor-product correlation
+negative,identified,C18028,"L-Fucono-1,5-lactone",162.0528,163.0561783,M-H,161.0455,47.3,0.6002,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C18038,7alpha-Hydroxypregnenolone,332.2351,333.2384997,M-H2O-H,313.2171,215.6,0.7503,1,precursor-product correlation
+negative,identified,C18040,5alpha-Dihydrodeoxycorticosterone,332.2351,333.2384997,M-H2O-H,313.2171,215.6,0.5202,1,precursor-product correlation
+negative,identified,C18041,5alpha-Pregnan-20alpha-ol-3-one,318.2559,319.2592352,M-H,317.2479,240.4,0.7936,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C18043,Cholesterol sulfate,466.3117,467.315036,M+Cl,501.2816,192.7,0.2283,1,precursor-product correlation
+negative,identified,C18048,N-Succinyl-L-citrulline,275.1117,276.1150901,M-H2O-H,256.0939,290.1,0.2196,1,precursor-product correlation
+negative,identified,C18062,TRIBOA-glucoside,359.0852,360.0886006,M+Cl,394.056,25.4,0.2217,1,precursor-product correlation
+negative,identified,C18218,16-Hydroxypalmitate,272.2351,273.2384997,M-H2O-H,253.2172,227.8,0.891,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C18220,Palustradienal,286.2297,287.2330204,M+Na-2H,307.2045,172.4,0.2621,1,precursor-product correlation
+negative,identified,C18222,Isopimaradienal,286.2297,287.2330204,M+Na-2H,307.2045,172.4,0.2621,1,precursor-product correlation
+negative,identified,C18224,Stemod-13(17)-ene,272.2504,273.2537559,M+FA-H,317.2479,240.4,0.7108,1,precursor-product correlation
+negative,identified,C18225,"9beta-Pimara-7,15-diene",272.2504,273.2537559,M+FA-H,317.2479,240.4,0.7108,1,precursor-product correlation
+negative,identified,C18226,"ent-Cassa-12,15-diene",272.2504,273.2537559,M+FA-H,317.2479,240.4,0.7108,1,precursor-product correlation
+negative,identified,C18232,N-Formylmaleamic acid,143.0219,144.0252125,M-H,142.0145,287.1,0.4634,1,precursor-product correlation
+negative,identified,C18259,1-Methoxypyrene,232.0888,233.0921698,M-H,231.0816,37.3,0.5314,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C18262,"1-Methoxypyrene-6,7-oxide",248.0837,249.0870845,M+Cl,283.053,26.1,0.5314,1,precursor-product correlation
+negative,identified,C18317,"2,4,5-Trihydroxytoluene",140.0473,141.050699,M-H,139.0401,293,0.3183,1,precursor-product correlation
+negative,identified,C18318,"cis,cis-2,4-Dihydroxy-5-methyl-6-oxo-2,4-hexadienoate",172.0372,173.0405282,M-H2O-H,153.0193,290.7,0.3183,1,precursor-product correlation
+negative,identified,C18625,4-Nitrobenzoate,167.0219,168.0252125,M+FA-H,212.0207,25.6,0.2393,1,precursor-product correlation
+negative,identified,C18796,(2R)-2-Hydroxy-2-methylbutanenitrile,99.0684,100.0717688,M+FA-H,144.0666,49.3,0.2173,1,precursor-product correlation
+negative,identified,C18904,Methylselenopyruvate,181.9482,179.9490033,M-H2O-H,162.93,64.2,0.2686,1,precursor-product correlation
+negative,identified,C19418,"9,10-Epoxystearate",298.2508,299.2541498,M-H2O-H,279.2327,234,0.8183,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C19491,(E)-2-Methylbutanal oxime,101.0841,102.0874188,M+FA-H,146.0823,24.1,0.2648,1,precursor-product correlation
+negative,identified,C19614,16-Oxopalmitate,270.2195,271.2228497,M-H2O-H,251.2015,206.6,0.5384,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C19615,Hexadecanedioate,286.2144,287.2177643,M-H,285.2069,290.9,0.1908,1,precursor-product correlation
+negative,identified,C19616,18-Hydroxyoleate,298.2508,299.2541498,M-H2O-H,279.2327,234,0.9416,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C19617,18-Oxooleate,296.2351,297.2384997,M-H2O-H,277.217,219.6,0.958,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C19620,"9,10-Epoxy-18-hydroxystearate",314.2457,315.2490644,M-H,313.2384,226.3,0.9336,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C19621,"9,10,18-Trihydroxystearate",332.2563,333.2596291,M-H2O-H,313.2384,226.3,0.5539,1,precursor-product correlation
+negative,identified,C19622,"9,10-Dihydroxystearate",316.2614,317.2647145,M-H2O-H,297.2433,192.5,0.571,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C19623,22-Hydroxydocosanoate,356.329,357.3324001,M-H2O-H,337.3112,298.8,0.4272,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C19624,22-Oxodocosanoate,354.3134,355.3167501,M-H2O-H,335.2955,279.4,0.6023,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C19625,Docosanedioate,370.3083,371.3116647,M-H,369.3009,276.8,0.8048,1,precursor-product correlation
+negative,identified,C19670,Oleamide,281.2719,282.2752196,M-H,280.2643,234.4,0.8983,1,precursor-product correlation
+negative,identified,C19674,D-Arabinitol 1-phosphate,232.0348,233.0381592,M+FA-H,277.0329,24.7,0.5402,1,precursor-product correlation
+negative,identified,C19675,"(R)-2,3-Dihydroxypropane-1-sulfonate",156.0092,158.0050404,M+Na-2H,176.9837,131.2,0.3403,1,precursor-product correlation
+negative,identified,C19676,"Germacra-1(10),4,11(13)-trien-12-ol",220.1827,221.1860702,M+FA-H,265.1808,188.7,0.236,1,precursor-product correlation
+negative,identified,C19679,L-Sorbosone,178.0477,179.0510929,M-H,177.0404,44.6,0.6256,1,precursor-product correlation
+negative,identified,C19694,D-Alanyl-(R)-lactate,161.0688,162.0721627,M-H2O-H,142.0509,54.5,0.3516,1,precursor-product correlation
+negative,identified,C19706,cis-3-Hydroxy-L-proline,131.0582,132.061598,M-H,130.0509,27,0.6468,1,precursor-product correlation
+negative,identified,C19708,5-Epiaristolochene,204.1878,205.1911556,M+FA-H,249.1859,183.4,0.2152,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C19711,Solavetivol,220.1827,221.1860702,M+FA-H,265.1808,188.7,0.236,1,precursor-product correlation
+negative,identified,C19712,N-Hydroxy-L-phenylalanine,181.0739,182.0772481,M-H,180.0666,26.1,0.5225,1,precursor-product correlation
+negative,identified,C19714,(E)-Phenylacetaldoxime,135.0684,136.0717688,M+FA-H,180.0666,26.1,0.5225,1,precursor-product correlation
+negative,identified,C19719,D-Alanyl-D-serine,176.0797,177.0830617,M-H2O-H,157.0618,291,0.3326,1,precursor-product correlation
+negative,identified,C19726,15beta-Hydroxyprogesterone,330.2195,331.2228497,M-H,329.2127,233.7,0.29,1,precursor-product correlation
+negative,identified,C19752,(S)-beta-Macrocarpene,204.1878,205.1911556,M+FA-H,249.1859,183.4,0.236,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C19792,2-O-(alpha-D-Glucopyranosyl)-D-glycerate,268.0794,269.0827869,M-H2O-H,249.0615,58.5,0.5064,1,precursor-product correlation
+negative,identified,C19798,"4,4'-Diapolycopenedial",428.2715,429.2748852,M-H2O-H,409.2545,231.6,0.3311,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C19813,threo-3-Hydroxy-D-aspartate,149.0324,150.0357772,M-H2O-H,130.0146,286.1,0.229,1,precursor-product correlation
+negative,identified,C19821,2-Hydroxy-2-(hydroxymethyl)-2H-pyran-3(6H)-one,144.0423,145.0456136,M-H,143.0348,40.9,0.7933,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C19822,"1,5-Anhydro-4-deoxy-D-glycero-hex-3-en-2-ulose",144.0423,145.0456136,M-H,143.0348,40.9,0.7933,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C19838,D-erythro-3-Hydroxyaspartate,149.0324,150.0357772,M-H2O-H,130.0146,286.1,0.229,1,precursor-product correlation
+negative,identified,C19891,1D-chiro-Inositol,180.0634,181.0667429,M+Cl,215.0328,22.1,0.6256,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C19938,Pentalen-13-ol,220.1827,221.1860702,M+FA-H,265.1808,188.7,0.236,1,precursor-product correlation
+negative,identified,C19939,Pentalen-13-al,218.1671,219.1704202,M+FA-H,263.1652,175.4,0.2264,1,precursor-product correlation
+negative,identified,C19960,dTDP-3-dehydro-6-deoxy-alpha-D-galactopyranose,546.0652,547.0685469,M+Na-2H,567.0383,41.5,0.6188,1,precursor-product correlation
+negative,identified,C19972,"2,4-Bis(acetamido)-2,4,6-trideoxy-beta-L-altropyranose",246.1216,247.1249265,M-H,245.1142,18.3,0.4647,1,precursor-product correlation
+negative,identified,C19973,(+)-beta-Caryophyllene,204.1878,205.1911556,M+FA-H,249.1859,183.4,0.2551,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C19974,(+)-Caryolan-1-ol,222.1984,223.2017203,M-H2O-H,203.1805,160.8,0.2551,1,precursor-product correlation
+negative,identified,C20145,ent-Isokaurene,272.2504,273.2537559,M+FA-H,317.2479,240.4,0.8451,1,precursor-product correlation
+negative,identified,C20148,"9beta-Pimara-7,15-dien-19-al",286.2297,287.2330204,M+Na-2H,307.2045,172.4,0.2621,1,precursor-product correlation
+negative,identified,C20149,"9beta-Pimara-7,15-dien-19-oate",302.2246,303.227935,M-H,301.2172,215.4,0.4864,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C20151,"10beta,14beta-Dihydroxytaxa-4(20),11-dien-5alpha-yl acetate",362.2457,363.2490644,M-H2O-H,343.2276,174.6,0.4897,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C20208,syn-Stemoden-19-oate,302.2246,303.227935,M-H,301.2172,215.4,0.7108,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C20229,10-Hydroxy-alpha-humulene,220.1827,221.1860702,M+FA-H,265.1808,188.7,0.236,1,precursor-product correlation
+negative,identified,C20232,(Z)-2-Methylureidoacrylate peracid,160.0484,161.0517616,M-H,159.0411,283.6,0.2547,1,precursor-product correlation
+negative,identified,C20234,5-Guanidino-3-methyl-2-oxopentanoate,187.0957,188.0990461,M-H2O-H,168.078,45.7,0.4067,1,precursor-product correlation
+negative,identified,C20240,"(2Z,4Z)-2-Hydroxyhexa-2,4-dienoate",128.0473,129.050699,M-H,127.04,28.7,0.3223,1,precursor-product correlation
+negative,identified,C20248,7-Carboxy-7-carbaguanine,194.044,195.0473449,M-H2O-H,175.0248,17.8,0.4477,1,precursor-product correlation
+negative,identified,C20249,(Z)-3-Peroxyaminoacrylate,103.0269,104.0302979,M-H,102.0197,260.1,0.226,1,precursor-product correlation
+negative,identified,C20251,1-Keto-D-chiro-inositol,178.0477,179.0510929,M-H,177.0404,44.6,0.6256,1,precursor-product correlation
+negative,identified,C20253,Aminoacrylate,87.032,88.03538324,M-H,86.0247,287.7,0.2717,1,precursor-product correlation
+negative,identified,C20254,Ureidoacrylate,130.0378,131.0411969,M-H,129.0305,291.2,0.325,1,precursor-product correlation
+negative,identified,C20255,Methylaminoacrylate,101.0477,102.0510333,M+FA-H,146.0459,20.3,0.1935,1,precursor-product correlation
+negative,identified,C20256,Methylureidoacrylate,144.0535,145.056847,M-H,143.0461,290.9,0.2657,1,precursor-product correlation
+negative,identified,C20258,"(2S,4S)-4-Hydroxy-2,3,4,5-tetrahydrodipicolinate",187.0481,188.0514272,M-H2O-H,168.0301,290,0.2293,1,precursor-product correlation
+negative,identified,C20277,"(2R,3R)-3-Methylornithine",146.1055,147.1088825,M-H,145.0983,45.7,0.411,1,precursor-product correlation
+negative,identified,C20278,"(2R,3R)-3-Methylornithinyl-N6-lysine",274.2005,275.2038456,M+Cl,309.1702,26.8,0.411,1,precursor-product correlation
+negative,identified,C20307,Artemisinic alcohol,220.1827,221.1860702,M+FA-H,265.1808,188.7,0.236,1,precursor-product correlation
+negative,identified,C20310,N-Hydroxy-L-isoleucine,147.0895,148.0928981,M-H,146.0823,24.1,0.3052,1,precursor-product correlation
+negative,identified,C20311,"N,N-Dihydroxy-L-isoleucine",163.0845,164.0878127,M+FA-H,208.0826,30.4,0.335,1,precursor-product correlation
+negative,identified,C20312,(Z)-2-Methylbutanal oxime,101.0841,102.0874188,M+FA-H,146.0823,24.1,0.1963,1,precursor-product correlation
+negative,identified,C20313,N-Hydroxy-L-valine,133.0739,134.0772481,M-H2O-H,114.056,41.1,0.7747,1,precursor-product correlation
+negative,identified,C20314,"N,N-Dihydroxy-L-valine",149.0688,150.0721627,M-H2O-H,130.0509,27,0.7532,1,precursor-product correlation
+negative,identified,C20328,N-Acetyl-alpha-D-glucosamine,221.0899,222.093292,M-H2O-H,202.0721,58.8,0.2423,1,precursor-product correlation
+negative,identified,C20345,Isopentenyl phosphate,166.0395,167.0428507,M+Na-2H,187.0143,23.9,0.463,1,precursor-product correlation
+negative,identified,C20396,Methylphosphonate,95.9976,97.00098586,M+Na-2H,116.9725,30.5,0.4372,1,precursor-product correlation
+negative,identified,C20424,"2,4-Diacetamido-2,4,6-trideoxy-D-mannopyranose",246.1216,247.1249265,M-H,245.1142,18.3,0.4647,1,precursor-product correlation
+negative,identified,C20463,Purine deoxyribonucleoside,236.0909,237.0942951,M+FA-H,281.0878,93.2,0.1879,1,precursor-product correlation
+negative,identified,C20485,(4S)-4-Hydroxy-2-oxoglutarate,162.0164,163.0197928,M-H,161.0084,46.8,0.5106,1,precursor-product correlation
+negative,identified,C20496,"Delphinidin 3,7-di-O-beta-D-glucoside",627.1561,628.1594794,M+FA-H,672.1521,265.7,0.3018,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C20522,Dihydrourocanate,140.0586,141.0619323,M+Na-2H,161.0335,65.6,0.2338,1,precursor-product correlation
+negative,identified,C20559,4-(beta-D-Ribofuranosyl)aniline 5'-phosphate,305.0664,306.0697937,M+FA-H,350.0641,43.3,0.2793,1,precursor-product correlation
+negative,identified,C20568,beta-L-Arabinofuranosyl-(1->2)-beta-L-arabinofuranose,282.0951,283.098437,M-H,281.0878,93.2,0.2115,1,precursor-product correlation
+negative,identified,C20569,beta-L-Arabinofuranose,150.0528,151.0561783,M-H,149.0455,42.7,0.2115,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C20581,cis-(Homo)2-aconitate,202.0477,203.0510929,M+FA-H,247.0458,290.9,0.1903,1,precursor-product correlation
+negative,identified,C20630,Fumitremorgin B,479.242,480.245376,M+FA-H,524.2416,258.5,0.182,1,precursor-product correlation
+negative,identified,C20631,"(2S,3S)-3-Hydroxyasparagine",148.0484,149.0517616,M-H2O-H,129.0305,291.2,0.3138,1,precursor-product correlation
+negative,identified,C20646,(3S)-2-Oxo-3-phenylbutanoate,178.063,179.066349,M+Na-2H,199.0378,25.8,0.3389,1,precursor-product correlation
+negative,identified,C20679,Tungstate,249.9462,251.9496705,M-H,248.9391,41.1,0.3084,1,precursor-product correlation
+negative,identified,C20680,2-Dehydro-3-deoxy-L-galactonate,178.0477,179.0510929,M-H2O-H,159.0299,31.1,0.4136,1,precursor-product correlation
+negative,identified,C20685,"(R)-(2,4-Dichlorophenoxy)propanoate",233.9851,235.9820995,M-H,232.9789,128.9,0.2556,1,precursor-product correlation
+negative,identified,C20687,"(S)-(2,4-Dichlorophenoxy)propanoate",233.9851,235.9820995,M-H,232.9789,128.9,0.2556,1,precursor-product correlation
+negative,identified,C20702,"(8E,10S)-10-Hydroperoxyoctadeca-8-enoate",314.2457,315.2490644,M-H,313.2384,226.3,0.9345,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C20711,Miltiradiene,272.2504,273.2537559,M+FA-H,317.2479,240.4,0.7389,1,precursor-product correlation
+negative,identified,C20781,"2,4-Diketo-3-deoxy-L-fuconate",160.0372,161.0405282,M+FA-H,205.0353,58.6,0.5693,1,precursor-product correlation
+negative,identified,C20800,3-Methyl-L-tyrosine,195.0895,196.0928981,M-H2O-H,176.0715,65.9,0.2384,1,precursor-product correlation
+negative,identified,C20802,(4S)-4-Hydroxy-L-isoleucine,147.0895,148.0928981,M-H,146.0823,24.1,0.3113,1,precursor-product correlation
+negative,identified,C20807,3-Hydroxy-L-phenylalanine,181.0739,182.0772481,M-H,180.0666,26.1,0.5225,1,precursor-product correlation
+negative,identified,C20808,2-Methyl-1-pyrroline,83.0735,84.07685413,M+FA-H,128.0717,148.2,0.2403,1,precursor-product correlation
+negative,identified,C20809,(R)-2-Methylpyrrolidine,85.0891,86.09250419,M+FA-H,130.0873,35.3,0.2403,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C20818,C20818,244.0882,245.0915184,M-H,243.0816,66.8,0.2026,1,precursor-product correlation
+negative,identified,C20819,C20819,258.1038,259.1071685,M-H,257.0971,286.4,0.2204,1,precursor-product correlation
+negative,identified,C20820,"2,3-Dihydrothienamycin",274.0987,275.1020831,M-H,273.0922,38.1,0.3267,1,precursor-product correlation
+negative,identified,C20830,6-Deoxy-6-sulfo-D-fructose,244.0253,245.0286434,M+Cl,278.9959,38,0.1811,1,precursor-product correlation
+negative,identified,C20831,6-Deoxy-6-sulfo-D-fructose 1-phosphate,323.9916,324.9949742,M+FA-H,368.9906,17.3,0.2117,1,precursor-product correlation
+negative,identified,C20834,Cyclooctat-9-en-7-ol,290.261,291.2643206,M+Cl,325.2288,223.1,0.4237,1,precursor-product correlation
+negative,identified,C20836,beta-L-Fucopyranose,164.0685,165.0718283,M+FA-H,209.0666,44.8,0.4996,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C20845,"(4S,5R)-4,5,6-Trihydroxy-2-iminohexanoate",177.0637,178.0670773,M-H2O-H,158.0458,286.7,0.3242,1,precursor-product correlation
+negative,identified,C20846,3-Oxo-3-ureidoisobutyrate,160.0484,161.0517616,M-H2O-H,141.0306,289,0.2112,1,precursor-product correlation
+negative,identified,C20847,(R)-Mevalonate 3-phosphate,228.0399,229.0432446,M-H2O-H,209.0212,20.3,0.4712,1,precursor-product correlation
+negative,identified,C20848,"(R)-Mevalonate 3,5-bisphosphate",308.0062,309.0095755,M-H2O-H,288.9869,19,0.5782,1,precursor-product correlation
+negative,identified,C20851,Dihydromonacolin L acid,324.2301,325.2334143,M-H,323.2218,226.9,0.4033,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C20853,Monacolin L acid,322.2144,323.2177643,M+Na-2H,343.1906,167.4,0.3177,1,precursor-product correlation
+negative,identified,C20854,Monacolin J acid,338.2093,339.2126789,M-H2O-H,319.1906,195.8,0.2321,1,precursor-product correlation
+negative,identified,C20855,22-Hydroxydocosahexaenoate,344.2351,345.2384997,M-H,343.2276,174.6,0.4897,1,precursor-product correlation
+negative,identified,C20889,"D-Galactaro-1,5-lactone",192.027,193.0303574,M-H,191.0197,19.9,0.6476,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C20890,"D-Glucaro-1,5-lactone",192.027,193.0303574,M-H,191.0197,19.9,0.5341,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C20892,3-(5-Oxoisoxazolin-2-yl)-L-alanine,172.0484,173.0517616,M+Na-2H,193.0239,19.9,0.4116,1,precursor-product correlation
+negative,identified,C20893,3-(5-Oxoisoxazolin-4-yl)-L-alanine,172.0484,173.0517616,M+Na-2H,193.0239,19.9,0.4116,1,precursor-product correlation
+negative,identified,C20902,"3,6-Anhydro-alpha-L-galactopyranose",162.0528,163.0561783,M-H,161.0455,47.3,0.5516,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C20903,"3,6-Anhydro-L-galactonate",178.0477,179.0510929,M-H,177.0404,44.6,0.4295,1,precursor-product correlation
+negative,identified,C20904,2-Iminopropanoate,87.032,88.03538324,M-H,86.0247,287.7,0.3174,1,precursor-product correlation
+negative,identified,C20905,2-Iminobutanoate,101.0477,102.0510333,M+FA-H,146.0459,20.3,0.6128,1,precursor-product correlation
+negative,identified,C20910,L-4-Hydroxyphenylglycyl-L-arginine,323.1594,324.162709,M+Na-2H,344.135,25.5,0.2922,1,precursor-product correlation
+negative,identified,C20917,Tabtoxin,289.1274,290.1307402,M+FA-H,334.1258,25.1,0.414,1,precursor-product correlation
+negative,identified,C20918,Tabtoxinine-beta-lactam,188.0797,189.0830617,M+Cl,223.0481,28.1,0.5494,1,precursor-product correlation
+negative,identified,C20919,Isotabtoxin,289.1274,290.1307402,M-H2O-H,270.1095,289.4,0.2782,1,precursor-product correlation
+negative,identified,C20920,Tabtoxinine-delta-lactam,188.0797,189.0830617,M+Na-2H,209.0553,50.1,0.5845,1,precursor-product correlation
+negative,identified,C20921,N1-Acetyl-tabtoxinine-beta-lactam,230.0903,231.0936264,M-H,229.0828,286.2,0.4652,1,precursor-product correlation
+negative,identified,C20961,"N3-Fumaroyl-L-2,3-diaminopropanoate",202.059,203.0623263,M-H,201.0517,282.9,0.3894,1,precursor-product correlation
+negative,identified,C20965,N(beta)-Epoxysuccinamoyl-DAP-Val,316.1383,317.1416392,M-H2O-H,297.1193,292.7,0.2522,1,precursor-product correlation
+negative,identified,C20966,3-{[(2E)-4-Amino-4-oxobut-2-enoyl]amino}-L-alanine,201.075,202.0783107,M-H,200.0677,48.6,0.5399,1,precursor-product correlation
+negative,identified,C20967,N(beta)-Epoxysuccinamoyl-DAP,217.0699,218.0732253,M-H2O-H,198.052,45.7,0.4404,1,precursor-product correlation
+negative,identified,C21015,gamma-L-Glutamyl-L-2-aminobutyrate,232.1059,233.1092765,M-H2O-H,213.0881,290.5,0.2352,1,precursor-product correlation
+negative,identified,C21016,Ophthalmate,289.1274,290.1307402,M+FA-H,334.1258,25.1,0.2429,1,precursor-product correlation
+negative,identified,C21028,"(R)-5,6-Dihydrothymine",128.0586,129.0619323,M-H,127.0513,289,0.3977,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C21029,(R)-3-Ureidoisobutyrate,146.0691,147.072497,M-H,145.0618,20.6,0.2147,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C21040,D-Apiofuranose,150.0528,151.0561783,M-H,149.0455,42.7,0.7477,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C21076,Delta4-Dafachronic acid,414.3134,415.3167501,M-H,413.3062,232.4,0.3391,1,precursor-product correlation
+negative,identified,C21079,5'-Dehydrouridine,242.0539,243.0572409,M+Cl,277.0233,19.3,0.4273,1,precursor-product correlation
+negative,identified,C21080,7-Hydroxydodecanoate,216.1725,217.1758995,M-H2O-H,197.1547,150.2,0.7181,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C21109,Aminopyrrolnitrin,226.0065,228.0035036,M-H,224.9993,28.3,0.5013,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C21132,Deoxyviolaceinic acid,357.1113,358.1146962,M+Cl,392.0808,151.5,0.3235,1,precursor-product correlation
+negative,identified,C21144,"1,3,7-Trimethyl-5-hydroxyisourate",226.0702,227.0735597,M-H2O-H,207.0509,52.5,0.3665,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C21168,4-Hydroxyisophthalate,182.0215,183.0248781,M-H,181.0144,138.4,0.3251,1,precursor-product correlation
+negative,identified,C21181,(2S)-3-Sulfolactaldehyde,153.9936,155.9893903,M-H,152.9862,285.8,0.2111,1,precursor-product correlation
+negative,identified,C21214,Dimethylallyl phosphate,166.0395,167.0428507,M+Na-2H,187.0143,23.9,0.4191,1,precursor-product correlation
+negative,identified,C21219,Validoxylamine A 7'-phosphate,415.1243,416.1277025,M+Na-2H,436.0992,211.7,0.3161,1,precursor-product correlation
+negative,identified,C21250,2-Methyl-trans-aconitate,188.0321,189.0354428,M-H2O-H,169.0138,61.4,0.5765,1,precursor-product correlation
+negative,identified,C21298,"2,6-Dihydroxybenzoate",154.0266,155.0299635,M-H,153.0193,24.2,0.5348,1,precursor-product correlation
+negative,identified,C21308,(S)-beta-Tyrosine,181.0739,182.0772481,M-H,180.0666,26.1,0.2014,1,precursor-product correlation
+negative,identified,C21332,8-Dehydro-3-deoxy-D-manno-octulosonate,236.0532,237.0565722,M+FA-H,281.0526,23.9,0.1927,1,precursor-product correlation
+negative,identified,C21333,"8-Amino-3,8-dideoxy-D-manno-octulosonate",237.0849,238.0882067,M-H2O-H,218.0669,18.7,0.4703,1,precursor-product correlation
+negative,identified,C21418,"(2R,3S,4S)-Leucoanthocyanidin",242.0943,243.0976491,M+Na-2H,263.0684,51.2,0.5674,1,precursor-product correlation
+negative,identified,C21425,"Abieta-8,11,13-triene",270.2348,271.2381058,M+Na-2H,291.2095,247.2,0.7389,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C21454,"beta-1,2-Mannotriose",504.169,505.1723898,M+FA-H,549.1653,18.6,0.2979,1,precursor-product correlation
+negative,identified,C21523,L-Tagatose,180.0634,181.0667429,M+Cl,215.0328,22.1,0.4846,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C21524,D-Altritol,182.079,183.082393,M-H,181.0716,40.3,0.4846,1,precursor-product correlation
+negative,identified,C21525,2-Methylbutanenitrile,83.0735,84.07685413,M+FA-H,128.0717,148.2,0.1942,1,precursor-product correlation
+negative,identified,C21559,N-[(2S)-2-Amino-2-carboxyethyl]-L-glutamate,234.0852,235.088541,M+FA-H,279.0824,28.6,0.3168,1,precursor-product correlation
+negative,identified,C21570,"4-Methoxy-2,2'-bipyrrole-5-carbaldehyde",190.0742,191.0775824,M-H,189.0669,283,0.4511,1,precursor-product correlation
+negative,identified,C21573,4-Keto-2-undecylpyrroline,237.2093,238.2126193,M+FA-H,282.2072,197.6,0.4236,1,precursor-product correlation
+negative,identified,C21632,2-Hydroxyparaconate,146.0215,147.0248781,M+FA-H,191.0197,19.9,0.8157,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C21643,3-Dehydro-scyllo-inosose,176.0321,177.0354428,M-H,175.0248,17.8,0.4233,1,precursor-product correlation
+negative,identified,C21644,5-Dehydro-L-gluconate,194.0427,195.0460075,M+Cl,229.0118,21.7,0.339,1,precursor-product correlation
+negative,identified,C21762,4-Hydroxytryptamine,176.095,177.0983179,M+Cl,211.0642,61.9,0.2131,1,precursor-product correlation
+negative,identified,C21770,"4,4'-Diapolycopene-4,4'-dioate",460.2614,461.2647145,M-H,459.2545,178.9,0.3311,1,precursor-product correlation
+negative,identified,C21771,L-Firefly luciferin,279.9976,281.0009893,M-H2O-H,260.9792,21.6,0.2247,1,precursor-product correlation
+negative,identified,C21777,4-Hydroxy-L-tryptophan,220.0848,221.0881471,M-H,219.0778,21.9,0.2185,1,precursor-product correlation
+negative,identified,C21796,11-Hydroxyferruginol,302.2246,303.227935,M-H,301.2172,215.4,0.4083,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C21818,Carnosic acid,332.1988,333.2021142,M-H,331.1912,48.6,0.1813,1,precursor-product correlation
+negative,identified,C21819,Salviol,302.2246,303.227935,M-H,301.2172,215.4,0.2621,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C21822,Sugiol,300.2089,301.212285,M-H,299.2014,201.5,0.2153,1,precursor-product correlation
+negative,identified,C21823,11-Hydroxysugiol,316.2038,317.2071996,M-H2O-H,297.1855,285.5,0.2494,1,precursor-product correlation
+negative,identified,C21826,"ent-3beta-Hydroxycassa-12,15-dien-2-one",302.2246,303.227935,M-H,301.2172,215.4,0.5254,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C21828,"ent-Cassa-12,15-dien-2-one",286.2297,287.2330204,M+Na-2H,307.2045,172.4,0.2621,1,precursor-product correlation
+negative,identified,C21829,"ent-Cassa-12,15-diene-2beta,3beta-diol",304.2402,305.2435851,M-H,303.2328,230.2,0.6034,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C21830,"11,20-Dihydroxyferruginol",318.2195,319.2228497,M-H2O-H,299.2014,201.5,0.7815,1,precursor-product correlation
+negative,identified,C21831,"ent-2alpha,3alpha-Dihydroxyisokaurene",304.2402,305.2435851,M-H,303.2328,230.2,0.8451,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C21850,3-Bromo-4-hydroxybenzoate,215.9422,217.9401591,M-H2O-H,196.9233,18.5,0.2314,1,precursor-product correlation
+negative,identified,C21858,N-(4-Oxoglutaryl)-L-cysteinylglycine,306.0522,307.0555268,M+FA-H,351.0515,189.5,0.2515,1,precursor-product correlation
+negative,identified,C21889,(2S)-3-(4-Hydroxyphenyl)-2-isocyanopropanoate,191.0582,192.061598,M-H,190.0508,288.8,0.221,1,precursor-product correlation
+negative,identified,C21890,4-[(E)-2-Isocyanoethenyl]phenol,145.0528,146.0561187,M+FA-H,190.0508,288.8,0.3001,1,precursor-product correlation
+negative,identified,C21893,3-[(Z)-2-Isocyanoethenyl]-1H-indole,168.0687,169.0721031,M-H,167.0612,50.5,0.6022,1,precursor-product correlation
+negative,identified,C21894,3-[(E)-2-Isocyanoethenyl]-1H-indole,168.0687,169.0721031,M-H,167.0612,50.5,0.6022,1,precursor-product correlation
+negative,identified,C21895,2-Acetylphloroglucinol,168.0423,169.0456136,M-H2O-H,149.0243,286.7,0.1899,1,precursor-product correlation
+negative,identified,C21955,"L-Galactono-1,5-lactone",178.0477,179.0510929,M-H,177.0404,44.6,0.5267,1,precursor-product correlation
+negative,identified,C21978,"Cyclooctat-9-ene-5,7-diol",306.2559,307.2592352,M-H,305.2485,241.7,0.6592,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C21979,Cyclooctatin,322.2508,323.2541498,M-H2O-H,303.2328,230.2,0.8948,1,precursor-product correlation
+negative,identified,C22012,"[(4S)-4-(5,5-Dimethylcyclohex-1-en-1-yl)-cyclohex-1-en-1-yl]methanol",220.1827,221.1860702,M+FA-H,265.1808,188.7,0.236,1,precursor-product correlation
+negative,identified,C22024,Staphylopine,328.1383,329.1416392,M-H2O-H,309.1192,25.4,0.3498,1,precursor-product correlation
+negative,identified,C22084,1-Carboxybiuret,147.028,148.0313605,M-H2O-H,128.0101,291.1,0.1859,1,precursor-product correlation
+negative,identified,C22085,"Urea-1,3-dicarboxylate",148.012,149.0153761,M-H,147.0048,291.5,0.191,1,precursor-product correlation
+negative,identified,C22103,"3beta-Hydroxy-4,4-dimethylsteroid",304.2766,305.2799706,M+FA-H,349.2746,256.7,0.4188,1,precursor-product correlation
+negative,identified,C22105,3beta-Hydroxy-4beta-formyl-4alpha-methylsteroid,318.2559,319.2592352,M-H,317.2479,240.4,0.7936,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C22106,3beta-Hydroxy-4alpha-methylsteroid-4beta-carboxylate,334.2508,335.2541498,M-H2O-H,315.2334,221.3,0.6062,1,precursor-product correlation
+negative,identified,C22132,(Stearoyl)adenylate,613.3241,614.3274054,M-H2O-H,594.3036,172.9,0.2364,1,precursor-product correlation
+negative,identified,C22139,gamma-L-Glutamyl-L-propargylglycine,242.0903,243.0936264,M+FA-H,287.0883,36.1,0.205,1,precursor-product correlation
+negative,identified,C22140,L-gamma-Glutamyl-(3R)-L-beta-ethynylserine,258.0852,259.088541,M-H,257.078,292.3,0.2764,1,precursor-product correlation
+negative,identified,C22141,L-beta-Ethynylserine,129.0426,130.0459479,M-H,128.0353,21.8,0.2876,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C22202,2-Oxoindole-3-acetate,191.0582,192.061598,M+Cl,226.0283,156.7,0.3188,1,precursor-product correlation
+negative,identified,C22218,D-Apionolactone,148.0372,149.0405282,M+FA-H,193.0353,39.3,0.7477,1,precursor-product correlation
+negative,identified,C22219,D-Apionate,166.0477,167.0510929,M-H,165.0407,226.8,0.2888,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C22220,3-Oxoisoapionate,164.0321,165.0354428,M-H2O-H,145.0142,19.6,0.2861,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C22254,"2,4-Diacetamido-2,4,6-trideoxy-beta-L-gulose",246.1216,247.1249265,M-H,245.1142,18.3,0.4647,1,precursor-product correlation
+negative,identified,C22281,[2-(Trimethylamino)ethyl]phosphonate,167.0711,168.0744852,M+Na-2H,188.0459,24.6,0.5785,1,precursor-product correlation
+negative,identified,C22300,3(1)-Hydroxy-L-isoleucine,147.0895,148.0928981,M-H,146.0823,24.1,0.3503,1,precursor-product correlation
+negative,identified,C22301,"(4S)-31,4-Dihydroxy-L-isoleucine",163.0845,164.0878127,M+FA-H,208.0826,30.4,0.4447,1,precursor-product correlation
+negative,identified,C22309,Apulose,150.0528,151.0561783,M-H,149.0455,42.7,0.4245,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C22314,(3R)-3-Hydroxy-L-glutamate,163.0481,164.0514272,M-H2O-H,144.0302,286.8,0.4411,1,precursor-product correlation
+negative,identified,C22318,Apulose 4-phosphate,230.0192,231.0225092,M-H,229.0118,21.7,0.3219,1,precursor-product correlation
+negative,identified,C22337,D-Ribulose 1-phosphate,230.0192,231.0225092,M-H,229.0118,21.7,0.2869,1,precursor-product correlation
+negative,identified,C22350,Levoglucosan,162.0528,163.0561783,M-H,161.0455,47.3,0.4133,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C22351,3-Dehydrolevoglucosan,160.0372,161.0405282,M+FA-H,205.0353,58.6,0.6323,1,precursor-product correlation
+negative,identified,C22382,Aceneuramate,309.106,310.109336,M-H,308.0987,18.7,0.3747,1,precursor-product correlation
+negative,identified,C22383,"(2S)-2,3-Dihydroxypropane-1-sulfonate",156.0092,158.0050404,M-H2O-H,136.9913,290.9,0.304,1,precursor-product correlation
+negative,identified,C22420,"N(delta),N'(omega)-Dihydroxy-N(omega)-methyl-L-arginine",220.1172,221.1205098,M+Na-2H,241.0918,44.7,0.42,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C22422,N(delta)-Hydroxy-N(omega)-methyl-N(omega)-nitroso-L-citrulline,234.0964,235.0997744,M-H2O-H,215.0783,290,0.42,1,precursor-product correlation
+negative,identified,C22425,3-Amino-2-hydroxy-4-methoxybenzoate,183.0532,184.0565126,M-H2O-H,164.0356,21.9,0.2009,1,precursor-product correlation
+negative,identified,C22438,"3,5-Dehydroshikimate",170.0215,171.0248781,M-H,169.0142,291.5,0.2634,1,precursor-product correlation
+negative,identified,C22447,"22,26-Dihydroxycholesterol",418.3447,419.3480502,M+FA-H,463.3448,279.9,0.2311,1,precursor-product correlation
+negative,identified,C22453,trans-Anhydromevalonate phosphate,210.0293,211.0326799,M-H,209.0212,20.3,0.4568,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C22488,"N-Acetyl-D-glucosamino-1,5-lactone",219.0743,220.077642,M-H2O-H,200.0565,286.7,0.239,1,precursor-product correlation
+negative,identified,C22494,Phenylsuccinate,194.0579,195.0612636,M+Na-2H,215.0328,22.1,0.5415,1,precursor-product correlation
+negative,identified,C22508,6-Dehydro-D-glucose,178.0477,179.0510929,M-H,177.0404,44.6,0.6256,1,precursor-product correlation
+negative,identified,C22611,N-Acetyl-D-glutamate,189.0637,190.0670773,M-H2O-H,170.0458,117.5,0.2875,1,precursor-product correlation
+negative,identified,C22617,(+)-exo-beta-Bergamotene,204.1878,205.1911556,M+FA-H,249.1859,183.4,0.236,1,clustering of adducts and isotopes AND precursor-product correlation
+negative,identified,C22619,5-Dehydrofumagillol,280.1675,281.1708141,M+Na-2H,301.1421,247.3,0.7706,1,precursor-product correlation
+negative,identified,C22622,Dehydrocyclopeptine,278.1055,279.1088825,M+Na-2H,299.0806,259.3,0.2207,1,precursor-product correlation
+negative,identified,C22625,(2E)-2-Aminobut-2-enoate,101.0477,102.0510333,M+FA-H,146.0459,20.3,0.6217,1,precursor-product correlation
+negative,identified,C22627,(5R)-Hydroxy-(+)-exo-beta-bergamotene,220.1827,221.1860702,M+FA-H,265.1808,188.7,0.236,1,precursor-product correlation
+negative,identified,C22631,5-Dehydro-6-demethoxy-6-hydroxyfumagillol,266.1518,267.155164,M+Cl,301.1205,216.5,0.5152,1,precursor-product correlation
+negative,identified,C22635,3-Dehydro-D-glucopyranose,178.0477,179.0510929,M-H,177.0404,44.6,0.1811,1,precursor-product correlation

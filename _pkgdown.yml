@@ -1,0 +1,8 @@
+url: ~
+navbar:
+  structure:
+    left:  [intro, articles, reference]
+    right: [github]
+template:
+  bootstrap: 5
+  bootswatch: cerulean
