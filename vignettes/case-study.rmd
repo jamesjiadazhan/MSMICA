@@ -10,9 +10,9 @@ output:
 # Outline:
 - Load packages and data
 - Replace the missing intensity values with half minimum imputation
-- Prepare the data for MSMICA mega-scale targeted metabolomics analysis
+- Prepare the data for MSMICA targeted metabolomics analysis
 - Prepare the data for MSMICA untargeted metabolomics analysis
-- MSMICA mega-scale targeted metabolomics analysis
+- MSMICA targeted metabolomics analysis
     - Combine the MSMICA results from HILIC positive and C18 negative renal cancer study example data (7 paired renal cancer tissue samples and normal renal tissue samples taken from the same subjects) for a limma paired t-test comparison. Half minimum imputation is used for intensites with 0 values. 
         - Reference: https://bioconductor.org/packages/release/bioc/vignettes/limma/inst/doc/usersguide.pdf
 - MSMICA untargeted metabolomics analysis
@@ -20,7 +20,6 @@ output:
 - MSMICA targeted Sparse PLS Discriminant Analysis (sPLS-DA)
     - Combine the HILIC positive and C18 negative MSMICA results for a sPLS-DA analysis to compare renal cancer tissue and normal tissue samples within the same subject, followed by the sample grouping plot (shows the relationship and similaries between sample), hierarchical clustering heatmap, and relevance network analysis using mixOmics R package. Half minimum imputation is used for intensites with 0 values.
         - Reference: http://mixomics.org/case-studies/splsda-srbct-case-study/
-
 ---
 
 ## Load packages and data
@@ -30,9 +29,9 @@ library(dplyr)
 library(tidyr)
 library(limma)
 library(splines)
-install.packages("/Users/james/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Emory University - Ph.D./PhD dissertation/MSMICA/Publication/Abstract/MSMICA algorithm/MSMICA", repos = NULL, type = "source")
 library(MSMICA)
 
+# this is the working directory for the case study
 setwd("/Users/james/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Emory University - Ph.D./PhD dissertation/MSMICA/Publication/Abstract/MSMICA algorithm/MSMICA/case study")
 
 # import feature table data
@@ -160,9 +159,9 @@ print(feature_table_exp_c18neg_imputed)
 ```
 
 
-## Prepare the data for MSMICA mega-scale targeted metabolomics analysis
+## Prepare the data for MSMICA targeted metabolomics analysis
 ```{r}
-# Prepare the data for MSMICA mega-scale targeted metabolomics analysis ############################################################################################################
+# Prepare the data for MSMICA targeted metabolomics analysis ############################################################################################################
 # HILIC positive ############################################################################################################
 # inner join the imputed feature table and MSMICA results based on mz=mz, rt=time. This is to add intensity values to the MSMICA results.
 hilicpos_MSMICA_featuretable <- inner_join(hilicpos_MSMICA_identified_metabolites, feature_table_exp_hilicpos_imputed, , by=c("mz"="mz", "time"="time"))
@@ -237,7 +236,7 @@ hilicpos_c18neg_MSMICA_featuretable_clean_t = hilicpos_c18neg_MSMICA_featuretabl
 hilicpos_c18neg_MSMICA_featuretable_clean_t[, -c(1:5)] = hilicpos_c18neg_MSMICA_featuretable_clean_t[, -c(1:5)] %>%
     mutate_all(~log2(.))
 
-# check the data ready for MSMICA mega-scale targeted metabolomics analysis
+# check the data ready for MSMICA targeted metabolomics analysis
 print(hilicpos_c18neg_MSMICA_featuretable_clean_t)
 ```
 
@@ -315,7 +314,7 @@ feature_table_exp_c18neg_imputed_t[, -c(1:5)] = feature_table_exp_c18neg_imputed
 print(feature_table_exp_c18neg_imputed_t)
 ```
 
-## MSMICA mega-scale targeted metabolomics analysis
+## MSMICA targeted metabolomics analysis
 ```{r}
 ############################# limma paired t-test #############################
 # Factorize the samples into normal and cancer
@@ -370,11 +369,11 @@ limma_outcome_1_sig = limma_outcome_1 %>%
 # print the results
 print(limma_outcome_1_sig, width=Inf)
 
-# create a new folder called: MSMICA mega-scale targeted metabolomics analysis
-dir.create("MSMICA mega-scale targeted metabolomics analysis")
+# create a new folder called: MSMICA targeted metabolomics analysis
+dir.create("MSMICA targeted metabolomics analysis")
 
 # save the result as a csv file
-write.csv(limma_outcome_1, "MSMICA mega-scale targeted metabolomics analysis/rcc_targeted_MSMICA_HILICposC18neg_metabolites_limma_paired_t_test.csv", row.names = FALSE)
+write.csv(limma_outcome_1, "MSMICA targeted metabolomics analysis/rcc_targeted_MSMICA_HILICposC18neg_metabolites_limma_paired_t_test.csv", row.names = FALSE)
 ```
 
 
@@ -435,7 +434,7 @@ limma_outcome_hilicpos_sig_MSMICA = left_join(limma_outcome_hilicpos_sig, hilicp
 # print the results
 print(limma_outcome_hilicpos_sig_MSMICA, n=20, width=Inf)
 
-# create a new folder called: MSMICA mega-scale targeted metabolomics analysis
+# create a new folder called: MSMICA targeted metabolomics analysis
 dir.create("MSMICA untargeted metabolomics analysis")
 
 # save the result as a csv file
@@ -525,7 +524,7 @@ plot(pca.RCC)  # barplot of the eigenvalues (explained variance per component)
 plotIndiv(pca.RCC, group = Y, ind.names = TRUE, # plot the samples projected
           legend = TRUE, 
           col.per.group = c("#F68B33", "#388ECC"), # set of colours
-          title = 'PCA on the RCC study, comp 1 - 2') # onto the PCA
+          title = 'PCA on the RCC study, comp 1 & 2') # onto the PCA
 
 # It seems like only the normal tissue samples are separated from the cancer tissue samples. Cancer tissue samples are heterogenous. This is expected as the normal tissue samples are expected to have different metabolite profiles compared to the cancer tissue samples.
 
@@ -566,7 +565,7 @@ plotIndiv(final.splsda, comp = c(1,2), # plot samples from final model
           group = Y, ind.names = TRUE, # colour by class label
           ellipse = TRUE, legend = TRUE, # include 95% confidence ellipse,
           col.per.group = c("#F68B33", "#388ECC"), # set of colours
-          title = 'Final sPLS-DA on SRBCT, comp 1 & 2')
+          title = 'Final sPLS-DA on the RCC study, comp 1 & 2')
 
 # hierarchical clustering heatmap
 # set the styling of the legend to be homogeneous with previous plots
@@ -593,7 +592,7 @@ cim(
 legend("topright", legend = legend$legend, fill = legend$col, title = legend$title)
 
 # network analysis:
-network(final.splsda, color.node = c("orange","lightblue"), cutoff = 0.63, size.node = 0.5, cex.node.name = 0.7, cex.edge.label = 0.7, symkey = TRUE) 
+network(final.splsda, color.node = c("orange","lightblue"), cutoff = 0.63, size.node = 0.5, cex.node.name = 0.8, cex.edge.label = 0.8, symkey = TRUE) 
 ```
 
 

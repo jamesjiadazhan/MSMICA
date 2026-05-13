@@ -26,8 +26,6 @@ library(dplyr)
 library(readr)
 ## this is for data processing
 library(tidyr)
-## this is for progress bar display
-library(progress)
 ## this is for calculating theoretical m/z based on the KEGG monoisotopic masses and adduct forms
 library(MetaboCoreUtilsAdduct)
 

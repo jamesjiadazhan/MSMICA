@@ -6,25 +6,61 @@
 \usage{
 MSMICA_algorithm(
   met_raw_wide,
-  metabolite_identified = NULL,
-  identified_target = NULL,
-  Adduct = c("M+H", "M+2Na-H", "M+Na", "M-H2O+H", "M+K", "M+2H"),
+  class_file = NULL,
+  LC = "HILIC",
+  LC_run_time,
+  mz_threshold = 10,
+  biospecimen = "Blood",
+  hmdb_detection_preference = TRUE,
+  All_Adduct = c("M+H", "M+Na", "M+2Na-H", "M+H-H2O", "M+H-NH3", "M+ACN+H", "M+ACN+2H",
+    "2M+H", "M+2H", "M+H-2H2O"),
+  metabolite_database = "KEGG_HMDB",
+  reaction_database = c("mammalia"),
+  backpropagation_correlation_direction = "positive",
+  adduct_correlation_r_threshold = 0.39,
+  adduct_correlation_time_threshold = 6,
+  isotopic_correlation_r_threshold = 0.71,
+  isotopic_correlation_time_threshold = 4,
+  imputation_method = "half_min",
   prefix = "",
   ion_mode = "positive",
   detail = FALSE,
-  adduct_correlation_r_threshold = 0.4,
-  adduct_correlation_time_threshold = 5,
-  isotopic_correlation_r_threshold = 0.5,
-  isotopic_correlation_time_threshold = 5,
-  mean_absolute_isotope_ratio_deviation_threshold = 5
+  save_unidentified = FALSE,
+  progress_log = FALSE
 )
 }
 \arguments{
 \item{met_raw_wide}{a metabolomics feature table in wide format with mz as the first column, time as the second column, and intensity values as the remaining columns.}
 
-\item{metabolite_identified}{a data frame containing the metabolites that have been identified in the metabolomics feature table. The first column is ion_mode (positive or negative). The second column is metabolite (the name of metabolite). The third column is KEGGID (if no KEGGID, use NA). The fourth column is adduct (the adduct form of a metabolite). The fifth column is mz and the sixth column is time. The rest of the columns are the intensity values. Default is NULL.}
+\item{class_file}{a class file in wide format with the first column name as metabolomics raw file name, the second column name as subject ID, and the third column name as class label (study sample or reference standard sample).}
 
-\item{Adduct}{a vector containing the adduct forms of the metabolites. Default is c("M+H","M+2Na-H","M+Na","M-H2O+H","M+K","M+2H") for the positive mode.}
+\item{LC}{a character value indicating which liquid chromatography (LC) column to be used to predict the retention time of the metabolites. Default is "HILIC" (hydrophilic interaction liquid chromatography). Other options is "RP" or "C18" (reversed phase liquid chromatography, also called C18).}
+
+\item{LC_run_time}{a numeric value indicating the run time of the liquid chromatography. Default is 5 minutes.}
+
+\item{mz_threshold}{the m/z threshold for the metabolite identification. Default is 10 ppm.}
+
+\item{biospecimen}{a character value indicating the biospecimen of the study samples. Default is "Blood". The other options include "Urine", "Feces", "Cerebrospinal Fluid", "Saliva", "Breast Milk", "Sweat", "Cellular Cytoplasm", "Amniotic Fluid", "Aqueous Humour", "Ascites Fluid", "Lymph", "Tears",  "Bile", "Semen", "Pericardial Effusion"}
+
+\item{hmdb_detection_preference}{a logical value indicating whether to use the HMDB detection preference for the adduct identification. Default is TRUE. If TRUE, then only the metabolites noted as "detected" in the HMDB database will be used for MSMICA algorithm. If FALSE, then all the metabolites specified in the metabolite_database will be used for MSMICA algorithm.}
+
+\item{All_Adduct}{the adduct forms of the metabolites. Default is c("M+H","M+Na","M+2Na-H","M+H-H2O","M+H-NH3","M+ACN+H","M+ACN+2H","2M+H","M+2H","M+H-2H2O") for the positive mode. This includes primary and secondary adducts.}
+
+\item{metabolite_database}{a character value indicating the metabolite database to be used. Default is "KEGG_HMDB".}
+
+\item{reaction_database}{a character vector specifying the reaction database to be used. Default is c("mammalia"). Other option is c("general").}
+
+\item{backpropagation_correlation_direction}{the direction of the backpropagation precursor-product/transportercorrelation coefficient. Default is "positive". Other options are "both". If positive, then only the positive backpropagation correlation coefficient is used. If both, then both the positive and negative backpropagation correlation coefficients are used.}
+
+\item{adduct_correlation_r_threshold}{the correlation threshold for adduct correlation analysis. Default is 0.39 (spearman correlation).}
+
+\item{adduct_correlation_time_threshold}{the retention time threshold for adduct correlation analysis. Default is 6 (seconds).}
+
+\item{isotopic_correlation_r_threshold}{the correlation threshold for isotopic correlation analysis. Default is 0.71 (spearman correlation).}
+
+\item{isotopic_correlation_time_threshold}{the retention time threshold for isotopic correlation analysis. Default is 4 (seconds).}
+
+\item{imputation_method}{the method to be used for missing value imputation. Default is "half_min". Other options are "QRILC" (QRILC is better for triplicate samples) and NA. If NA, then no imputation is performed.}
 
 \item{prefix}{a prefix to be added to the output files. Default is "".}
 
@@ -32,18 +68,10 @@ MSMICA_algorithm(
 
 \item{detail}{a logical value indicating whether to save the intermediate results as csv files. Default is FALSE. WARNING, this can create thousands of files with a lot of space. Use with caution.}
 
-\item{adduct_correlation_r_threshold}{the correlation threshold for adduct correlation analysis. Default is 0.4 (spearman correlation).}
+\item{save_unidentified}{a logical value indicating whether the unidentified features should be saved. Default is FALSE.}
 
-\item{adduct_correlation_time_threshold}{the retention time threshold for adduct correlation analysis. Default is 5 (seconds).}
-
-\item{isotopic_correlation_r_threshold}{the correlation threshold for isotopic correlation analysis. Default is 0.5 (spearman correlation).}
-
-\item{isotopic_correlation_time_threshold}{the retention time threshold for isotopic correlation analysis. Default is 5 (seconds).}
-
-\item{mean_absolute_isotope_ratio_deviation_threshold}{the threshold for the mean absolute isotope ratio deviation between predicted isotopic relative abundance and actual isotopic relative abundance compared to the primary adduct without heavy isotope. Default is 5 (percent).}
-
-\item{identified_target:}{a vector containing the KEGGID that are used as additional starting points for the MSMICA algorithm. This can be used when users just want to use specific identified metabolites as the starting point for the MSMICA algorithm. Default is NULL.}
+\item{progress_log}{a logical value indicating whether to save the log of all printings and messages to a text file. Default is TRUE.}
 }
 \description{
-This function is used to perform the MSMICA algorithm for metabolite identification using the metabolomics feature table and the KEGG database. The function takes the following inputs:
+This function is used to perform the MSMICA algorithm for metabolite identification using the metabolomics feature table and the KEGG database.
 }

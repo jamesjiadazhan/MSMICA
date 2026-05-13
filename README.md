@@ -1,132 +1,178 @@
 # MSMICA
-**Mega scale putative metabolomics identification through connections of untargeted metabolomics data** 
+**Mega-Scale Metabolomics Identification through Connections of Untargeted Metabolomics Data**
 
-## Code availability
+## Code Availability
 ___
-**MSMICA** is available to only non-commercial use. All commercial use of MSMICA requires a business license. Please contact Jiada (James) Zhan at jzha832@emory.edu or the Office of Technology Transfer at Emory University at mcoburn@emory.edu for more information.
+**MSMICA** is available for non-commercial use only. All commercial use requires a business license. Please contact James Zhan at jamesjiadazhan@gmail.com for more information.
+
+## License
+___
+MSMICA is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License (CC BY-NC-ND 4.0). See the `LICENSE` file for details.
 
 ## Overview
 ___
 
-**MSMICA** is an R package that uses experimentally optimized parameters, including adduct formations, adduct correlations, enzyme-based precursor-product correlations, and isotope correlations, to quantify the confidence of putative metabolite identification with a rigorous Bayesian probability approach. 
+**MSMICA** is an R package that uses experimentally optimized parameters — including adduct formations, adduct correlations, enzyme-based precursor-product correlations, and isotope correlations — to quantify the confidence of putative metabolite identification using a rigorous Bayesian probability framework.
 
-
-## User-friendly tutorial page
-___
-- ### [Click here]()
-
+The algorithm assigns each LC-MS feature a posterior identification probability and outputs a **unique** list of identified metabolites with one adduct form, m/z, and retention time per entry.
 
 ## Citation
 ___
-If you are using the MSMICA in your research, **please be sure to cite our original work**. By doing so, you not only add credibility to your findings but also recognize and appreciate our intellectual efforts and contributions. The appropriate citation is as follows:
+If you use MSMICA in your research, **please cite our original work**:
 
-- *bioRxiv citation or Nature Methods citation*
-  - website link
+- *Citation TBD — manuscript under review*
 
-## How MSMICA works
-___
-The **MSMICA** package performs calculations in 3 steps:
-
-1. m/z annotation using KEGG database using users' provided adduct forms (default 5 ppm).
-
-2. Bayesian probability calculation for metabolites with clustering patterns using adduct correlations, isotope correlations and adduct formations.
-
-3. Bayesian probability calculation for all the other metabolomics features using precursor-product correlations, using KEGG precursor-product enzyme-based reaction database.
-
-## What MSMICA can do
+## How MSMICA Works
 ___
 
-- Input: 
-    - The algorithm starts with the input of a liquid chromatography-mass spectrometry (LC-MS) feature table with a list of features’ m/z, retention time, and intensities. 
-        - The default is an untargeted approach. 
-        - Users have the option of providing a list of identified or confidently annotated metabolites as additional algorithm starting points with column mode, metabolite names, KEGGID, m/z, retention times, and intensities. This may further increase the coverage of MSMICA.
+MSMICA performs identification in three main stages:
 
-- Output: 
-    - The output is a unique list of identified metabolites with the one adduct form, m/z, and retention time assigned. 
-        - Regarding output, by applying MSMICA to studies with human plasma, human urine, human tissue, and mouse serum samples, we identified about 3000 unique metabolites by combining HILIC positive and C18 negative results in each sample type. 
-        - Using our retention time reference library (m/z 5 ppm, RT 30 seconds), we confirmed some of these metabolites with an average fraction correct rate of 0.96.
+1. **m/z annotation** — Each observed feature is matched against the KEGG/HMDB metabolite database (combined or KEGG-only) at the user-specified ppm tolerance. All user-specified adduct forms are considered simultaneously.
+
+2. **Clustering of adducts and isotopes** — For metabolites whose candidate features form adduct/isotopologue clusters (i.e. two or more adduct forms of the same metabolite co-elute and co-vary in intensity), a Bayesian model incorporating adduct formation, adduct correlation (Spearman r), and isotopologue abundance ratio is used to reduce the identity redundancies of features.  
+
+3. **Local optimization per monoisotopic mass** — For all remaining features, MSMICA uses a local Bayesian optimization scores each candidate feature using retention-time prediction, precursor-product/transporter Spearman correlation, and biospecimen-specific HMDB concentration priors. This stage iterates until no new metabolite identification can be made.
+
+## What MSMICA Can Do
+___
+
+**Input:**
+- A LC-MS feature table with m/z, retention time, and per-sample intensities as columns (wide format).
+- Optional: a list of pre-identified metabolites (e.g. from targeted analysis or authentic standards) with KEGG IDs, m/z, and retention times to serve as network anchors.
+- Optional: a sample class file to restrict correlation analysis to study samples only.
+
+**Output:**
+- A unique list of identified metabolites with assigned adduct, m/z, retention time, identification method, and posterior probability (0–100 %).
+- When applied to human plasma, urine, tissue, and mouse serum with combined HILIC positive / C18 negative data, MSMICA typically identifies ~3,000 unique metabolites per sample type.
 
 ## Installation
 ___
 
-Currently, **dietaryindex** is not available on [CRAN]
+MSMICA is not yet on CRAN. Install from GitHub using **remotes** after installing the package dependencies below.
 
-To install MSMICA from GitHub, use the **devtools** package:
+**Package dependencies:** `dplyr`, `readr`, `tidyr`, `data.table`, `mgcv`, `pracma`, `preprocessCore`, `imputeLCMD`, `MetaboCoreUtilsAdduct`.
 
-Package dependencies: **dplyr**, **readr**, **tidyr**, **progress**, **MetaboCoreUtilsAdduct**.
+**Installation helpers:** `remotes` for GitHub packages and `BiocManager` for Bioconductor packages.
 
-```
-# If you don't have the following dependencies installed already
-install.packages("dplyr")
-install.packages("readr")
-install.packages("tidyr")
-install.packages("progress")
-install.packages("devtools")
-devtools::install_github("jamesjiadazhan/MetaboCoreUtilsAdduct") # Install the package from GitHub
+```r
+# Install only missing R package dependencies from CRAN
+required_pkgs <- c("dplyr", "readr", "tidyr",
+                   "data.table", "mgcv", "pracma", "remotes")
+missing_pkgs <- required_pkgs[!required_pkgs %in% rownames(installed.packages())]
+if (length(missing_pkgs) > 0) install.packages(missing_pkgs)
 
-# Now, install MSMICA
-devtools::install_github("jamesjiadazhan/MSMICA") # Install the package from GitHub
-```
+# Install Bioconductor dependencies
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install(c("preprocessCore", "pcaMethods", "impute"))
 
-To install MSMICA locally, you can first download the package manually by clicking the **Code** button and downloading the ZIP file. Unzip the file. Then, use the following codes (replace my path with your path):
+# Install imputeLCMD from CRAN
+if (!requireNamespace("imputeLCMD", quietly = TRUE))
+    install.packages("imputeLCMD")
 
-```
-# If you don't have the following dependencies installed already
-install.packages("dplyr")
-install.packages("readr")
-install.packages("tidyr")
-install.packages("progress")
-install.packages("devtools")
-devtools::install_github("jamesjiadazhan/MetaboCoreUtilsAdduct") # Install the package from GitHub
+# Install MetaboCoreUtilsAdduct from GitHub
+remotes::install_github("jamesjiadazhan/MetaboCoreUtilsAdduct")
 
-# Now, install MSMICA
-install.packages("/Users/yan/Downloads/MSMICA-main", repos = NULL, type = "source")
+# Install MSMICA from GitHub
+remotes::install_github("jamesjiadazhan/MSMICA")
 ```
 
+To install from a local copy, install the dependencies above first. Then download and unzip the MSMICA repository, copy the local path, replace `"/path/to/MSMICA"` below, and run:
 
-If something happens like the following, first try to enter 1 in the terminal (lower box). If not successful, then try to enter 2. **It will take a while if you are a new R user.**
-```
-  These packages have more recent versions available.
-  It is recommended to update all of them.
-  Which would you like to update?
-
-  1: All                          
-  2: CRAN packages only           
-  3: None                         
-  4: tzdb  (0.3.0 -> 0.4.0) [CRAN]
-  5: vroom (1.6.1 -> 1.6.3) [CRAN]
+```r
+install.packages("/path/to/MSMICA", repos = NULL, type = "source")
 ```
 
+If you receive MSMICA as a local source archive, such as `.tar.gz`, install dependencies first and then use:
+
+```r
+install.packages("/path/to/MSMICA_1.0.0.tar.gz", repos = NULL, type = "source")
+```
 
 ## Getting Started
 ___
-- ### [Click here for codes with printing outputs]()
-```
-# Load the necessary dependency packages for MSMICA
-## this is for data processing
-library(dplyr)
-## this is for tibble data structure
-library(readr)
-## this is for data processing
-library(tidyr)
-## this is for progress bar display
-library(progress)
-## this is for calculating theoretical m/z based on the KEGG monoisotopic masses and adduct forms
-library(MetaboCoreUtilsAdduct)
 
-# Load MSMICA
+```r
 library(MSMICA)
 
-# The example data includes a feature table from a LC-MS metabolomics study involving 7 paired kidney cancer tissue samples and normal kidney tissue samples taken from the same subjects (7 subjects, 14 actual samples, 42 triplicate samples). These samples were analyzed using HILIC positive. The feature table is a data frame with the first column as m/z (mass-to-charge ratio), the second column as retention time, and the rest of the columns as the intensity values for each sample.
+# ── Step 1: Load your feature table ──────────────────────────────────────────
+# The feature table must have m/z as column 1, retention time (seconds) as column 2, and per-sample intensities in the remaining columns.
 data(feature_table_exp_hilicpos)
 
-# Set a working directory for the MSMICA output files. This is where the output files will be saved.
-setwd("/Users/james/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Emory University - Ph.D./PhD dissertation/MSMICA/Publication/Abstract/MSMICA algorithm/MSMICA example data")
+# ── Step 2: QC filter ─────────────────────────────────────────────────────────
+# Remove features that appear in fewer than 20 % of samples.
+feature_table_exp_hilicpos <- QC_filter(
+    x = feature_table_exp_hilicpos,
+    metabolite_start_column = 3,
+    minimum_sample_appear = 0.20
+)
 
-# Filter out features appear less than 20% of all samples. The intensity column starts from the 3rd column.
-feature_table_exp_hilicpos = QC_filter(x = feature_table_exp_hilicpos, metabolite_start_column = 3, minimum_sample_appear = 0.20)
+# ── Step 3: Run MSMICA ────────────────────────────────────────────────────────
+# Select one ion mode at a time and provide the appropriate adduct list.
+adducts <- msmica_adducts(mode = "positive", sample_type = "fluid")
 
-# Run the MSMICA algorithm with the example data. Remember to select only one ion mode at a time and select the appropriate adduct forms.
-MSMICA_algorithm(met_raw_wide = feature_table_exp_hilicpos, Adduct = c("M+H","M+2Na-H","M+Na","M-H2O+H","M+K","M+2H"), prefix="MSMICA_test_hilicpos", ion_mode="positive")
-
+MSMICA_algorithm(
+    met_raw_wide    = feature_table_exp_hilicpos,
+    LC              = "HILIC",    # chromatography
+    LC_run_time     = 5,          # minutes
+    mz_threshold    = 10,
+    ion_mode        = "positive",
+    All_Adduct      = adducts,
+    biospecimen     = "Blood",
+    reaction_database = c("mammalia"),
+    prefix          = "MSMICA_test_hilicpos"
+)
 ```
+
+
+## Function Reference
+___
+
+| Function | Description |
+|---|---|
+| `MSMICA_algorithm()` | Main entry point. Runs the full three-stage identification pipeline. |
+| `QC_filter()` | Removes low-prevalence features (appear in < x% of samples). |
+| `msmica_adducts()` | Returns preset adduct vectors for common ion mode and sample type combinations. |
+| `find.Overlapping.mzs()` | Fast ppm-based m/z matching between two feature tables using `data.table`. |
+| `custom_biochemical_reaction_loading()` | Loads the bundled curated biochemical reaction dataset. |
+
+All other functions in the package are internal helpers called automatically by `MSMICA_algorithm()`.
+
+## Key Parameters
+___
+
+| Parameter | Default | Description | Alternative Options |
+|---|---|---|---|
+| `mz_threshold` | `10` | m/z matching tolerance in ppm. Use 10 ppm with high-resolution instruments (including Orbitrap MS). | User-defined numeric threshold based on instrument performance. |
+| `LC` | `"HILIC"` | LC column type for RT prediction. | `"RP"` or `"C18"`. |
+| `LC_run_time` | — | Total LC run time in **minutes** (required). | Any positive numeric runtime in minutes. |
+| `biospecimen` | `"Blood"` | Biospecimen type used for HMDB concentration priors. Only Blood and Urine are well characterized. Other biospecimen types are not well documented so using Blood may be a good alternative. | `"Urine"`, `"Feces"`, `"Cerebrospinal Fluid"`, `"Saliva"`, `"Breast Milk"`, `"Sweat"`, `"Cellular Cytoplasm"`, `"Amniotic Fluid"`, `"Aqueous Humour"`, `"Ascites Fluid"`, `"Lymph"`, `"Tears"`, `"Bile"`, `"Semen"`, `"Pericardial Effusion"`. |
+| `ion_mode` | `"positive"` | Ionization mode. | `"negative"`. |
+| `All_Adduct` | `msmica_adducts("positive", "fluid")` | Adduct forms considered for matching. | Use `msmica_adducts(mode, sample_type)` for presets: `mode = "positive"` or `"negative"`; `sample_type = "fluid"` or `"tissue"`. You can also provide a custom character vector. |
+| `adduct_correlation_r_threshold` | `0.39` | Spearman correlation threshold for adduct correlation analysis. | User-defined numeric threshold (typically between 0 and 1). |
+| `adduct_correlation_time_threshold` | `6` | Retention-time threshold (seconds) for adduct correlation analysis. | User-defined positive numeric value in seconds. |
+| `isotopic_correlation_r_threshold` | `0.71` | Spearman correlation threshold for isotopic correlation analysis. | User-defined numeric threshold (typically between 0 and 1). |
+| `isotopic_correlation_time_threshold` | `4` | Retention-time threshold (seconds) for isotopic correlation analysis. | User-defined positive numeric value in seconds. |
+| `reaction_database` | `"mammalia"` | Biochemical reaction database(s) for precursor-product scoring. | `"general"`. |
+| `imputation_method` | `"half_min"` | Missing-value imputation method. | `"QRILC"` or `NA` (no imputation). |
+| `detail` | `FALSE` | Save intermediate CSVs (warning: 10+ large files with hundreds of MB). | `TRUE`. |
+| `progress_log` | `FALSE` | Write all messages to a `.txt` log file. | `TRUE`. |
+
+## Adduct Presets
+___
+
+`msmica_adducts()` returns preset adduct vectors for common ion mode and sample type combinations. These presets are meant as convenient starting points; users can still provide a custom character vector to `All_Adduct`.
+
+| Preset | Exact adduct vector |
+|---|---|
+| `msmica_adducts("positive", "fluid")` | `c("M+H", "M+Na", "M+2Na-H", "M+H-H2O", "M+H-NH3", "M+ACN+H", "M+ACN+2H", "2M+H", "M+2H", "M+H-2H2O")` |
+| `msmica_adducts("negative", "fluid")` | `c("M-H", "M+Cl", "M+FA-H", "M+Hac-H", "M-H+HCOONa", "M+Na-2H", "M-2H", "2M-H", "M+ACN-H")` |
+| `msmica_adducts("positive", "tissue")` | `c("M+H", "M+K", "M+2K-H", "M+H-H2O", "M+H-NH3", "M+ACN+H", "M+ACN+2H", "2M+H", "M+2H", "M+H-2H2O")` |
+| `msmica_adducts("negative", "tissue")` | `c("M-H", "M+Cl", "M+FA-H", "M+Hac-H", "M-H+HCOOK", "M-2H", "2M-H", "M+ACN-H", "M+K-2H")` |
+
+
+
+## Contact
+___
+- **Author:** Jiada (James) Zhan — jzha832@emory.edu or jamesjiadazhan@gmail.com
+- **Lab:** Dean Jones and Young-Mi Go's lab, Emory University, Atlanta, GA, USA

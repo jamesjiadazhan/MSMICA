@@ -1,6 +1,6 @@
 Package: MSMICA
 Type: Package
-Title: Mega scale metabolomics identification through connections of untargeted metabolomics data (MSMICA)
+Title: Mass Spectrometry Metabolite Identification Connection Algorithm (MSMICA)
 Version: 1.0.0
 Authors@R: c(
     person(given = "Jiada", family = "Zhan", middle = "", "jzha832@emory.edu", role = c("aut", "cre"),
@@ -9,16 +9,26 @@ Authors@R: c(
   )
 Maintainer: Jiada (James) Zhan <jzha832@emory.edu>
 Date: 2024-06-27
-Description: MSMICA uses experimentally optimized parameters, including adduct formations, adduct correlations, enzyme-based precursor-product correlations, and isotope correlations, to quantify the confidence of metabolite identification with a probability approach. The output is a unique list of identified metabolites with the one adduct form, m/z, and retention time assigned.
+Description: MSMICA uses mass spectrometry evidence, chromatography evidence, and biological evidence for metabolite identification. The output is a list of identified metabolites with the one adduct form, m/z, and retention time assigned.
 Depends: 
     R (>= 2.10)
 Imports:
+    data.table,
     dplyr,
+    imputeLCMD,
+    mgcv,
+    pracma,
+    preprocessCore,
     readr,
     tidyr,
-    progress,
     MetaboCoreUtilsAdduct
-License:
+Remotes:
+    bioc::preprocessCore,
+    github::jamesjiadazhan/MetaboCoreUtilsAdduct
+License: CC BY-NC-ND 4.0 + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
