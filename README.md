@@ -45,7 +45,7 @@ ___
 - A unique list of identified metabolites with assigned adduct, m/z, retention time, identification method, and posterior probability (0–100 %).
 - When applied to human plasma, urine, tissue, and mouse serum with combined HILIC positive / C18 negative data, MSMICA typically identifies ~3,000 unique metabolites per sample type.
 
-## Installation
+## Dependency Installation
 ___
 
 MSMICA is not yet on CRAN. Install from GitHub using **remotes** after installing the package dependencies below.
@@ -71,8 +71,12 @@ if (!requireNamespace("imputeLCMD", quietly = TRUE))
     install.packages("imputeLCMD")
 
 # Install MetaboCoreUtilsAdduct from GitHub
+BiocManager::install(c("MsCoreUtils", "BiocParallel"))
 remotes::install_github("jamesjiadazhan/MetaboCoreUtilsAdduct")
+```
 
+## MSMICA Installation
+```r
 # Install MSMICA from GitHub
 remotes::install_github("jamesjiadazhan/MSMICA")
 ```
@@ -81,12 +85,6 @@ To install from a local copy, install the dependencies above first. Then downloa
 
 ```r
 install.packages("/path/to/MSMICA", repos = NULL, type = "source")
-```
-
-If you receive MSMICA as a local source archive, such as `.tar.gz`, install dependencies first and then use:
-
-```r
-install.packages("/path/to/MSMICA_1.0.0.tar.gz", repos = NULL, type = "source")
 ```
 
 ## Getting started

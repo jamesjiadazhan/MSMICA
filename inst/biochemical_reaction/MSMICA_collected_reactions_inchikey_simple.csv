@@ -1,0 +1,21 @@
+﻿react_id,enzyme,source,connection_1_InChIKey,connection_1_name,connection_2_InChIKey,connection_2_name
+MSMICA:1,xenobiotic: dietary intake,MSMICA,MXNRLFUSFKVQSK-QMMMGPOBSA-N,"N6,N6,N6-Trimethyl-L-lysine",CDLVFVFTRQPQFU-UHFFFAOYSA-N,delta-Valerobetaine
+MSMICA:2,xenobiotic: dietary intake,MSMICA,CDLVFVFTRQPQFU-UHFFFAOYSA-N,delta-Valerobetaine,GETQZCLCWQTVFV-UHFFFAOYSA-N,Trimethylamine
+MSMICA:3,1.14.11.1,MSMICA,CDLVFVFTRQPQFU-UHFFFAOYSA-N,delta-Valerobetaine,VBXIQJABJRMCRF-ZETCQYMHSA-N,Homocarnitine
+MSMICA:4,3.5.1.14,BKMS-react,KTHDTJVBEPMMGL-VKHMYHEASA-N,N-Acetyl-L-alanine,QNAYBMKLOCPYGJ-REOHCLBHSA-N,L-Alanine
+MSMICA:5,xenobiotic: dietary intake,MSMICA,RYYVLZVUVIJVGH-UHFFFAOYSA-N,Caffeine,WWNNZCOKKKDOPX-UHFFFAOYSA-N,Trigonelline
+MSMICA:6,xenobiotic: dietary intake,MSMICA,RYYVLZVUVIJVGH-UHFFFAOYSA-N,Caffeine,QUNWUDVFRNGTCO-UHFFFAOYSA-N,Paraxanthine
+MSMICA:7,xenobiotic: dietary intake,MSMICA,RYYVLZVUVIJVGH-UHFFFAOYSA-N,Caffeine,ZFXYFBGIUFBOJW-UHFFFAOYSA-N,Theophylline
+MSMICA:8,xenobiotic: dietary intake,MSMICA,RYYVLZVUVIJVGH-UHFFFAOYSA-N,Caffeine,YAPQBXQYLJRXSA-UHFFFAOYSA-N,Theobromine
+MSMICA:9,xenobiotic: dietary intake,MSMICA,RYYVLZVUVIJVGH-UHFFFAOYSA-N,Caffeine,"	BYXCFUMGEBZDDI-UHFFFAOYSA-N","1,3,7-Trimethyluric acid"
+MSMICA:10,xenobiotic: dietary intake,MSMICA,QUNWUDVFRNGTCO-UHFFFAOYSA-N,Paraxanthine,PFWLFWPASULGAN-UHFFFAOYSA-N,7-Methylxanthine
+MSMICA:11,xenobiotic: dietary intake,MSMICA,QUNWUDVFRNGTCO-UHFFFAOYSA-N,Paraxanthine,MVOYJPOZRLFTCP-UHFFFAOYSA-N,1-Methylxanthine
+MSMICA:12,xenobiotic: dietary intake,MSMICA,QUNWUDVFRNGTCO-UHFFFAOYSA-N,Paraxanthine,NOFNCLGCUJJPKU-UHFFFAOYSA-N,"1,7-Dimethyluric acid"
+MSMICA:13,xenobiotic: dietary intake,MSMICA,YAPQBXQYLJRXSA-UHFFFAOYSA-N,Theobromine,GMSNIKWWOQHZGF-UHFFFAOYSA-N,3-Methylxanthine
+MSMICA:14,xenobiotic: dietary intake,MSMICA,MVOYJPOZRLFTCP-UHFFFAOYSA-N,1-Methylxanthine,QFDRTQONISXGJA-UHFFFAOYSA-N,1-Methyluric acid
+MSMICA:15,xenobiotic: dietary intake,MSMICA,GMSNIKWWOQHZGF-UHFFFAOYSA-N,3-Methylxanthine,ODCYDGXXCHTFIR-UHFFFAOYSA-N,3-Methyluric acid
+MSMICA:16,xenobiotic: dietary intake,MSMICA,PFWLFWPASULGAN-UHFFFAOYSA-N,7-Methylxanthine,YHNNPKUFPWLTOP-UHFFFAOYSA-N,7-Methyluric acid
+MSMICA:17,xenobiotic: dietary intake,MSMICA,MVOYJPOZRLFTCP-UHFFFAOYSA-N,1-Methylxanthine,RDZNZFGKEVDNPK-UHFFFAOYSA-N,5-Acetylamino-6-formylamino-3-methyluracil
+MSMICA:18,xenobiotic: dietary intake,MSMICA,MVOYJPOZRLFTCP-UHFFFAOYSA-N,1-Methylxanthine,POQOTWQIYYNXAT-UHFFFAOYSA-N,5-Acetylamino-6-amino-3-methyluracil
+MSMICA:19,xenobiotic: dietary intake,MSMICA,MVOYJPOZRLFTCP-UHFFFAOYSA-N,1-Methylxanthine,XWCBQDPCEYHYRB-UHFFFAOYSA-N,6-Amino-5(N-methylformylamino)-1-methyluracil
+MSMICA:20,xenobiotic: dietary intake,MSMICA,FJKROLUGYXJWQN-UHFFFAOYSA-N,4-hydroxybenzoic acid,ZMHLUFWWWPBTIU-UHFFFAOYSA-N,4-Hydroxyhippuric acid

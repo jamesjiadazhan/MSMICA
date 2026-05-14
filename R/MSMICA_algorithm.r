@@ -194,7 +194,8 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
     }
 
     # load the custom biochemical reaction dataset
-    custom_biochemical_reaction = custom_biochemical_reaction_loading()
+    data(custom_biochemical_reaction_path)
+    custom_biochemical_reaction = custom_biochemical_reaction_path
     # select the connection_1_InChIKey, connection_2_InChIKey, react_id, enzyme, source columns
     custom_biochemical_reaction = custom_biochemical_reaction %>%
         select(connection_1_InChIKey, connection_2_InChIKey, react_id, enzyme, source)
