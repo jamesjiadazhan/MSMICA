@@ -1,5 +1,5 @@
 # MSMICA
-**Mega-Scale Metabolomics Identification through Connections of Untargeted Metabolomics Data**
+**Mass Spectrometry Metabolomics Identification through Connections of Untargeted Metabolomics Data**
 
 ## Code Availability
 ___
@@ -89,87 +89,9 @@ If you receive MSMICA as a local source archive, such as `.tar.gz`, install depe
 install.packages("/path/to/MSMICA_1.0.0.tar.gz", repos = NULL, type = "source")
 ```
 
-## Getting Started
-___
-
-```r
-library(MSMICA)
-
-# ── Step 1: Load your feature table ──────────────────────────────────────────
-# The feature table must have m/z as column 1, retention time (seconds) as column 2, and per-sample intensities in the remaining columns.
-data(feature_table_exp_hilicpos)
-
-# ── Step 2: QC filter ─────────────────────────────────────────────────────────
-# Remove features that appear in fewer than 20 % of samples.
-feature_table_exp_hilicpos <- QC_filter(
-    x = feature_table_exp_hilicpos,
-    metabolite_start_column = 3,
-    minimum_sample_appear = 0.20
-)
-
-# ── Step 3: Run MSMICA ────────────────────────────────────────────────────────
-# Select one ion mode at a time and provide the appropriate adduct list.
-adducts <- msmica_adducts(mode = "positive", sample_type = "fluid")
-
-MSMICA_algorithm(
-    met_raw_wide    = feature_table_exp_hilicpos,
-    LC              = "HILIC",    # chromatography
-    LC_run_time     = 5,          # minutes
-    mz_threshold    = 10,
-    ion_mode        = "positive",
-    All_Adduct      = adducts,
-    biospecimen     = "Blood",
-    reaction_database = c("mammalia"),
-    prefix          = "MSMICA_test_hilicpos"
-)
-```
-
-
-## Function Reference
-___
-
-| Function | Description |
-|---|---|
-| `MSMICA_algorithm()` | Main entry point. Runs the full three-stage identification pipeline. |
-| `QC_filter()` | Removes low-prevalence features (appear in < x% of samples). |
-| `msmica_adducts()` | Returns preset adduct vectors for common ion mode and sample type combinations. |
-| `find.Overlapping.mzs()` | Fast ppm-based m/z matching between two feature tables using `data.table`. |
-| `custom_biochemical_reaction_loading()` | Loads the bundled curated biochemical reaction dataset. |
-
-All other functions in the package are internal helpers called automatically by `MSMICA_algorithm()`.
-
-## Key Parameters
-___
-
-| Parameter | Default | Description | Alternative Options |
-|---|---|---|---|
-| `mz_threshold` | `10` | m/z matching tolerance in ppm. Use 10 ppm with high-resolution instruments (including Orbitrap MS). | User-defined numeric threshold based on instrument performance. |
-| `LC` | `"HILIC"` | LC column type for RT prediction. | `"RP"` or `"C18"`. |
-| `LC_run_time` | — | Total LC run time in **minutes** (required). | Any positive numeric runtime in minutes. |
-| `biospecimen` | `"Blood"` | Biospecimen type used for HMDB concentration priors. Only Blood and Urine are well characterized. Other biospecimen types are not well documented so using Blood may be a good alternative. | `"Urine"`, `"Feces"`, `"Cerebrospinal Fluid"`, `"Saliva"`, `"Breast Milk"`, `"Sweat"`, `"Cellular Cytoplasm"`, `"Amniotic Fluid"`, `"Aqueous Humour"`, `"Ascites Fluid"`, `"Lymph"`, `"Tears"`, `"Bile"`, `"Semen"`, `"Pericardial Effusion"`. |
-| `ion_mode` | `"positive"` | Ionization mode. | `"negative"`. |
-| `All_Adduct` | `msmica_adducts("positive", "fluid")` | Adduct forms considered for matching. | Use `msmica_adducts(mode, sample_type)` for presets: `mode = "positive"` or `"negative"`; `sample_type = "fluid"` or `"tissue"`. You can also provide a custom character vector. |
-| `adduct_correlation_r_threshold` | `0.39` | Spearman correlation threshold for adduct correlation analysis. | User-defined numeric threshold (typically between 0 and 1). |
-| `adduct_correlation_time_threshold` | `6` | Retention-time threshold (seconds) for adduct correlation analysis. | User-defined positive numeric value in seconds. |
-| `isotopic_correlation_r_threshold` | `0.71` | Spearman correlation threshold for isotopic correlation analysis. | User-defined numeric threshold (typically between 0 and 1). |
-| `isotopic_correlation_time_threshold` | `4` | Retention-time threshold (seconds) for isotopic correlation analysis. | User-defined positive numeric value in seconds. |
-| `reaction_database` | `"mammalia"` | Biochemical reaction database(s) for precursor-product scoring. | `"general"`. |
-| `imputation_method` | `"half_min"` | Missing-value imputation method. | `"QRILC"` or `NA` (no imputation). |
-| `detail` | `FALSE` | Save intermediate CSVs (warning: 10+ large files with hundreds of MB). | `TRUE`. |
-| `progress_log` | `FALSE` | Write all messages to a `.txt` log file. | `TRUE`. |
-
-## Adduct Presets
-___
-
-`msmica_adducts()` returns preset adduct vectors for common ion mode and sample type combinations. These presets are meant as convenient starting points; users can still provide a custom character vector to `All_Adduct`.
-
-| Preset | Exact adduct vector |
-|---|---|
-| `msmica_adducts("positive", "fluid")` | `c("M+H", "M+Na", "M+2Na-H", "M+H-H2O", "M+H-NH3", "M+ACN+H", "M+ACN+2H", "2M+H", "M+2H", "M+H-2H2O")` |
-| `msmica_adducts("negative", "fluid")` | `c("M-H", "M+Cl", "M+FA-H", "M+Hac-H", "M-H+HCOONa", "M+Na-2H", "M-2H", "2M-H", "M+ACN-H")` |
-| `msmica_adducts("positive", "tissue")` | `c("M+H", "M+K", "M+2K-H", "M+H-H2O", "M+H-NH3", "M+ACN+H", "M+ACN+2H", "2M+H", "M+2H", "M+H-2H2O")` |
-| `msmica_adducts("negative", "tissue")` | `c("M-H", "M+Cl", "M+FA-H", "M+Hac-H", "M-H+HCOOK", "M-2H", "2M-H", "M+ACN-H", "M+K-2H")` |
-
+## Getting started
+### Check the "Get started" header on the top of the MSMICA website
+- ### [Click here](https://jamesjiadazhan.github.io/MSMICA_manual/articles/MSMICA.html)
 
 
 ## Contact

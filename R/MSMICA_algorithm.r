@@ -1418,5 +1418,5 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
     message("The total running time of the MSMICA algorithm is: ", end_time - start_time)
 
     # return MSMICA main result data frame in case it is directly needed for further analysis
-    return(MSMICA_results_filtered_adduct_isotopic_final)
+    return(MSMICA_results_filtered_final_5)
 }
