@@ -69,10 +69,6 @@ BiocManager::install(c("preprocessCore", "pcaMethods", "impute"))
 # Install imputeLCMD from CRAN
 if (!requireNamespace("imputeLCMD", quietly = TRUE))
     install.packages("imputeLCMD")
-
-# Install MetaboCoreUtilsAdduct from GitHub
-BiocManager::install(c("MsCoreUtils", "BiocParallel"))
-remotes::install_github("jamesjiadazhan/MetaboCoreUtilsAdduct")
 ```
 
 ## MSMICA Installation

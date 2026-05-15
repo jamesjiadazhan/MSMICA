@@ -10,7 +10,7 @@
 #' QC_filter(x = feature_table_exp_hilicpos, metabolite_start_column = 3, minimum_sample_appear = 0.20)
 #' @export QC_filter
 
-QC_filter = function(x, metabolite_start_column, minimum_sample_appear = 0.20){
+QC_filter = function(x, metabolite_start_column = 3, minimum_sample_appear = 0.20){
     sample_appear = ceiling((dim(x)[2] - (metabolite_start_column - 1)) * minimum_sample_appear)
     NumPres.All.Samples = rowSums(x != 0) - (metabolite_start_column - 1)
     x_clean = subset(x, NumPres.All.Samples > sample_appear)

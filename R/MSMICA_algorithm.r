@@ -33,7 +33,6 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
     library(data.table)
     library(mgcv)
     library(pracma)
-    library(MetaboCoreUtilsAdduct)
     # imputeLCMD is not needed to be loaded here because we only use a few functions from it
     # data.table is not needed to be loaded here because find.Overlapping.mzs will load it later
     # preprocessCore is not needed to be loaded here because we only use a few functions from it
@@ -194,8 +193,7 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
     }
 
     # load the custom biochemical reaction dataset
-    data(custom_biochemical_reaction_path)
-    custom_biochemical_reaction = custom_biochemical_reaction_path
+    custom_biochemical_reaction = custom_biochemical_reaction_loading()
     # select the connection_1_InChIKey, connection_2_InChIKey, react_id, enzyme, source columns
     custom_biochemical_reaction = custom_biochemical_reaction %>%
         select(connection_1_InChIKey, connection_2_InChIKey, react_id, enzyme, source)
@@ -291,12 +289,12 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
         dplyr::select(-c(has_NH3, has_H2O, n_NH3, n_H2O))
 
     # calculate mz using Mono_mass and Adduct
-    metabolite_database_2_mz = MetaboCoreUtilsAdduct::mass2mz_df(mass=metabolite_database_2$Mono_mass, adduct=metabolite_database_2$Adduct)
+    metabolite_database_2_mz = mass2mz_df(mass=metabolite_database_2$Mono_mass, adduct=metabolite_database_2$Adduct)
     # add mz to the metabolite_database_2
     metabolite_database_2$mz = metabolite_database_2_mz$mz
 
     # calculate the heavy isotope mz using Most_abundant_isotopologue_mass and and Adduct
-    metabolite_database_2_mz_heavy = MetaboCoreUtilsAdduct::mass2mz_df(mass=metabolite_database_2$Most_abundant_isotopologue_mass, adduct=metabolite_database_2$Adduct)
+    metabolite_database_2_mz_heavy = mass2mz_df(mass=metabolite_database_2$Most_abundant_isotopologue_mass, adduct=metabolite_database_2$Adduct)
     # add heavy isotope mz to the metabolite_database_2
     metabolite_database_2$mz_isotope = metabolite_database_2_mz_heavy$mz
 

@@ -20,11 +20,9 @@ Imports:
     pracma,
     preprocessCore,
     readr,
-    tidyr,
-    MetaboCoreUtilsAdduct
+    tidyr
 Remotes:
-    bioc::preprocessCore,
-    github::jamesjiadazhan/MetaboCoreUtilsAdduct
+    bioc::preprocessCore
 License: CC BY-NC-ND 4.0 + file LICENSE
 Encoding: UTF-8
 LazyData: true

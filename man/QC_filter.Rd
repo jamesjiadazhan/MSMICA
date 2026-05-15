@@ -4,7 +4,7 @@
 \alias{QC_filter}
 \title{QC_filter}
 \usage{
-QC_filter(x, metabolite_start_column, minimum_sample_appear = 0.2)
+QC_filter(x, metabolite_start_column = 3, minimum_sample_appear = 0.2)
 }
 \arguments{
 \item{x}{The metabolomics feature table}
