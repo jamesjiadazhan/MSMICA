@@ -1,7 +1,7 @@
 #' Iteratively run the feature-wise local optimization until convergence
 #'
 #' Repeats the Bayesian local optimization loop
-#' (\code{local_optimization_per_feature()} → precursor-product filtering
+#' (\code{local_optimization_per_mass()} → precursor-product filtering
 #' → concentration-priority pruning) until no further assignments can be
 #' made or \code{max_iter} is reached. At each iteration, newly assigned
 #' (feature, metabolite) pairs are removed from the candidate pool before
@@ -17,9 +17,9 @@
 #' @param input_data Data frame of candidate (feature, metabolite) rows
 #'   in the MSMICA scoring schema, split by \code{Mono_mass}.
 #' @param rt_sigma Numeric. SD of the RT Gaussian passed to
-#'   \code{local_optimization_per_feature()}.
+#'   \code{local_optimization_per_mass()}.
 #' @param pp_mu,pp_sigma Mean and SD of the Fisher-z correlation prior
-#'   passed to \code{local_optimization_per_feature()}.
+#'   passed to \code{local_optimization_per_mass()}.
 #' @param detail Logical. If \code{TRUE} and \code{output_folder} is set,
 #'   intermediate input and result tables are written as CSV files.
 #' @param output_folder Character path. Directory for intermediate CSV
@@ -34,7 +34,20 @@
 #' @noRd
 run_local_optimization_iteratively = function(input_data, rt_sigma, pp_mu, pp_sigma,
                                               rxn_connection, cor_input, adduct_corr_time_thresh,
-                                              detail = FALSE, output_folder = NULL, max_iter = 20) {
+                                              detail = FALSE, output_folder = NULL, max_iter = 20,
+                                              concentration_prior_weight = 1,
+                                              feature_rank_prior_strength = 1,
+                                              single_feature_prior_multiplier = 10,
+                                              cross_mass_concentration_tiebreak = TRUE,
+                                              use_concentration_tag = TRUE,
+                                              local_optimization_assignment = "metabolite_greedy",
+                                              local_rt_weight = 1,
+                                              local_corr_weight = 1,
+                                              metabolite_rt_weight = 1,
+                                              metabolite_corr_weight = 1,
+                                              metabolite_intensity_weight = 1,
+                                              calibration_method = "current",
+                                              evidence_calibration = NULL) {
     current_data = input_data
     all_results = list()
     iter = 1
@@ -56,7 +69,7 @@ run_local_optimization_iteratively = function(input_data, rt_sigma, pp_mu, pp_si
                 current_data,
                 paste0(
                     output_folder, "/",
-                    "MSMICA_local_optimization_per_feature_main_adduct_input_data_",
+                    "MSMICA_local_optimization_per_mass_main_adduct_input_data_",
                     iter, ".csv"
                 )
             )
@@ -67,7 +80,7 @@ run_local_optimization_iteratively = function(input_data, rt_sigma, pp_mu, pp_si
 
         # progress bar
         total_iterations = length(current_split)
-        pb_local_optimization_per_feature = txtProgressBar(
+        pb_local_optimization_per_mass = txtProgressBar(
             min = 0,
             max = total_iterations,
             style = 3
@@ -77,17 +90,25 @@ run_local_optimization_iteratively = function(input_data, rt_sigma, pp_mu, pp_si
         last_progress_updete = 1
 
         current_result_split = lapply(seq_along(current_split), function(j) {
-            res = local_optimization_per_feature(
+            res = local_optimization_per_mass(
                 mass_group_data = current_split[[j]],
                 rt_sigma = rt_sigma,
                 corr_mu = pp_mu,
-                corr_sigma = pp_sigma
+                corr_sigma = pp_sigma,
+                w_rt = local_rt_weight,
+                w_corr = local_corr_weight,
+                w_prior = concentration_prior_weight,
+                single_feature_prior_multiplier = single_feature_prior_multiplier,
+                feature_rank_prior_strength = feature_rank_prior_strength,
+                assignment_strategy = local_optimization_assignment,
+                calibration_method = calibration_method,
+                evidence_calibration = evidence_calibration
             )
-            setTxtProgressBar(pb_local_optimization_per_feature, j)
+            setTxtProgressBar(pb_local_optimization_per_mass, j)
             res
         })
 
-        close(pb_local_optimization_per_feature)
+        close(pb_local_optimization_per_mass)
 
         # combine
         current_result = do.call(rbind, current_result_split)
@@ -108,28 +129,22 @@ run_local_optimization_iteratively = function(input_data, rt_sigma, pp_mu, pp_si
             )
 
         # process identification_method
-        current_processed = process_identification_method(current_joined)
+        current_processed = process_identification_method(
+            current_joined,
+            use_concentration_tag = use_concentration_tag
+        )
 
         message("Here is the current local optimization result:")
         print(current_processed)
 
         # group by mz_time and select the metabolites with the highest Concentration_average: this is because the previous steps use monoisotopic mass, but some metabolites have very close but not the same monoisotopic mass (like Butyrobetaine and Acetylcholine, but Butyrobetaine is much more abundant should be prioritized). 
-        current_processed = current_processed %>%
-            group_by(mz_time) %>%
-            filter(Concentration_average == max(Concentration_average) | is.na(Concentration_average)) %>%
-            ungroup()
+        if (cross_mass_concentration_tiebreak) {
+            current_filtered = current_processed %>%
+                group_by(mz_time) %>%
+                filter(Concentration_average == max(Concentration_average) | is.na(Concentration_average)) %>%
+                ungroup()
+        }
     
-        # apply precursor-product filter
-        current_filtered = precursor_product_correlation_filtering(
-            current_processed,
-            rxn_connection = rxn_connection,
-            cor_input = cor_input,
-            adduct_corr_time_thresh = adduct_corr_time_thresh,
-            rt_sigma = rt_sigma,
-            pp_mu = pp_mu,
-            pp_sigma = pp_sigma
-        )
-
         # standardize output
         current_filtered = current_filtered %>%
             dplyr::select(-log_posterior) %>%
@@ -148,7 +163,7 @@ run_local_optimization_iteratively = function(input_data, rt_sigma, pp_mu, pp_si
                 current_filtered,
                 paste0(
                     output_folder, "/",
-                    "MSMICA_local_optimization_per_feature_main_adduct_result_",
+                    "MSMICA_local_optimization_per_mass_main_adduct_result_",
                     iter, ".csv"
                 )
             )

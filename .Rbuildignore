@@ -1,3 +1,15 @@
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
+^\.DS_Store$
+^.*\.DS_Store$
+^\.Rhistory$
+^\.Rproj\.user$
+^\.claude$
+^\.cursor$
+^\.git$
+^\.github$
+^MSMICA\.Rproj$
+^vignettes/MSMICA targeted metabolomics analysis$
+^vignettes/MSMICA untargeted metabolomics analysis$
+^vignettes/MSMICA_example_.*_secondary_adduct_isotopic\.csv$

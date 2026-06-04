@@ -1,17 +1,22 @@
 Package: MSMICA
 Type: Package
 Title: Mass Spectrometry Metabolite Identification Connection Algorithm (MSMICA)
-Version: 1.0.0
+Version: 1.0.1
 Authors@R: c(
-    person(given = "Jiada", family = "Zhan", middle = "", "jzha832@emory.edu", role = c("aut", "cre"),
-      comment = c(ORCID = "0000-0003-2480-8760")
+    person(
+        given = "Jiada",
+        family = "Zhan",
+        email = "jzha832@emory.edu",
+        role = c("aut", "cre"),
+        comment = c(ORCID = "0000-0003-2480-8760")
     )
   )
+Author: Jiada Zhan [aut, cre]
 Maintainer: Jiada (James) Zhan <jzha832@emory.edu>
-Date: 2024-06-27
-Description: MSMICA uses mass spectrometry evidence, chromatography evidence, and biological evidence for metabolite identification. The output is a list of identified metabolites with the one adduct form, m/z, and retention time assigned.
+Date: 2026-05-28
+Description: MSMICA uses mass spectrometry evidence, chromatography evidence, and biological evidence for metabolite identification. This publication version uses the optimized empirical RT/correlation calibration, soft rank prior, and 80% empirical adduct/isotope clustering thresholds. The output is a list of identified metabolites with one assigned adduct form, m/z, and retention time.
 Depends: 
-    R (>= 2.10)
+    R (>= 3.5.0)
 Imports:
     data.table,
     dplyr,
@@ -20,13 +25,12 @@ Imports:
     pracma,
     preprocessCore,
     readr,
+    tibble,
     tidyr
 Remotes:
     bioc::preprocessCore
 License: CC BY-NC-ND 4.0 + file LICENSE
 Encoding: UTF-8
 LazyData: true
+LazyDataCompression: xz
 RoxygenNote: 7.3.2
-Suggests:
-    testthat (>= 3.0.0)
-Config/testthat/edition: 3

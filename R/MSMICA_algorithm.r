@@ -13,10 +13,12 @@
 #' @param metabolite_database a character value indicating the metabolite database to be used. Default is "KEGG_HMDB".
 #' @param reaction_database a character vector specifying the reaction database to be used. Default is c("mammalia"). Other option is c("general").
 #' @param backpropagation_correlation_direction the direction of the backpropagation precursor-product/transportercorrelation coefficient. Default is "positive". Other options are "both". If positive, then only the positive backpropagation correlation coefficient is used. If both, then both the positive and negative backpropagation correlation coefficients are used.
-#' @param adduct_correlation_r_threshold the correlation threshold for adduct correlation analysis. Default is 0.39 (spearman correlation).
-#' @param adduct_correlation_time_threshold the retention time threshold for adduct correlation analysis. Default is 6 (seconds).
-#' @param isotopic_correlation_r_threshold the correlation threshold for isotopic correlation analysis. Default is 0.71 (spearman correlation).
-#' @param isotopic_correlation_time_threshold the retention time threshold for isotopic correlation analysis. Default is 4 (seconds).
+#' @details Adduct and isotope clustering thresholds are estimated empirically
+#'   from high-confidence primary-adduct anchors within each dataset. The final
+#'   publication workflow uses the optimized 80% capture criterion, with a
+#'   maximum calibration search window of 15 seconds for adduct pairs and
+#'   10 seconds for isotope pairs. Adduct and isotope correlation thresholds
+#'   use a hard Spearman correlation floor of 0.4.
 #' @param imputation_method the method to be used for missing value imputation. Default is "half_min". Other options are "QRILC" (QRILC is better for triplicate samples) and NA. If NA, then no imputation is performed.
 #' @param prefix a prefix to be added to the output files. Default is "".
 #' @param ion_mode the ionization mode of the metabolomics data. Default is "positive". Other options are "negative".
@@ -25,17 +27,22 @@
 #' @param progress_log a logical value indicating whether to save the log of all printings and messages to a text file. Default is TRUE.
 #' @export MSMICA_algorithm
 
-MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_run_time, mz_threshold = 10, biospecimen = "Blood", hmdb_detection_preference = TRUE,  All_Adduct = c("M+H","M+Na","M+2Na-H","M+H-H2O","M+H-NH3","M+ACN+H","M+ACN+2H","2M+H","M+2H","M+H-2H2O"), metabolite_database = "KEGG_HMDB", reaction_database = c("mammalia"), backpropagation_correlation_direction = "positive", adduct_correlation_r_threshold = 0.39, adduct_correlation_time_threshold = 6, isotopic_correlation_r_threshold = 0.71, isotopic_correlation_time_threshold = 4, imputation_method = "half_min", prefix = "", ion_mode = "positive", detail = FALSE, save_unidentified = FALSE, progress_log = FALSE) {
-    # Load all required packages only if necessary
-    library(dplyr)
-    library(readr)
-    library(tidyr)
-    library(data.table)
-    library(mgcv)
-    library(pracma)
-    # imputeLCMD is not needed to be loaded here because we only use a few functions from it
-    # data.table is not needed to be loaded here because find.Overlapping.mzs will load it later
-    # preprocessCore is not needed to be loaded here because we only use a few functions from it
+MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_run_time, mz_threshold = 10, biospecimen = "Blood", hmdb_detection_preference = TRUE,  All_Adduct = c("M+H","M+Na","M+2Na-H","M+H-H2O","M+H-NH3","M+ACN+H","M+ACN+2H","2M+H","M+2H","M+H-2H2O"), metabolite_database = "KEGG_HMDB", reaction_database = c("mammalia"), backpropagation_correlation_direction = "positive", imputation_method = "half_min", prefix = "", ion_mode = "positive", detail = FALSE, save_unidentified = FALSE, progress_log = FALSE) {
+    # Publication-optimized MSMICA settings.
+    empirical_cluster_capture = 0.8
+    adduct_threshold_max_time = 15
+    isotope_threshold_max_time = 10
+    adduct_correlation_floor = 0.4
+    isotopic_correlation_floor = 0.4
+    threshold_min_pairs = 20
+    concentration_prior_weight = 0
+    feature_rank_prior_strength = 0.5
+    single_feature_prior_multiplier = 10
+    local_rt_weight = 2
+    local_corr_weight = 0.25
+    metabolite_rt_weight = 2
+    metabolite_corr_weight = 0.25
+    metabolite_intensity_weight = 1
 
     # if progress_log = TRUE, then establish a log file (txt format) to store all the printing and messages
     if (progress_log) {
@@ -153,30 +160,41 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
         ungroup()
 
     ##################### prepare the hmdb detection preference database #####################
-    # if hmdb_detection_preference is TRUE, then load the hmdb_endogenous_metabolites_detected_and_quantified database for prioritization
+    # if hmdb_detection_preference is TRUE, then load the hmdb_metabolites_detected_and_quantified database for prioritization
     if (hmdb_detection_preference == TRUE) {
-        data(hmdb_endogenous_metabolites_detected_and_quantified)
+        hmdb_detected_env = new.env(parent = emptyenv())
+        utils::data("hmdb_metabolites_detected_and_quantified", envir = hmdb_detected_env)
+        if (exists("hmdb_metabolites_detected_and_quantified", envir = hmdb_detected_env)) {
+            hmdb_metabolites_detected_and_quantified = get("hmdb_metabolites_detected_and_quantified", envir = hmdb_detected_env)
+        } else if (exists("hmdb_endogenous_metabolites_detected_and_quantified", envir = hmdb_detected_env)) {
+            hmdb_metabolites_detected_and_quantified = get("hmdb_endogenous_metabolites_detected_and_quantified", envir = hmdb_detected_env)
+        } else {
+            stop("hmdb_metabolites_detected_and_quantified data could not be loaded.")
+        }
 
-        # extract non-NA values from the HMDBID and InChIKey columns in the hmdb_endogenous_metabolites_detected_and_quantified dataframe
-        hmdb_endogenous_metabolites_detected_and_quantified_HMDBID = hmdb_endogenous_metabolites_detected_and_quantified %>%
+        # extract non-NA values from the HMDBID and InChIKey columns in the hmdb_metabolites_detected_and_quantified dataframe
+        hmdb_endogenous_metabolites_detected_and_quantified_HMDBID = hmdb_metabolites_detected_and_quantified %>%
             filter(!is.na(HMDBID)) %>%
             select(HMDBID) %>%
             unique() %>%
             pull()
 
-        hmdb_endogenous_metabolites_detected_and_quantified_InChIKey = hmdb_endogenous_metabolites_detected_and_quantified %>%
+        hmdb_endogenous_metabolites_detected_and_quantified_InChIKey = hmdb_metabolites_detected_and_quantified %>%
             filter(!is.na(InChIKey)) %>%
             select(InChIKey) %>%
             unique() %>%
             pull()
     }
-    # keep only the first 14 characters of the InChIKey in the hmdb_endogenous_metabolites_detected_and_quantified
+    # keep only the first 14 characters of the InChIKey in the hmdb_metabolites_detected_and_quantified
     hmdb_endogenous_metabolites_detected_and_quantified_InChIKey = substr(hmdb_endogenous_metabolites_detected_and_quantified_InChIKey, 1, 14)
     # remove duplicates
     hmdb_endogenous_metabolites_detected_and_quantified_InChIKey = unique(hmdb_endogenous_metabolites_detected_and_quantified_InChIKey)
     # append the records from hmdb_metabolites_concentrations_average
     hmdb_endogenous_metabolites_detected_and_quantified_HMDBID = unique(c(hmdb_endogenous_metabolites_detected_and_quantified_HMDBID, hmdb_metabolites_concentrations_average$HMDBID))
     hmdb_endogenous_metabolites_detected_and_quantified_InChIKey = unique(c(hmdb_endogenous_metabolites_detected_and_quantified_InChIKey, hmdb_metabolites_concentrations_average$InChIKey))
+    # remove NA values from hmdb_endogenous_metabolites_detected_and_quantified_HMDBID and hmdb_endogenous_metabolites_detected_and_quantified_InChIKey
+    hmdb_endogenous_metabolites_detected_and_quantified_HMDBID = hmdb_endogenous_metabolites_detected_and_quantified_HMDBID[!is.na(hmdb_endogenous_metabolites_detected_and_quantified_HMDBID)]
+    hmdb_endogenous_metabolites_detected_and_quantified_InChIKey = hmdb_endogenous_metabolites_detected_and_quantified_InChIKey[!is.na(hmdb_endogenous_metabolites_detected_and_quantified_InChIKey)]
 
     ##################### prepare the precursor-product/transporter relationship database #####################
     # import the precursor-product reaction database according to the reaction_database input for the initial propagation of precursor-product correlation
@@ -203,6 +221,14 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
         mutate(connection_1_InChIKey = connection_2_InChIKey, connection_2_InChIKey = connection_1_InChIKey)
     # combine the custom_biochemical_reaction and custom_biochemical_reaction_flipped
     custom_biochemical_reaction = bind_rows(custom_biochemical_reaction, custom_biochemical_reaction_flipped)
+
+    # # Prepare xenobiotic precursor/product relationships for correlation testing.
+    # # Xenobiotic edges are flipped product -> precursor, and products that share
+    # # the same precursor are connected bidirectionally.
+    # xenobiotic_reaction_connection = xenobiotic_reaction_connection_loading(
+    #     metabolite_database = metabolite_database
+    # )
+    # message("Xenobiotic reaction database is used.")
 
     # import the human transporter database
     data(Recon3D_unitprot_Deo_human_transporter)
@@ -233,7 +259,8 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
     colnames(custom_biochemical_reaction)[4] = "enzyme_transporter"
 
     # combine the reaction_connection and custom_biochemical_reaction
-    reaction_connection = bind_rows(reaction_connection, custom_biochemical_reaction, Recon3D_unitprot_Deo_human_transporter_long) 
+    # reaction_connection = bind_rows(reaction_connection, custom_biochemical_reaction, xenobiotic_reaction_connection, Recon3D_unitprot_Deo_human_transporter_long)
+    reaction_connection = bind_rows(reaction_connection, custom_biochemical_reaction, Recon3D_unitprot_Deo_human_transporter_long)
     
     # keep only the first 14 characters of the InChIKey in the reaction_connection
     reaction_connection$connection_1_InChIKey = substr(reaction_connection$connection_1_InChIKey, 1, 14)
@@ -262,8 +289,8 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
         dir.create(clustering_folder_name, showWarnings = FALSE)
 
         # Create a folder to store result: local optimization per feature
-        local_optimization_per_feature_folder_name = paste0(master_folder_name, "/step4_local_optimization_per_feature", "_", mz_threshold, "ppm")
-        dir.create(local_optimization_per_feature_folder_name, showWarnings = FALSE)
+        local_optimization_per_mass_folder_name = paste0(master_folder_name, "/step4_local_optimization_per_mass", "_", mz_threshold, "ppm")
+        dir.create(local_optimization_per_mass_folder_name, showWarnings = FALSE)
     }
 
     ##################### prepare the metabolite database for m/z matching #####################
@@ -444,6 +471,10 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
 
     print("Results are kept if either adduct correlation or isotopic correlation is possible")
 
+    # remove unused data to save memory
+    rm(met_raw_wide, met_raw_wide_final_isotope_1, met_raw_wide_final_1, met_raw_wide_final_isotope, met_raw_wide_final)
+    gc()
+
     # simplify the data frame for typical adducts
     ## arrange by Adduct_annotated first and then Mono_mass
     met_raw_wide_final_monomass = met_raw_wide_final_monomass %>%
@@ -617,9 +648,11 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
         # Calculate MAE
         mean_difference_predret = mean(abs(met_raw_wide_mz_single_match_RT_mapping_predret$time - met_raw_wide_mz_single_match_RT_mapping_predret$time_predicted), na.rm=TRUE)
         print(paste0("The mean absolute error for retention time prediction in the 'training' data is: ", round(mean_difference_predret, 1), " seconds"))
+        rt_error_training_seconds = abs(met_raw_wide_mz_single_match_RT_mapping_predret$time - met_raw_wide_mz_single_match_RT_mapping_predret$time_predicted)
     
     } else {
         print("Failed to fit training model (insufficient points).")
+        rt_error_training_seconds = numeric(0)
     }
 
     ############# establish parameters for the precursor-product/transporter correlation analysis #############
@@ -634,11 +667,11 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
 
     ############ calculation correlation coefficients and p-values only between the proposed precursor-product relationships ############
     # apply the precursor_product_correlation function to the MSMICA_col_names_connection_training
-    precursor_product_correlation_result_training_unique = precursor_product_correlation(precursor_product_correlation_input_data = MSMICA_col_names_connection_training, precursor_col = "mz_time_identified", product_col = "mz_time_identified_final",
+    precursor_product_correlation_result_training_all = precursor_product_correlation(precursor_product_correlation_input_data = MSMICA_col_names_connection_training, precursor_col = "mz_time_identified", product_col = "mz_time_identified_final",
         cor_input = MSMICA_cor_input)
 
     # keep only significant precursor-product correlations
-    precursor_product_correlation_result_training_unique = precursor_product_correlation_result_training_unique %>%
+    precursor_product_correlation_result_training_unique = precursor_product_correlation_result_training_all %>%
         filter(p_value < 0.05)
 
     # if detail is TRUE, save the precursor_product_correlation_result_training_unique to a file
@@ -655,6 +688,74 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
 
     print(paste0("The mean of the Fisher Z-transformed precursor-product correlations for the training data is: ", round(pp_mu, 2)))
     print(paste0("The standard deviation of the Fisher Z-transformed precursor-product correlations for the training data is: ", round(pp_sigma, 2)))
+
+    evidence_calibration = build_msmica_empirical_calibration(
+        rt_errors = rt_error_training_seconds,
+        corr_z = pp_z_obs
+    )
+    message("Empirical evidence calibration is used for RT/correlation scoring.")
+
+    if (detail == TRUE) {
+        write_msmica_calibration_outputs(evidence_calibration, rt_mapping_anchor_metabolites_folder_name)
+    }
+
+    adduct_threshold_estimate = estimate_adduct_clustering_thresholds(
+        primary_anchor_data = met_raw_wide_mz_single_match,
+        annotated_adduct_data = met_raw_wide_final_monomass,
+        cor_input = MSMICA_cor_input,
+        capture_fraction = empirical_cluster_capture,
+        min_pairs = threshold_min_pairs,
+        max_time_difference = adduct_threshold_max_time,
+        correlation_floor = adduct_correlation_floor
+    )
+
+    adduct_correlation_time_threshold = adduct_threshold_estimate$adduct_correlation_time_threshold
+    adduct_correlation_r_threshold = adduct_threshold_estimate$adduct_correlation_r_threshold
+
+    isotope_threshold_estimate = estimate_isotope_clustering_thresholds(
+        primary_anchor_data = met_raw_wide_mz_single_match,
+        isotope_adduct_data = met_raw_wide_final_monomass_isotope,
+        cor_input = MSMICA_cor_input,
+        capture_fraction = empirical_cluster_capture,
+        min_pairs = threshold_min_pairs,
+        max_time_difference = isotope_threshold_max_time,
+        correlation_floor = isotopic_correlation_floor
+    )
+
+    isotopic_correlation_time_threshold = isotope_threshold_estimate$isotopic_correlation_time_threshold
+    isotopic_correlation_r_threshold = isotope_threshold_estimate$isotopic_correlation_r_threshold
+
+    message(paste0(
+        "Empirical adduct clustering thresholds are used: RT <= ",
+        round(adduct_correlation_time_threshold, 2),
+        " seconds, Spearman r >= ",
+        round(adduct_correlation_r_threshold, 3),
+        " (capture target = ",
+        empirical_cluster_capture,
+        ", hard r floor = ",
+        adduct_correlation_floor,
+        ", pairs = ",
+        adduct_threshold_estimate$summary$n_pairs,
+        ")."
+    ))
+    message(paste0(
+        "Empirical isotope clustering thresholds are used: RT <= ",
+        round(isotopic_correlation_time_threshold, 2),
+        " seconds, Spearman r >= ",
+        round(isotopic_correlation_r_threshold, 3),
+        " (capture target = ",
+        empirical_cluster_capture,
+        ", hard r floor = ",
+        isotopic_correlation_floor,
+        ", pairs = ",
+        isotope_threshold_estimate$summary$n_pairs,
+        ")."
+    ))
+
+    if (detail == TRUE) {
+        write_csv(adduct_threshold_estimate$summary, paste0(clustering_folder_name, "/adduct_clustering_threshold_calibration_summary.csv"))
+        write_csv(isotope_threshold_estimate$summary, paste0(clustering_folder_name, "/isotope_clustering_threshold_calibration_summary.csv"))
+    }
 
     # Splitting the data by Mono_mass
     data_split_cluster = split(met_raw_wide_final_monomass_simple, met_raw_wide_final_monomass_simple$Mono_mass)
@@ -909,6 +1010,7 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
         filter(!(mz_time_annotated %in% mz_time_clustered_feature & !has_any_concentration)) %>%
         dplyr::select(-has_any_concentration)
 
+    rm(met_raw_wide_final_monomass)
 
     # add KEGG_ID and HMDB_ID to the met_raw_wide_mz_match by left joining with the metabolite_database_simple based on Mono_mass, Confirmed_Name=Name, and InChIKey
     met_raw_wide_mz_match = left_join(met_raw_wide_mz_match, metabolite_database_simple, by = c("Mono_mass", "Confirmed_Name"="Name", "InChIKey"), relationship = "many-to-many")
@@ -952,13 +1054,7 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
     # calculate the absolute difference between time and time_predicted
     met_raw_wide_mz_match_3$time_difference = abs(met_raw_wide_mz_match_3$time - met_raw_wide_mz_match_3$time_predicted)
 
-    # among all results with the same Mono_mass, if all results have time_difference >= 200 seconds, keep them all; Otherwise, exclude those results with time_difference >= 200 seconds and keep the rest
-    met_raw_wide_mz_match_4 = met_raw_wide_mz_match_3 %>%
-        group_by(Mono_mass) %>%
-        mutate(all_time_difference_200 = all(time_difference >= 200)) %>%
-        ungroup() %>%
-        filter(all_time_difference_200 | time_difference < 200) %>%
-        dplyr::select(-all_time_difference_200)
+    met_raw_wide_mz_match_4 = met_raw_wide_mz_match_3
 
     # if Concentration_average is NA, set it as 1e-6
     met_raw_wide_mz_match_4$Concentration_average[is.na(met_raw_wide_mz_match_4$Concentration_average)] = 1e-6
@@ -1066,24 +1162,37 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
         cor_input = MSMICA_cor_input,
         adduct_corr_time_thresh = adduct_correlation_time_threshold,
         detail = detail,
-        output_folder = local_optimization_per_feature_folder_name,
-        max_iter = 99
+        output_folder = local_optimization_per_mass_folder_name,
+        max_iter = 99,
+        concentration_prior_weight = concentration_prior_weight,
+        feature_rank_prior_strength = feature_rank_prior_strength,
+        single_feature_prior_multiplier = single_feature_prior_multiplier,
+        cross_mass_concentration_tiebreak = TRUE,
+        use_concentration_tag = TRUE,
+        local_optimization_assignment = "metabolite_greedy",
+        local_rt_weight = local_rt_weight,
+        local_corr_weight = local_corr_weight,
+        metabolite_rt_weight = metabolite_rt_weight,
+        metabolite_corr_weight = metabolite_corr_weight,
+        metabolite_intensity_weight = metabolite_intensity_weight,
+        calibration_method = "empirical",
+        evidence_calibration = evidence_calibration
     )
 
     # extract the result from the local_opt_output
-    MSMICA_local_optimization_per_feature_result_combined = local_opt_output$result
+    MSMICA_local_optimization_per_mass_result_combined = local_opt_output$result
 
     # remove correlation, log_concentration_prior, and log_mean_intensity columns
-    MSMICA_local_optimization_per_feature_result_combined = MSMICA_local_optimization_per_feature_result_combined %>%
+    MSMICA_local_optimization_per_mass_result_combined = MSMICA_local_optimization_per_mass_result_combined %>%
         dplyr::select(-correlation, -log_concentration_prior, -log_mean_intensity)
 
-    # save the MSMICA_local_optimization_per_feature_result_combined in the local_optimization_per_feature_folder_name folder
+    # save the MSMICA_local_optimization_per_mass_result_combined in the local_optimization_per_mass_folder_name folder
     if (detail == TRUE){
-        write_csv(MSMICA_local_optimization_per_feature_result_combined, paste0(local_optimization_per_feature_folder_name, "/", "MSMICA_local_optimization_per_feature_main_adduct_result_combined.csv"))
+        write_csv(MSMICA_local_optimization_per_mass_result_combined, paste0(local_optimization_per_mass_folder_name, "/", "MSMICA_local_optimization_per_mass_main_adduct_result_combined.csv"))
     }
 
     # select the following columns to update the identified_metabolites
-    MSMICA_results_filtered_final = MSMICA_local_optimization_per_feature_result_combined %>%
+    MSMICA_results_filtered_final = MSMICA_local_optimization_per_mass_result_combined %>%
         dplyr::select(identification_type, ion_mode, identified_Name, KEGG_ID, HMDB_ID, InChIKey, Adduct, mz, time, time_predicted, time_difference, identification_method, Probability, match_category)
 
     # round Probability column to 1 decimal places

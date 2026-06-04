@@ -15,7 +15,7 @@
 #'   column augmented in place.
 #' @keywords internal
 #' @noRd
-process_identification_method = function(df) {
+process_identification_method = function(df, use_concentration_tag = TRUE) {
     # Tag: retention time prediction (anywhere RT prediction gave a time_difference)
     df$identification_method = ifelse(
         !is.na(df$time_difference) & !grepl("retention time prediction", df$identification_method),
@@ -31,11 +31,13 @@ process_identification_method = function(df) {
     )
     # Sentinel 1e-6 was used upstream to mean "no HMDB concentration"; restore to NA
     df$Concentration_average[df$Concentration_average == 1e-6] = NA
-    # Tag: biospecimen-specific concentration prior was used in scoring
-    df$identification_method = ifelse(
-        !is.na(df$Concentration_average) & !grepl("biospecimen-specific concentration", df$identification_method),
-        paste0(df$identification_method, "; biospecimen-specific concentration"),
-        df$identification_method
-    )
+    if (use_concentration_tag) {
+        # Tag: biospecimen-specific concentration prior was used in scoring
+        df$identification_method = ifelse(
+            !is.na(df$Concentration_average) & !grepl("biospecimen-specific concentration", df$identification_method),
+            paste0(df$identification_method, "; biospecimen-specific concentration"),
+            df$identification_method
+        )
+    }
     return(df)
 }

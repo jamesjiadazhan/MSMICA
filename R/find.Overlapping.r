@@ -10,7 +10,6 @@
 #' @export find.Overlapping.mzs
 
 find.Overlapping.mzs <- function(dataA, dataB, mz.thresh = 5, time.thresh = NA) {
-    library(data.table)
     # Convert inputs to data.table
     setDT(dataA)
     setDT(dataB)
