@@ -17,10 +17,6 @@ MSMICA_algorithm(
   metabolite_database = "KEGG_HMDB",
   reaction_database = c("mammalia"),
   backpropagation_correlation_direction = "positive",
-  adduct_correlation_r_threshold = 0.39,
-  adduct_correlation_time_threshold = 6,
-  isotopic_correlation_r_threshold = 0.71,
-  isotopic_correlation_time_threshold = 4,
   imputation_method = "half_min",
   prefix = "",
   ion_mode = "positive",
@@ -53,14 +49,6 @@ MSMICA_algorithm(
 
 \item{backpropagation_correlation_direction}{the direction of the backpropagation precursor-product/transportercorrelation coefficient. Default is "positive". Other options are "both". If positive, then only the positive backpropagation correlation coefficient is used. If both, then both the positive and negative backpropagation correlation coefficients are used.}
 
-\item{adduct_correlation_r_threshold}{the correlation threshold for adduct correlation analysis. Default is 0.39 (spearman correlation).}
-
-\item{adduct_correlation_time_threshold}{the retention time threshold for adduct correlation analysis. Default is 6 (seconds).}
-
-\item{isotopic_correlation_r_threshold}{the correlation threshold for isotopic correlation analysis. Default is 0.71 (spearman correlation).}
-
-\item{isotopic_correlation_time_threshold}{the retention time threshold for isotopic correlation analysis. Default is 4 (seconds).}
-
 \item{imputation_method}{the method to be used for missing value imputation. Default is "half_min". Other options are "QRILC" (QRILC is better for triplicate samples) and NA. If NA, then no imputation is performed.}
 
 \item{prefix}{a prefix to be added to the output files. Default is "".}
@@ -77,4 +65,11 @@ MSMICA_algorithm(
 }
 \description{
 This function is used to perform the MSMICA algorithm for metabolite identification using the metabolomics feature table and the KEGG database.
+}
+\details{
+Adduct and isotope clustering thresholds are estimated empirically
+  from high-confidence primary-adduct anchors within each dataset. The final
+  publication workflow uses the optimized 80% capture criterion, with a
+  maximum calibration search window of 15 seconds for adduct pairs and
+  10 seconds for isotope pairs.
 }

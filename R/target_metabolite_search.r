@@ -11,8 +11,6 @@
 #'   `time_difference`.
 #' @export target_metabolite_search
 target_metabolite_search = function(reference_library, feature_table, use_retention_time = TRUE, mz_threshold = 10, time_threshold = 30){
-    library(data.table)
-
     # define the function to find overlapping mz and time between two data sets
     find_overlapping_mz_time <- function(dataA, dataB, mz.thresh = 5, time.thresh = NA) {
         data_a <- data.table::as.data.table(dataA)

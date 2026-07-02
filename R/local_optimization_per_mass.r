@@ -31,7 +31,7 @@
 #'   \code{probability}.
 #' @keywords internal
 #' @noRd
-local_optimization_per_feature = function(mass_group_data,
+local_optimization_per_mass = function(mass_group_data,
                                             rt_sigma = rt_mapping_sigma_predret,
                                             corr_mu = pp_mu,
                                             corr_sigma = pp_sigma,
@@ -39,8 +39,13 @@ local_optimization_per_feature = function(mass_group_data,
                                             w_corr = 1,
                                             w_prior = 1,
                                             single_feature_prior_multiplier = 10,
-                                            feature_rank_prior_strength = 1
+                                            feature_rank_prior_strength = 1,
+                                            assignment_strategy = "metabolite_greedy",
+                                            calibration_method = "current",
+                                            evidence_calibration = NULL
                                             ) {
+    assignment_strategy = assignment_strategy
+    calibration_method = match.arg(calibration_method, c("current", "empirical"))
 
     # All rows in mass_group_data share one monoisotopic mass
     current_monomass = unique(mass_group_data$Mono_mass)
@@ -116,19 +121,33 @@ local_optimization_per_feature = function(mass_group_data,
             td = pair_data$time_difference[1]
 
             # A. RT likelihood
-            p_rt = dnorm(td, mean = 0, sd = rt_sigma)
-            p_rt = max(p_rt, 1e-300)
-            log_rt = log(p_rt)
+            if (calibration_method == "empirical") {
+                log_rt = empirical_rt_log_likelihood(td, evidence_calibration)
+            } else {
+                log_rt = NA_real_
+            }
+            if (!is.finite(log_rt)) {
+                p_rt = dnorm(td, mean = 0, sd = rt_sigma)
+                p_rt = max(p_rt, 1e-300)
+                log_rt = log(p_rt)
+            }
 
             # B. Correlation likelihood
             if (is.na(pair_data$correlation[1])) {
                 log_corr = 0
             } else {
-                corr_value = min(max(pair_data$correlation[1], -0.999999), 0.999999)
-                z_obs = atanh(corr_value)
-                p_corr = dnorm(z_obs, mean = corr_mu, sd = corr_sigma)
-                p_corr = max(p_corr, 1e-300)
-                log_corr = log(p_corr)
+                if (calibration_method == "empirical") {
+                    log_corr = empirical_corr_log_likelihood(pair_data$correlation[1], evidence_calibration)
+                } else {
+                    log_corr = NA_real_
+                }
+                if (!is.finite(log_corr)) {
+                    corr_value = min(max(pair_data$correlation[1], -0.999999), 0.999999)
+                    z_obs = atanh(corr_value)
+                    p_corr = dnorm(z_obs, mean = corr_mu, sd = corr_sigma)
+                    p_corr = max(p_corr, 1e-300)
+                    log_corr = log(p_corr)
+                }
             }
 
             # C. Metabolite concentration prior
@@ -148,25 +167,26 @@ local_optimization_per_feature = function(mass_group_data,
         arrange(desc(log_mean_intensity), mz_time) %>%
         pull(feature_order)
 
-    assignment_result = exact_bayesian_assignment(
-        local_log_score_matrix = log_lik_matrix,
-        feature_rank_order = feature_rank_order,
-        feature_log_intensity = feature_metadata$log_mean_intensity,
-        metabolite_log_concentration = metabolite_metadata$log_concentration_prior,
-        feature_rank_prior_strength = feature_rank_prior_strength
-    )
+    if (assignment_strategy == "metabolite_greedy") {
+        assignment_result = exact_bayesian_metabolite_feature_assignment(
+            local_log_score_matrix = log_lik_matrix,
+            feature_log_intensity = feature_metadata$log_mean_intensity,
+            metabolite_log_concentration = metabolite_metadata$log_concentration_prior,
+            feature_rank_prior_strength = feature_rank_prior_strength
+        )
 
-    if (is.null(assignment_result)) {
-        return(NULL)
+        if (is.null(assignment_result)) {
+            return(NULL)
+        }
+
+        results = data.frame(
+            mz_time = features[assignment_result$feature_index],
+            InChIKey = metabolites[assignment_result$metabolite_index],
+            log_posterior = assignment_result$log_posterior,
+            probability = assignment_result$probability,
+            stringsAsFactors = FALSE
+        )
     }
-
-    results = data.frame(
-        mz_time = features,
-        InChIKey = metabolites[assignment_result$assignment],
-        log_posterior = assignment_result$log_posterior,
-        probability = assignment_result$probability,
-        stringsAsFactors = FALSE
-    )
 
     return(results)
 }

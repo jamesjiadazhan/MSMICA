@@ -405,20 +405,19 @@ bayesian_probability_calculation_cluster = function(data, MSMICA_cor_input,
     ## evidence 3: isotopic adduct correlation (correlation between regular adducts and their most abundant isotopologue (e.g. M+H and M+H[+1]))
     bayesian_probability_calculation_cluster_child = function(
         data_cluster,
-        n_MH_right = 1259,
-        n_MH_total = 1883,
-        n_other_right = 1144,
-        n_other_total = 6361,
-        n_cor_yes_right = 1156,
-        n_cor_yes_total = 2121,
-        n_cor_no_right = 1235,
-        n_cor_no_total = 6099,
-        n_iso_yes_right = 537,
-        n_iso_yes_total = 846,
-        n_iso_no_right = 2431,
-        n_iso_no_total = 10149,
-        eps = 1e-12,
-        laplace = 0
+        n_MH_right = 112,
+        n_MH_total = 147,
+        n_other_right = 97,
+        n_other_total = 476,
+        n_cor_yes_right = 90,
+        n_cor_yes_total = 158,
+        n_cor_no_right = 119,
+        n_cor_no_total = 465,
+        n_iso_yes_right = 43,
+        n_iso_yes_total = 61,
+        n_iso_no_right = 212,
+        n_iso_no_total = 876,
+        eps = 1e-12
     ) {
         K = nrow(data_cluster)
         if (K == 0) return(NULL)
@@ -434,36 +433,34 @@ bayesian_probability_calculation_cluster = function(data, MSMICA_cor_input,
         n_iso_yes_wrong  = n_iso_yes_total - n_iso_yes_right
         n_iso_no_wrong   = n_iso_no_total - n_iso_no_right
 
-        add = laplace
-
         # Estimate P(feature state | H) and P(feature state | not H) for
         # each evidence source, where H means the row is the true parent ion.
         p_A_MH_given_H =
-            clamp((n_MH_right + add) / (n_MH_right + n_other_right + 2 * add))
+            clamp((n_MH_right) / (n_MH_right + n_other_right))
         p_A_other_given_H =
-            clamp((n_other_right + add) / (n_MH_right + n_other_right + 2 * add))
+            clamp((n_other_right) / (n_MH_right + n_other_right))
         p_A_MH_given_notH =
-            clamp((n_MH_wrong + add) / (n_MH_wrong + n_other_wrong + 2 * add))
+            clamp((n_MH_wrong) / (n_MH_wrong + n_other_wrong))
         p_A_other_given_notH =
-            clamp((n_other_wrong + add) / (n_MH_wrong + n_other_wrong + 2 * add))
+            clamp((n_other_wrong) / (n_MH_wrong + n_other_wrong))
 
         p_C_yes_given_H =
-            clamp((n_cor_yes_right + add) / (n_cor_yes_right + n_cor_no_right + 2 * add))
+            clamp((n_cor_yes_right) / (n_cor_yes_right + n_cor_no_right))
         p_C_no_given_H =
-            clamp((n_cor_no_right + add) / (n_cor_yes_right + n_cor_no_right + 2 * add))
+            clamp((n_cor_no_right) / (n_cor_yes_right + n_cor_no_right))
         p_C_yes_given_notH =
-            clamp((n_cor_yes_wrong + add) / (n_cor_yes_wrong + n_cor_no_wrong + 2 * add))
+            clamp((n_cor_yes_wrong) / (n_cor_yes_wrong + n_cor_no_wrong))
         p_C_no_given_notH =
-            clamp((n_cor_no_wrong + add) / (n_cor_yes_wrong + n_cor_no_wrong + 2 * add))
+            clamp((n_cor_no_wrong) / (n_cor_yes_wrong + n_cor_no_wrong))
 
         p_I_yes_given_H =
-            clamp((n_iso_yes_right + add) / (n_iso_yes_right + n_iso_no_right + 2 * add))
+            clamp((n_iso_yes_right) / (n_iso_yes_right + n_iso_no_right))
         p_I_no_given_H =
-            clamp((n_iso_no_right + add) / (n_iso_yes_right + n_iso_no_right + 2 * add))
+            clamp((n_iso_no_right) / (n_iso_yes_right + n_iso_no_right))
         p_I_yes_given_notH =
-            clamp((n_iso_yes_wrong + add) / (n_iso_yes_wrong + n_iso_no_wrong + 2 * add))
+            clamp((n_iso_yes_wrong) / (n_iso_yes_wrong + n_iso_no_wrong))
         p_I_no_given_notH =
-            clamp((n_iso_no_wrong + add) / (n_iso_yes_wrong + n_iso_no_wrong + 2 * add))
+            clamp((n_iso_no_wrong) / (n_iso_yes_wrong + n_iso_no_wrong))
 
         # Turn each row into three binary evidence indicators.
         A_is_MH = data_cluster$Adduct_annotated %in% c("M+H", "M-H")

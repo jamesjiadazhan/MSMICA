@@ -17,15 +17,19 @@
 #'   (columns keyed by \code{mz_time_annotated}).
 #' @param time_threshold Numeric. Maximum retention time gap (in
 #'   seconds) between adjacent features in the same RT-local cluster.
-#'   Defaults to the global \code{adduct_correlation_time_threshold}
-#'   set by \code{MSMICA_algorithm()}.
+#'   Supplied by the empirical threshold estimator in
+#'   \code{MSMICA_algorithm()}.
 #' @param cor_method Character. Correlation method passed to
 #'   \code{cor()}. Defaults to \code{"spearman"}.
 #' @return A data frame with one row per ordered-pair adduct
 #'   correlation, annotated with both features' metadata.
 #' @keywords internal
 #' @noRd
-extract_adduct_correlation_from_cluster_results = function(final_results_cluster, MSMICA_cor_input, time_threshold = adduct_correlation_time_threshold, cor_method = "spearman") {
+extract_adduct_correlation_from_cluster_results = function(final_results_cluster, MSMICA_cor_input, time_threshold, cor_method = "spearman") {
+    if (missing(time_threshold) || !is.finite(time_threshold)) {
+        stop("time_threshold must be supplied by the empirical clustering threshold estimator.")
+    }
+
     # Keep only rows that the clustering step marked as adduct-correlated
     final_results_cluster_corr = final_results_cluster %>%
         dplyr::filter(!is.na(adduct_corr_cluster) & adduct_corr_cluster == TRUE)

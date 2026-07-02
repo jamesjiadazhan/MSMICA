@@ -4,8 +4,7 @@
 #' computed correlations and summarizes the biological-network evidence
 #' supporting each candidate product. Optionally applies
 #' Benjamini-Hochberg FDR correction within each product InChIKey,
-#' collapses bidirectional pair records by median significant
-#' correlation, and counts total vs. significant correlations.
+#' collapses bidirectional pair records by median correlation.
 #' \code{duplicate_removal} controls whether precursors with a mix of
 #' unique and redundant product links are pruned to the unique ones
 #' (while keeping entirely-redundant precursors intact).
@@ -111,7 +110,8 @@ backpropagation_correlation_analysis = function(MSMICA_col_names_connection_12, 
             select(-group_has_unique)
     }
 
-    # Summarize the correlation to median correlation and then count the total number of correlations and significant correlations
+    # Summarize the correlation to median correlation; count-based
+    # correlation evidence is intentionally not used as an identification criterion.
     Backpropagation_input_clean_detailed_2 = Backpropagation_input_clean_detailed %>%
         # select connection_2's records
         dplyr::select(KEGG_ID, HMDB_ID, connection_2_InChIKey, identified_Name_2, identification_type_1, ion_mode, Mono_mass, Adduct_2, mz_2, time_2, mz_time_2, identification_method_2, time_predicted, time_difference, Concentration_average, correlation, p_value) %>%
@@ -122,18 +122,14 @@ backpropagation_correlation_analysis = function(MSMICA_col_names_connection_12, 
         rename(InChIKey = connection_2_InChIKey, identified_Name = identified_Name_2, identification_type = identification_type_1, Adduct = Adduct_2, mz = mz_2, time = time_2, mz_time = mz_time_2, identification_method = identification_method_2) %>%
         group_by(KEGG_ID, HMDB_ID, InChIKey, identified_Name, Mono_mass, identification_type, ion_mode, Adduct, mz, time, mz_time, identification_method, match_category, time_predicted, time_difference, Concentration_average) %>%
         summarize(
-            ## calculate the median of the significant correlations (p_value < 0.05)
-            correlation = median(correlation[p_value < 0.05], na.rm = TRUE), 
-            ## count the total number of correlations
+            correlation = median(correlation, na.rm = TRUE),
             correlation_count = n(),
-            ## count the total number of significant correlations
-            significant_correlation_count = sum(p_value < 0.05, na.rm = TRUE),
             .groups = "keep") %>%
         ungroup()
 
     # select specific columns from final_results
     Backpropagation_input_clean_detailed_3 = Backpropagation_input_clean_detailed_2 %>%
-        dplyr::select(InChIKey, KEGG_ID, HMDB_ID, ion_mode, identification_type, identified_Name, Adduct, mz, time, correlation, correlation_count, significant_correlation_count, identification_method, match_category, time_predicted, time_difference, Concentration_average)
+        dplyr::select(InChIKey, KEGG_ID, HMDB_ID, ion_mode, identification_type, identified_Name, Adduct, mz, time, correlation, correlation_count, identification_method, match_category, time_predicted, time_difference, Concentration_average)
 
     # arrange by mz and time
     Backpropagation_input_clean_detailed_3 = Backpropagation_input_clean_detailed_3 %>%
