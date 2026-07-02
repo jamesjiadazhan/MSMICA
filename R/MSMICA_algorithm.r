@@ -28,7 +28,7 @@
 #' @param output_dir a character string specifying the directory where all output files should be written. Default is NULL, which writes to the current working directory.
 #' @export MSMICA_algorithm
 
-MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_run_time, mz_threshold = 10, biospecimen = "Blood", hmdb_detection_preference = TRUE,  All_Adduct = c("M+H","M+Na","M+2Na-H","M+H-H2O","M+H-NH3","M+ACN+H","M+ACN+2H","2M+H","M+2H","M+H-2H2O"), metabolite_database = "KEGG_HMDB", reaction_database = c("mammalia"), backpropagation_correlation_direction = "positive", imputation_method = "half_min", prefix = "", ion_mode = "positive", detail = FALSE, save_unidentified = FALSE, progress_log = FALSE) {
+MSMICA_algorithm = function(met_raw_wide, class_file = NULL, output_dir = NULL, LC = "HILIC", LC_run_time, mz_threshold = 10, biospecimen = "Blood", hmdb_detection_preference = TRUE,  All_Adduct = c("M+H","M+Na","M+2Na-H","M+H-H2O","M+H-NH3","M+ACN+H","M+ACN+2H","2M+H","M+2H","M+H-2H2O"), metabolite_database = "KEGG_HMDB", reaction_database = c("mammalia"), backpropagation_correlation_direction = "positive", imputation_method = "half_min", prefix = "", ion_mode = "positive", detail = FALSE, save_unidentified = FALSE, progress_log = FALSE) {
     # Load all required packages only if necessary
     library(dplyr)
     library(readr)
