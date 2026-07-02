@@ -32,5 +32,7 @@ Remotes:
 License: CC BY-NC-ND 4.0 + file LICENSE
 Encoding: UTF-8
 LazyData: true
-LazyDataCompression: xz
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
+Suggests:
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

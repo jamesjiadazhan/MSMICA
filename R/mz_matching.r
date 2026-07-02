@@ -67,6 +67,7 @@ mz_matching = function(met_raw_wide, metabolite_mz_library, mz_threshold, detail
         mutate(
             ion_mode = ion_mode,
             mz_sample = round(mz_sample, 4),
+            time_sample_1dp = round(time_sample, 1),
             time_sample = round(time_sample, 0),
             mz_time_sample = paste0(mz_sample, "_", time_sample)
             ) %>%

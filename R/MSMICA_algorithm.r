@@ -25,9 +25,17 @@
 #' @param detail a logical value indicating whether to save the intermediate results as csv files. Default is FALSE. WARNING, this can create thousands of files with a lot of space. Use with caution.
 #' @param save_unidentified a logical value indicating whether the unidentified features should be saved. Default is FALSE.
 #' @param progress_log a logical value indicating whether to save the log of all printings and messages to a text file. Default is TRUE.
+#' @param output_dir a character string specifying the directory where all output files should be written. Default is NULL, which writes to the current working directory.
 #' @export MSMICA_algorithm
 
 MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_run_time, mz_threshold = 10, biospecimen = "Blood", hmdb_detection_preference = TRUE,  All_Adduct = c("M+H","M+Na","M+2Na-H","M+H-H2O","M+H-NH3","M+ACN+H","M+ACN+2H","2M+H","M+2H","M+H-2H2O"), metabolite_database = "KEGG_HMDB", reaction_database = c("mammalia"), backpropagation_correlation_direction = "positive", imputation_method = "half_min", prefix = "", ion_mode = "positive", detail = FALSE, save_unidentified = FALSE, progress_log = FALSE) {
+    # Load all required packages only if necessary
+    library(dplyr)
+    library(readr)
+    library(tidyr)
+    library(data.table)
+    library(mgcv)
+  
     # Publication-optimized MSMICA settings.
     empirical_cluster_capture = 0.8
     adduct_threshold_max_time = 15
@@ -44,9 +52,17 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
     metabolite_corr_weight = 0.25
     metabolite_intensity_weight = 1
 
+    # resolve output directory - all output files will be written here
+    if (is.null(output_dir)) {
+        output_dir = getwd()
+    } else {
+        dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
+        output_dir = normalizePath(output_dir)
+    }
+
     # if progress_log = TRUE, then establish a log file (txt format) to store all the printing and messages
     if (progress_log) {
-        log_file = file("MSMICA_algorithm_log.txt", open = "wt")
+        log_file = file(file.path(output_dir, "MSMICA_algorithm_log.txt"), open = "wt")
 
         sink(log_file, type = "output")
         sink(log_file, type = "message")
@@ -273,7 +289,7 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
     # if detail = TRUE, then create the following folders
     if (detail == TRUE){
         # Create a master folder with the study name to store all the detailed results
-        master_folder_name = paste0(prefix, "_", mz_threshold, "ppm")
+        master_folder_name = file.path(output_dir, paste0(prefix, "_", mz_threshold, "ppm"))
         dir.create(master_folder_name, showWarnings = FALSE)
 
         # Create a folder to store the result: m/z matching for all adducts with or without isotopes
@@ -377,6 +393,13 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
     message("Here is the m/z matching results for all primary and secondary adducts:")
     print(paste0("The m/z matching threshold is: ", mz_threshold, " ppm"))
     print(met_raw_wide_final)
+
+    # build a lookup of mz_time -> 1dp time and feature label before downstream selects drop these columns
+    time_unrounded_lookup = met_raw_wide_final %>%
+        distinct(mz_time_sample, mz_sample, time_sample_1dp) %>%
+        rename(mz_time = mz_time_sample, unrounded_time = time_sample_1dp) %>%
+        mutate(feature = paste0(LC, "_", mz_sample, "_", unrounded_time)) %>%
+        dplyr::select(mz_time, unrounded_time, feature)
 
     ##################### perform mz isotope matching ###############################
     # use the mz_isotope_matching function to perform mz matching for all adducts with heavy isotopes
@@ -1462,6 +1485,9 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
     MSMICA_results_filtered_adduct_isotopic_final = MSMICA_results_filtered_adduct_isotopic_final %>%
         arrange(KEGG_ID, HMDB_ID)
 
+    # Note: the export object below is created purely for CSV output (time overwritten with 1dp, mz_time dropped, feature added);
+    # the original MSMICA_results_filtered_adduct_isotopic_final is left intact for the return value and save_unidentified joins
+
     # if save_unidentified is not FALSE
     if (save_unidentified != FALSE){
         # select those features not identified by MSMICA by using the met_raw_wide_original data frame with the anti_join function
@@ -1480,10 +1506,10 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
         # save the features_not_identified data frame
         if (prefix != ""){
             # add the prefix to saved file names
-            write_csv(features_not_identified, paste0(prefix, "_features_not_identified.csv"), progress = FALSE)
+            write_csv(features_not_identified, file.path(output_dir, paste0(prefix, "_features_not_identified.csv")), progress = FALSE)
         } else {
             # save the data without prefix
-            write_csv(features_not_identified, "features_not_identified.csv", progress = FALSE)
+            write_csv(features_not_identified, file.path(output_dir, "features_not_identified.csv"), progress = FALSE)
         }
 
         # clear memory
@@ -1492,12 +1518,19 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
     }
 
     # save the MSMICA_results_filtered_adduct_isotopic_final data frame
+    # apply the same time/feature column treatment as the main output (purely for CSV export, original object is unchanged for return value)
+    MSMICA_results_filtered_adduct_isotopic_final_export = MSMICA_results_filtered_adduct_isotopic_final %>%
+        left_join(time_unrounded_lookup, by = "mz_time") %>%
+        dplyr::select(-time, -mz_time) %>%
+        rename(time = unrounded_time) %>%
+        dplyr::select(mz, time, feature, mz_isotope, time_isotope, Adduct, adduct_type, Name, identification_type, identification_method, Probability, metabolite_within_feature_number, isomer_exist, time_predicted, time_difference, mean_intensity, everything())
+
     if (prefix != ""){
         # add the prefix to saved file names
-        write_csv(MSMICA_results_filtered_adduct_isotopic_final, paste0(prefix, "_MSMICA_identified_metabolites_filtered_secondary_adduct_isotopic.csv"), progress = FALSE)
+        write_csv(MSMICA_results_filtered_adduct_isotopic_final_export, file.path(output_dir, paste0(prefix, "_MSMICA_identified_metabolites_filtered_secondary_adduct_isotopic.csv")), progress = FALSE)
     } else {
         # save the data without prefix
-        write_csv(MSMICA_results_filtered_adduct_isotopic_final, "identified_MSMICA_identified_metabolites_filtered_secondary_adduct_isotopic.csv", progress = FALSE)
+        write_csv(MSMICA_results_filtered_adduct_isotopic_final_export, file.path(output_dir, "identified_MSMICA_identified_metabolites_filtered_secondary_adduct_isotopic.csv"), progress = FALSE)
     }
 
     # add a new column, isomer_exist, which is TRUE when metabolite_within_feature_number is greater than 1
@@ -1506,19 +1539,22 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, LC = "HILIC", LC_ru
 
     # reoreder the column names for better readability
     MSMICA_results_filtered_final_5 = MSMICA_results_filtered_final_5 %>%
-        dplyr::select(mz, time, mz_time, Adduct, Name, identification_type, identification_method, Probability, metabolite_within_feature_number, isomer_exist, time_predicted, time_difference, mean_intensity, everything())
+        left_join(time_unrounded_lookup, by = "mz_time") %>%
+        dplyr::select(-time, -mz_time) %>%
+        rename(time = unrounded_time) %>%
+        dplyr::select(mz, time, feature, Adduct, Name, identification_type, identification_method, Probability, metabolite_within_feature_number, isomer_exist, time_predicted, time_difference, mean_intensity, everything())
 
     if (prefix != ""){
         # add the prefix to saved file names
-        write_csv(MSMICA_results_filtered_final_5, paste0(prefix, "_MSMICA_identified_metabolites_filtered.csv"), progress = FALSE)
+        write_csv(MSMICA_results_filtered_final_5, file.path(output_dir, paste0(prefix, "_MSMICA_identified_metabolites_filtered.csv")), progress = FALSE)
     } else {
         # save the data without prefix
-        write_csv(MSMICA_results_filtered_final_5, "identified_MSMICA_identified_metabolites_filtered.csv", progress = FALSE)
+        write_csv(MSMICA_results_filtered_final_5, file.path(output_dir, "identified_MSMICA_identified_metabolites_filtered.csv"), progress = FALSE)
     }
 
     # print where the MSMICA_TCA_result_identified.csv and MSMICA_TCA_result_not_identified.csv are saved
     print("The identified_MSMICA_identified_metabolites.csv was saved in:")
-    print(getwd())
+    print(output_dir)
 
     # log the end time of the MSMICA algorithm
     end_time = Sys.time()

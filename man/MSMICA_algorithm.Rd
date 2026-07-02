@@ -22,7 +22,8 @@ MSMICA_algorithm(
   ion_mode = "positive",
   detail = FALSE,
   save_unidentified = FALSE,
-  progress_log = FALSE
+  progress_log = FALSE,
+  output_dir = NULL
 )
 }
 \arguments{
@@ -59,6 +60,8 @@ MSMICA_algorithm(
 \item{save_unidentified}{a logical value indicating whether the unidentified features should be saved. Default is FALSE.}
 
 \item{progress_log}{a logical value indicating whether to save the log of all printings and messages to a text file. Default is TRUE.}
+
+\item{output_dir}{a character string specifying the directory where all output files should be written. Default is NULL, which writes to the current working directory.}
 }
 \description{
 This function is used to perform the MSMICA algorithm for metabolite identification using the metabolomics feature table and the KEGG database.
