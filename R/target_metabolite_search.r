@@ -26,9 +26,9 @@ target_metabolite_search = function(reference_library, feature_table, use_retent
             data.table::setnames(data_a, old = names(data_a)[2], new = "time_data_A")
             data.table::setnames(data_b, old = names(data_b)[2], new = "time_data_B")
             data.table::set(data_b, j = "time_data_B_actual", value = data_b[["time_data_B"]])
-            message("Using the 1st column as 'mz' and 2nd column as 'retention time')")
+            message("Using the 1st column as 'mz' and 2nd column as 'retention time'")
         } else {
-            message("Using the 1st column as 'mz')")
+            message("Using the 1st column as 'mz'")
         }
 
         data.table::set(data_a, j = "index_A", value = seq_len(nrow(data_a)))
