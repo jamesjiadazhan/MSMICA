@@ -117,14 +117,14 @@ target_metabolite_search = function(reference_library, feature_table, use_retent
             )
 
             return(
-                matches[, selected_columns, with = FALSE] |>
+                matches[, selected_columns, with = FALSE] %>%
                     base::as.data.frame(check.names = FALSE)
             )
         }
 
         selected_columns <- c("index_A", "mz_data_A", "index_B", "mz.data_B", "mz_difference_ppm")
 
-        matches[, selected_columns, with = FALSE] |>
+        matches[, selected_columns, with = FALSE] %>%
             base::as.data.frame(check.names = FALSE)
     }
 
