@@ -132,9 +132,17 @@ bayesian_probability_calculation_cluster = function(data, MSMICA_cor_input,
             })
 
             # Convert to unique pairs
-            unique_pairs = unique(apply(high_cor_pairs, 2, function(pair) {
-                sort(pair)
-            }, simplify = FALSE))
+            ## NOTE: apply()'s `simplify` argument was only introduced in R 4.1.0.
+            ## On older R, apply(X, 2, FUN, simplify = FALSE) forwards `simplify`
+            ## into FUN via `...` and fails with
+            ##   Error in FUN(newX[, i], ...) : unused argument (simplify = FALSE)
+            ## lapply() over the columns is equivalent and works on R >= 3.5.0,
+            ## which is what DESCRIPTION declares in Depends.
+            unique_pairs = lapply(seq_len(ncol(high_cor_pairs)), function(j) {
+                sort(high_cor_pairs[, j])
+            })
+            names(unique_pairs) = colnames(high_cor_pairs)
+            unique_pairs = unique(unique_pairs)
 
             # Convert the list of unique pairs to a list of character vectors
             unique_pairs_list = lapply(unique_pairs, function(pair) {
