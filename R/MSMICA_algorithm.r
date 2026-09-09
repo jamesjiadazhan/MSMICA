@@ -360,7 +360,7 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, output_dir = NULL, 
         mutate(mean_intensity = rowMeans(select(., -mz, -time), na.rm = TRUE)) %>%
         # group by mz and time and select the feature with highest mean_intensity if there are duplicates. These are the duplicates after the mz and time rounding
         group_by(mz, time) %>%
-        filter(mean_intensity == max(mean_intensity)) %>%
+        slice_max(mean_intensity, n = 1, with_ties = FALSE) %>%
         ungroup()
 
     # extract the mz, time, and mean_intensity columns for met_raw_wide_original_mean_intensity
