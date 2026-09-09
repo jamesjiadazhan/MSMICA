@@ -358,10 +358,16 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, output_dir = NULL, 
     met_raw_wide = met_raw_wide %>%
         # calculate the mean intensity values for each feature across all samples
         mutate(mean_intensity = rowMeans(select(., -mz, -time), na.rm = TRUE)) %>%
-        # group by mz and time and select the feature with highest mean_intensity if there are duplicates. These are the duplicates after the mz and time rounding
-        group_by(mz, time) %>%
+        # Group at the granularity the downstream mz_time key actually uses
+        # (4-dp m/z + 0-dp retention time). Grouping on the 1-dp time instead
+        # leaves features that are distinct at 1 dp but collide at 0 dp - e.g.
+        # 356.9 and 357.4 both become 357 - which later surfaces as duplicate
+        # column names when the annotated table is pivoted to wide format.
+        # The 1-dp time is kept in the data; only the grouping key is coarser.
+        group_by(mz, .time_key = round(time, 0)) %>%
         slice_max(mean_intensity, n = 1, with_ties = FALSE) %>%
-        ungroup()
+        ungroup() %>%
+        select(-.time_key)
 
     # extract the mz, time, and mean_intensity columns for met_raw_wide_original_mean_intensity
     met_raw_wide_original_mean_intensity = met_raw_wide %>%
