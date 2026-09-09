@@ -350,6 +350,10 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, output_dir = NULL, 
     # for met_raw_wide, replace all 0 values with NA
     met_raw_wide[met_raw_wide == 0] = NA
 
+    # round the mz to 4 decimal places and time to 1 decimal place
+    met_raw_wide = met_raw_wide %>%
+        mutate(mz = round(mz, 4), time = round(time, 1))
+    
     # if there are duplicates in the met_raw_wide based on mz and time, keep the feature with the highest mean intensity
     met_raw_wide = met_raw_wide %>%
         # calculate the mean intensity values for each feature across all samples
