@@ -131,18 +131,12 @@ local_optimization_per_mass = function(mass_group_data,
             if (is.na(pair_data$correlation[1])) {
                 log_corr = 0
             } else {
-                if (calibration_method == "empirical") {
-                    log_corr = empirical_corr_log_likelihood(pair_data$correlation[1], evidence_calibration)
-                } else {
-                    log_corr = NA_real_
-                }
-                if (!is.finite(log_corr)) {
-                    corr_value = min(max(pair_data$correlation[1], -0.999999), 0.999999)
-                    z_obs = atanh(corr_value)
-                    p_corr = dnorm(z_obs, mean = corr_mu, sd = corr_sigma)
-                    p_corr = max(p_corr, 1e-300)
-                    log_corr = log(p_corr)
-                }
+                log_corr = msmica_corr_log_likelihood(
+                    pair_data$correlation[1],
+                    if (calibration_method == "empirical") evidence_calibration else NULL,
+                    corr_mu,
+                    corr_sigma
+                )
             }
 
             # C. Metabolite concentration prior

@@ -46,6 +46,26 @@ msmica_rt_log_likelihood = function(time_difference, calibration, rt_sigma) {
     log(max(dnorm(time_difference, mean = 0, sd = rt_sigma), 1e-300))
 }
 
+#' Correlation log likelihood with a safe no-calibration behavior
+#' @keywords internal
+#' @noRd
+msmica_corr_log_likelihood = function(correlation, calibration, corr_mu, corr_sigma) {
+    log_corr = empirical_corr_log_likelihood(correlation, calibration)
+    if (is.finite(log_corr)) {
+        return(log_corr)
+    }
+    if (!is.finite(correlation) || length(corr_mu) != 1 ||
+        !is.finite(corr_mu) || length(corr_sigma) != 1 ||
+        !is.finite(corr_sigma) || corr_sigma <= 0) {
+        # No valid correlation calibration/prior is available. Omit the
+        # correlation term instead of manufacturing a training distribution.
+        return(0)
+    }
+    corr_value = min(max(correlation, -0.999999), 0.999999)
+    z_obs = atanh(corr_value)
+    log(max(dnorm(z_obs, mean = corr_mu, sd = corr_sigma), 1e-300))
+}
+
 #' Empirical correlation log-likelihood from calibration anchors
 #' @keywords internal
 #' @noRd

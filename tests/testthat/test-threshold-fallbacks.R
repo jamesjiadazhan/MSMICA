@@ -90,3 +90,13 @@ test_that("missing PredRet calibration omits RT evidence without an invented sig
   expect_equal(msmica_rt_log_likelihood(12, list(rt_errors = numeric()), NA_real_), 0)
   expect_true(is.finite(msmica_rt_log_likelihood(12, list(rt_errors = numeric()), 25)))
 })
+
+test_that("missing correlation calibration omits evidence without an invented prior", {
+  expect_equal(
+    msmica_corr_log_likelihood(0.6, list(corr_z = numeric()), NaN, NA_real_),
+    0
+  )
+  expect_true(is.finite(
+    msmica_corr_log_likelihood(0.6, list(corr_z = numeric()), 0.3, 0.5)
+  ))
+})

@@ -731,6 +731,10 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, output_dir = NULL, 
     pp_mu = mean(pp_z_obs)
     pp_sigma = sd(pp_z_obs)
 
+    if (length(pp_z_obs) == 0 || !is.finite(pp_mu) || !is.finite(pp_sigma) || pp_sigma <= 0) {
+        message("No valid precursor-product correlation calibration; unavailable correlation evidence will be omitted from scoring.")
+    }
+
     print(paste0("The mean of the Fisher Z-transformed precursor-product correlations for the training data is: ", round(pp_mu, 2)))
     print(paste0("The standard deviation of the Fisher Z-transformed precursor-product correlations for the training data is: ", round(pp_sigma, 2)))
 
