@@ -694,6 +694,9 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, output_dir = NULL, 
     
     } else {
         print("Failed to fit training model (insufficient points).")
+        # Do not assign an arbitrary PredRet uncertainty when the anchor set is
+        # too small. Downstream scoring will omit this unavailable RT evidence.
+        rt_mapping_sigma_predret = NA_real_
         rt_error_training_seconds = numeric(0)
     }
 

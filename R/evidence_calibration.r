@@ -29,6 +29,23 @@ empirical_rt_log_likelihood = function(time_difference, calibration) {
     log(max(p, calibration$floor))
 }
 
+#' Retention-time log likelihood with a safe no-calibration behavior
+#' @keywords internal
+#' @noRd
+msmica_rt_log_likelihood = function(time_difference, calibration, rt_sigma) {
+    log_rt = empirical_rt_log_likelihood(time_difference, calibration)
+    if (is.finite(log_rt)) {
+        return(log_rt)
+    }
+    if (length(rt_sigma) != 1 || !is.finite(rt_sigma) || rt_sigma <= 0 ||
+        !is.finite(time_difference)) {
+        # Missing calibration is not negative evidence and must not be replaced
+        # by an invented uncertainty. Omit the RT term from the score.
+        return(0)
+    }
+    log(max(dnorm(time_difference, mean = 0, sd = rt_sigma), 1e-300))
+}
+
 #' Empirical correlation log-likelihood from calibration anchors
 #' @keywords internal
 #' @noRd

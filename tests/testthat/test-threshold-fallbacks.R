@@ -45,3 +45,8 @@ test_that("fallback summaries retain observed calibration-pair counts", {
   expect_equal(result$summary$n_pairs, 3)
   expect_equal(result$summary$n_pairs_for_threshold, 3)
 })
+
+test_that("missing PredRet calibration omits RT evidence without an invented sigma", {
+  expect_equal(msmica_rt_log_likelihood(12, list(rt_errors = numeric()), NA_real_), 0)
+  expect_true(is.finite(msmica_rt_log_likelihood(12, list(rt_errors = numeric()), 25)))
+})

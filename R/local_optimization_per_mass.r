@@ -121,15 +121,10 @@ local_optimization_per_mass = function(mass_group_data,
             td = pair_data$time_difference[1]
 
             # A. RT likelihood
-            if (calibration_method == "empirical") {
-                log_rt = empirical_rt_log_likelihood(td, evidence_calibration)
+            log_rt = if (calibration_method == "empirical") {
+                msmica_rt_log_likelihood(td, evidence_calibration, rt_sigma)
             } else {
-                log_rt = NA_real_
-            }
-            if (!is.finite(log_rt)) {
-                p_rt = dnorm(td, mean = 0, sd = rt_sigma)
-                p_rt = max(p_rt, 1e-300)
-                log_rt = log(p_rt)
+                msmica_rt_log_likelihood(td, NULL, rt_sigma)
             }
 
             # B. Correlation likelihood
