@@ -3,6 +3,46 @@ test_that("one calibration pair is the default minimum", {
   expect_equal(formals(estimate_isotope_clustering_thresholds)$min_pairs, 1)
 })
 
+test_that("both empirical threshold estimators accept one valid pair", {
+  anchors <- data.frame(
+    Mono_mass = 100,
+    InChIKey = "TEST-KEY",
+    Adduct_annotated = "M+H",
+    time = 10,
+    mz_time = "primary"
+  )
+  cor_input <- data.frame(
+    primary = c(2, 3, 4, 5),
+    secondary = c(0, 1, 2, 3)
+  )
+  adduct <- estimate_adduct_clustering_thresholds(
+    primary_anchor_data = anchors,
+    annotated_adduct_data = data.frame(
+      Mono_mass = 100,
+      InChIKey = "TEST-KEY",
+      Adduct_annotated = "M+Na",
+      time_annotated = 11,
+      mz_time_annotated = "secondary"
+    ),
+    cor_input = cor_input
+  )
+  isotope <- estimate_isotope_clustering_thresholds(
+    primary_anchor_data = anchors,
+    isotope_adduct_data = data.frame(
+      Mono_mass = 100,
+      InChIKey = "TEST-KEY",
+      Adduct_annotated = "M+H",
+      time_annotated = 11,
+      mz_time_annotated = "secondary"
+    ),
+    cor_input = cor_input
+  )
+  expect_equal(adduct$summary$n_pairs, 1)
+  expect_equal(isotope$summary$n_pairs, 1)
+  expect_equal(adduct$summary$threshold_method, "adduct_empirical_hard_r_floor")
+  expect_equal(isotope$summary$threshold_method, "isotope_empirical_hard_r_floor")
+})
+
 test_that("adduct and isotope defaults are returned when calibration fails", {
   fail_estimation <- function(...) stop("not enough usable pairs")
 
@@ -44,4 +84,19 @@ test_that("fallback summaries retain observed calibration-pair counts", {
   )
   expect_equal(result$summary$n_pairs, 3)
   expect_equal(result$summary$n_pairs_for_threshold, 3)
+})
+
+test_that("missing PredRet calibration omits RT evidence without an invented sigma", {
+  expect_equal(msmica_rt_log_likelihood(12, list(rt_errors = numeric()), NA_real_), 0)
+  expect_true(is.finite(msmica_rt_log_likelihood(12, list(rt_errors = numeric()), 25)))
+})
+
+test_that("missing correlation calibration omits evidence without an invented prior", {
+  expect_equal(
+    msmica_corr_log_likelihood(0.6, list(corr_z = numeric()), NaN, NA_real_),
+    0
+  )
+  expect_true(is.finite(
+    msmica_corr_log_likelihood(0.6, list(corr_z = numeric()), 0.3, 0.5)
+  ))
 })

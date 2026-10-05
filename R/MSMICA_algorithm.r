@@ -694,6 +694,9 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, output_dir = NULL, 
     
     } else {
         print("Failed to fit training model (insufficient points).")
+        # Do not assign an arbitrary PredRet uncertainty when the anchor set is
+        # too small. Downstream scoring will omit this unavailable RT evidence.
+        rt_mapping_sigma_predret = NA_real_
         rt_error_training_seconds = numeric(0)
     }
 
@@ -727,6 +730,10 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, output_dir = NULL, 
     # extract mu and sigma from the z_obs
     pp_mu = mean(pp_z_obs)
     pp_sigma = sd(pp_z_obs)
+
+    if (length(pp_z_obs) == 0 || !is.finite(pp_mu) || !is.finite(pp_sigma) || pp_sigma <= 0) {
+        message("No valid precursor-product correlation calibration; unavailable correlation evidence will be omitted from scoring.")
+    }
 
     print(paste0("The mean of the Fisher Z-transformed precursor-product correlations for the training data is: ", round(pp_mu, 2)))
     print(paste0("The standard deviation of the Fisher Z-transformed precursor-product correlations for the training data is: ", round(pp_sigma, 2)))
@@ -845,6 +852,17 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, output_dir = NULL, 
 
     # Combine all data frames in the list into one final data frame
     final_results_cluster = bind_rows(results_cluster)
+
+    # A sparse dataset can have no adduct/isotope clusters at all. The cluster
+    # helper intentionally returns data.frame() in that case, but the later
+    # empty-table path still needs the same columns to join and continue with
+    # the independent main-adduct/local-optimization analysis. Preserve the
+    # candidate schema while adding the empty evidence/result columns expected
+    # below; do not invent cluster assignments or calls.
+    final_results_cluster = ensure_msmica_cluster_result_schema(
+        final_results_cluster,
+        met_raw_wide_final_monomass_simple
+    )
 
     # clear memory
     rm(results_cluster)
