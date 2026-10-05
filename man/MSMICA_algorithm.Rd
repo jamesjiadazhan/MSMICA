@@ -7,6 +7,7 @@
 MSMICA_algorithm(
   met_raw_wide,
   class_file = NULL,
+  output_dir = NULL,
   LC = "HILIC",
   LC_run_time,
   mz_threshold = 10,
@@ -22,14 +23,15 @@ MSMICA_algorithm(
   ion_mode = "positive",
   detail = FALSE,
   save_unidentified = FALSE,
-  progress_log = FALSE,
-  output_dir = NULL
+  progress_log = FALSE
 )
 }
 \arguments{
 \item{met_raw_wide}{a metabolomics feature table in wide format with mz as the first column, time as the second column, and intensity values as the remaining columns.}
 
 \item{class_file}{a class file in wide format with the first column name as metabolomics raw file name, the second column name as subject ID, and the third column name as class label (study sample or reference standard sample).}
+
+\item{output_dir}{a character string specifying the directory where all output files should be written. Default is NULL, which writes to the current working directory.}
 
 \item{LC}{a character value indicating which liquid chromatography (LC) column to be used to predict the retention time of the metabolites. Default is "HILIC" (hydrophilic interaction liquid chromatography). Other options is "RP" or "C18" (reversed phase liquid chromatography, also called C18).}
 
@@ -60,8 +62,6 @@ MSMICA_algorithm(
 \item{save_unidentified}{a logical value indicating whether the unidentified features should be saved. Default is FALSE.}
 
 \item{progress_log}{a logical value indicating whether to save the log of all printings and messages to a text file. Default is TRUE.}
-
-\item{output_dir}{a character string specifying the directory where all output files should be written. Default is NULL, which writes to the current working directory.}
 }
 \description{
 This function is used to perform the MSMICA algorithm for metabolite identification using the metabolomics feature table and the KEGG database.
@@ -71,5 +71,8 @@ Adduct and isotope clustering thresholds are estimated empirically
   from high-confidence primary-adduct anchors within each dataset. The final
   publication workflow uses the optimized 80% capture criterion, with a
   maximum calibration search window of 15 seconds for adduct pairs and
-  10 seconds for isotope pairs.
+  10 seconds for isotope pairs. Adduct and isotope correlation thresholds
+  use a hard Spearman correlation floor of 0.4. When a dataset does not
+  provide enough calibration pairs to estimate a threshold, fixed defaults
+  are used (adduct: 10 seconds and r >= 0.4; isotope: 5 seconds and r >= 0.7).
 }

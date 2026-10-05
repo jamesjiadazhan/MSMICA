@@ -18,7 +18,9 @@
 #'   publication workflow uses the optimized 80% capture criterion, with a
 #'   maximum calibration search window of 15 seconds for adduct pairs and
 #'   10 seconds for isotope pairs. Adduct and isotope correlation thresholds
-#'   use a hard Spearman correlation floor of 0.4.
+#'   use a hard Spearman correlation floor of 0.4. When a dataset does not
+#'   provide enough calibration pairs to estimate a threshold, fixed defaults
+#'   are used (adduct: 10 seconds and r >= 0.4; isotope: 5 seconds and r >= 0.7).
 #' @param imputation_method the method to be used for missing value imputation. Default is "half_min". Other options are "QRILC" (QRILC is better for triplicate samples) and NA. If NA, then no imputation is performed.
 #' @param prefix a prefix to be added to the output files. Default is "".
 #' @param ion_mode the ionization mode of the metabolomics data. Default is "positive". Other options are "negative".
@@ -42,7 +44,14 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, output_dir = NULL, 
     isotope_threshold_max_time = 10
     adduct_correlation_floor = 0.4
     isotopic_correlation_floor = 0.4
-    threshold_min_pairs = 20
+    # A single valid pair is enough to estimate a dataset-specific threshold.
+    # If estimation is impossible or produces a non-finite value, fall back to
+    # conservative documented defaults and retain the reason in the summary.
+    threshold_min_pairs = 1
+    fallback_adduct_rt_seconds = 10
+    fallback_adduct_correlation = 0.4
+    fallback_isotope_rt_seconds = 5
+    fallback_isotope_correlation = 0.7
     concentration_prior_weight = 0
     feature_rank_prior_strength = 0.5
     single_feature_prior_multiplier = 10
@@ -732,26 +741,42 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, output_dir = NULL, 
         write_msmica_calibration_outputs(evidence_calibration, rt_mapping_anchor_metabolites_folder_name)
     }
 
-    adduct_threshold_estimate = estimate_adduct_clustering_thresholds(
-        primary_anchor_data = met_raw_wide_mz_single_match,
-        annotated_adduct_data = met_raw_wide_final_monomass,
-        cor_input = MSMICA_cor_input,
+    adduct_threshold_estimate = msmica_threshold_estimate_with_fallback(
+        estimator = estimate_adduct_clustering_thresholds,
+        estimator_args = list(
+            primary_anchor_data = met_raw_wide_mz_single_match,
+            annotated_adduct_data = met_raw_wide_final_monomass,
+            cor_input = MSMICA_cor_input,
+            capture_fraction = empirical_cluster_capture,
+            min_pairs = threshold_min_pairs,
+            max_time_difference = adduct_threshold_max_time,
+            correlation_floor = adduct_correlation_floor
+        ),
+        type = "adduct",
+        default_time = fallback_adduct_rt_seconds,
+        default_correlation = fallback_adduct_correlation,
         capture_fraction = empirical_cluster_capture,
-        min_pairs = threshold_min_pairs,
-        max_time_difference = adduct_threshold_max_time,
         correlation_floor = adduct_correlation_floor
     )
 
     adduct_correlation_time_threshold = adduct_threshold_estimate$adduct_correlation_time_threshold
     adduct_correlation_r_threshold = adduct_threshold_estimate$adduct_correlation_r_threshold
 
-    isotope_threshold_estimate = estimate_isotope_clustering_thresholds(
-        primary_anchor_data = met_raw_wide_mz_single_match,
-        isotope_adduct_data = met_raw_wide_final_monomass_isotope,
-        cor_input = MSMICA_cor_input,
+    isotope_threshold_estimate = msmica_threshold_estimate_with_fallback(
+        estimator = estimate_isotope_clustering_thresholds,
+        estimator_args = list(
+            primary_anchor_data = met_raw_wide_mz_single_match,
+            isotope_adduct_data = met_raw_wide_final_monomass_isotope,
+            cor_input = MSMICA_cor_input,
+            capture_fraction = empirical_cluster_capture,
+            min_pairs = threshold_min_pairs,
+            max_time_difference = isotope_threshold_max_time,
+            correlation_floor = isotopic_correlation_floor
+        ),
+        type = "isotope",
+        default_time = fallback_isotope_rt_seconds,
+        default_correlation = fallback_isotope_correlation,
         capture_fraction = empirical_cluster_capture,
-        min_pairs = threshold_min_pairs,
-        max_time_difference = isotope_threshold_max_time,
         correlation_floor = isotopic_correlation_floor
     )
 
@@ -759,7 +784,7 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, output_dir = NULL, 
     isotopic_correlation_r_threshold = isotope_threshold_estimate$isotopic_correlation_r_threshold
 
     message(paste0(
-        "Empirical adduct clustering thresholds are used: RT <= ",
+        if (adduct_threshold_estimate$summary$threshold_method[1] == "fixed_default_fallback") "Fixed-default adduct clustering thresholds are used: RT <= " else "Empirical adduct clustering thresholds are used: RT <= ",
         round(adduct_correlation_time_threshold, 2),
         " seconds, Spearman r >= ",
         round(adduct_correlation_r_threshold, 3),
@@ -772,7 +797,7 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, output_dir = NULL, 
         ")."
     ))
     message(paste0(
-        "Empirical isotope clustering thresholds are used: RT <= ",
+        if (isotope_threshold_estimate$summary$threshold_method[1] == "fixed_default_fallback") "Fixed-default isotope clustering thresholds are used: RT <= " else "Empirical isotope clustering thresholds are used: RT <= ",
         round(isotopic_correlation_time_threshold, 2),
         " seconds, Spearman r >= ",
         round(isotopic_correlation_r_threshold, 3),
