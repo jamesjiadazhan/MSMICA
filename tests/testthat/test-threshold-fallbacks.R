@@ -3,6 +3,46 @@ test_that("one calibration pair is the default minimum", {
   expect_equal(formals(estimate_isotope_clustering_thresholds)$min_pairs, 1)
 })
 
+test_that("both empirical threshold estimators accept one valid pair", {
+  anchors <- data.frame(
+    Mono_mass = 100,
+    InChIKey = "TEST-KEY",
+    Adduct_annotated = "M+H",
+    time = 10,
+    mz_time = "primary"
+  )
+  cor_input <- data.frame(
+    primary = c(2, 3, 4, 5),
+    secondary = c(0, 1, 2, 3)
+  )
+  adduct <- estimate_adduct_clustering_thresholds(
+    primary_anchor_data = anchors,
+    annotated_adduct_data = data.frame(
+      Mono_mass = 100,
+      InChIKey = "TEST-KEY",
+      Adduct_annotated = "M+Na",
+      time_annotated = 11,
+      mz_time_annotated = "secondary"
+    ),
+    cor_input = cor_input
+  )
+  isotope <- estimate_isotope_clustering_thresholds(
+    primary_anchor_data = anchors,
+    isotope_adduct_data = data.frame(
+      Mono_mass = 100,
+      InChIKey = "TEST-KEY",
+      Adduct_annotated = "M+H",
+      time_annotated = 11,
+      mz_time_annotated = "secondary"
+    ),
+    cor_input = cor_input
+  )
+  expect_equal(adduct$summary$n_pairs, 1)
+  expect_equal(isotope$summary$n_pairs, 1)
+  expect_equal(adduct$summary$threshold_method, "adduct_empirical_hard_r_floor")
+  expect_equal(isotope$summary$threshold_method, "isotope_empirical_hard_r_floor")
+})
+
 test_that("adduct and isotope defaults are returned when calibration fails", {
   fail_estimation <- function(...) stop("not enough usable pairs")
 
