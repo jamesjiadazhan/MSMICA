@@ -5,8 +5,8 @@
 #' available: \code{"QRILC"}, the Quantile Regression Imputation of
 #' Left-Censored data implemented in \pkg{imputeLCMD} (recommended when
 #' replicate samples are available), and \code{"half_min"}, which
-#' replaces missing values in each feature row with half of that row's
-#' observed minimum. Any other value disables imputation.
+#' replaces missing log2 intensities with the row's observed minimum
+#' minus one (equivalent to half the minimum on the original scale). Any other value disables imputation.
 #'
 #' @param met_raw_wide A wide-format metabolomics feature table. Columns
 #'   one and two are treated as m/z and retention time metadata; all
@@ -20,7 +20,7 @@
 #' @noRd
 data_imputation = function(met_raw_wide, imputation_method){
     # Branch 1: QRILC (quantile regression imputation of left-censored data)
-    if (imputation_method == "QRILC"){
+    if (identical(imputation_method, "QRILC")){
         met_raw_wide_meta = as.data.frame(met_raw_wide[, 1:2])
         met_raw_wide_intensity = as.data.frame(met_raw_wide[,-c(1,2)])
         met_raw_wide_intensity_imputed = imputeLCMD::impute.QRILC(met_raw_wide_intensity)
@@ -30,14 +30,15 @@ data_imputation = function(met_raw_wide, imputation_method){
         message("Missing data imputation completed. The imputation method is: QRILC")
         # Remove 'X' from column names if it is the first character
         colnames(met_raw_wide) = gsub("^X", "", colnames(met_raw_wide))
-    } else if (imputation_method == "half_min"){
+    } else if (identical(imputation_method, "half_min")){
 
         message("Missing data imputation completed. The imputation method is: half minimum")
 
-        # Function to impute missing values with half of the minimum value in the row
+        # Impute on the log2 scale: log2(minimum / 2) = min(log2(values)) - 1.
         impute_missing_values = function(values) {
-            # Calculate half of the minimum value in the row (excluding NA)
-            half_min_value = min(values, na.rm = TRUE) / 2
+            # An entirely missing feature has no minimum; leave it missing.
+            if (all(is.na(values))) return(values)
+            half_min_value = min(values, na.rm = TRUE) - 1
             # Impute NA values with half of the minimum value
             values[is.na(values)] = half_min_value
             # Combine the first two columns with the imputed values
