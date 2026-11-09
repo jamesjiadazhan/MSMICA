@@ -121,33 +121,22 @@ local_optimization_per_mass = function(mass_group_data,
             td = pair_data$time_difference[1]
 
             # A. RT likelihood
-            if (calibration_method == "empirical") {
-                log_rt = empirical_rt_log_likelihood(td, evidence_calibration)
+            log_rt = if (calibration_method == "empirical") {
+                msmica_rt_log_likelihood(td, evidence_calibration, rt_sigma)
             } else {
-                log_rt = NA_real_
-            }
-            if (!is.finite(log_rt)) {
-                p_rt = dnorm(td, mean = 0, sd = rt_sigma)
-                p_rt = max(p_rt, 1e-300)
-                log_rt = log(p_rt)
+                msmica_rt_log_likelihood(td, NULL, rt_sigma)
             }
 
             # B. Correlation likelihood
             if (is.na(pair_data$correlation[1])) {
                 log_corr = 0
             } else {
-                if (calibration_method == "empirical") {
-                    log_corr = empirical_corr_log_likelihood(pair_data$correlation[1], evidence_calibration)
-                } else {
-                    log_corr = NA_real_
-                }
-                if (!is.finite(log_corr)) {
-                    corr_value = min(max(pair_data$correlation[1], -0.999999), 0.999999)
-                    z_obs = atanh(corr_value)
-                    p_corr = dnorm(z_obs, mean = corr_mu, sd = corr_sigma)
-                    p_corr = max(p_corr, 1e-300)
-                    log_corr = log(p_corr)
-                }
+                log_corr = msmica_corr_log_likelihood(
+                    pair_data$correlation[1],
+                    if (calibration_method == "empirical") evidence_calibration else NULL,
+                    corr_mu,
+                    corr_sigma
+                )
             }
 
             # C. Metabolite concentration prior
