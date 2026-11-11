@@ -389,13 +389,20 @@ MSMICA_algorithm = function(met_raw_wide, class_file = NULL, output_dir = NULL, 
     # save the met_raw_wide as met_raw_wide_original for later use
     met_raw_wide_original = met_raw_wide
 
+    # Half-minimum imputation uses raw intensities and must precede log2.
+    if (identical(imputation_method, "half_min")) {
+        met_raw_wide = data_imputation(met_raw_wide = met_raw_wide, imputation_method = imputation_method)
+    }
+
     ##################### perform metabolomicsdata transformation ##################
     # perform log2 transformation
     met_raw_wide = data_transformation(met_raw_wide = met_raw_wide)
 
     ##################### perform metabolomics data imputation #####################
-    # use the function to imputate missing data in the metabolomics feature table (those 0 intensity data)
-    met_raw_wide = data_imputation(met_raw_wide = met_raw_wide, imputation_method = imputation_method)
+    # QRILC continues to operate on log2 intensities.
+    if (!identical(imputation_method, "half_min")) {
+        met_raw_wide = data_imputation(met_raw_wide = met_raw_wide, imputation_method = imputation_method)
+    }
     met_raw_wide = tibble(met_raw_wide)
 
     ##################### perform metabolomics data normalization ##################
